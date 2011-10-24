@@ -10,7 +10,7 @@ using NPOI.HSSF.Util;
 using NPOI.HPSF;
 using NPOI.POIFS.FileSystem;
 using NPOI.SS.UserModel;
-using Ionic;
+//using Ionic;
 
 namespace Compas.Helpers
 {
