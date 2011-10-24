@@ -98,15 +98,19 @@ namespace Compas.AdminUI.Documents
         public DocumentsList(CashRegister _CashRegister)
         {
             InitializeComponent();
+            CompasLogger.Add(String.Format("Start opening DocumentsList"), CompasLogger.Level.Info);
             cashRegister = _CashRegister;
             manager = new ContextManager();
             bool allowed = Compas.Logic.Security.CurrentSecurityContext.Principal.OpperationAllowed("DocumentsList");
             
             if (allowed == true)
             {
+                CompasLogger.Add(String.Format("FillDocumentFilter"), CompasLogger.Level.Info);
                 documentFilterUC1.Fill();
+                CompasLogger.Add(String.Format("FillUniversalFilter"), CompasLogger.Level.Info);
                 universalFilter1.Fill();
                 documentsLogic = new DocumentsLogic(manager);
+                CompasLogger.Add(String.Format("Fill"), CompasLogger.Level.Info);
                 Fill();
             }
             else
@@ -114,7 +118,7 @@ namespace Compas.AdminUI.Documents
                 MessageBox.Show("Дія заборонена. Зверніться до адміністратора.");
                 this.Close();
             }
-
+            CompasLogger.Add(String.Format("End opening DocumentsList"), CompasLogger.Level.Info);
             //this.DataGV.CellPainting += new
             //     DataGridViewCellPaintingEventHandler(DataGV_CellPainting);
 

@@ -32,14 +32,14 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -50,6 +50,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.CancelBt = new System.Windows.Forms.Button();
+            this.SaveBt = new System.Windows.Forms.Button();
+            this.AddPaymentCB = new DevExpress.XtraEditors.CheckEdit();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DurationL = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -57,9 +61,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.DocumentSumaL = new System.Windows.Forms.Label();
-            this.SaveBt = new System.Windows.Forms.Button();
-            this.CancelBt = new System.Windows.Forms.Button();
-            this.AddPaymentCB = new DevExpress.XtraEditors.CheckEdit();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.AddressTE = new DevExpress.XtraEditors.TextEdit();
             this.label15 = new System.Windows.Forms.Label();
@@ -102,7 +103,19 @@
             this.DescriptionTE = new DevExpress.XtraEditors.MemoEdit();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.DetailsGV = new System.Windows.Forms.DataGridView();
+            this.DocumentDetailID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WareName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SecondaryUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceForUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiscountForUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndPriceForUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CurrencyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.NewSB = new System.Windows.Forms.ToolStripButton();
@@ -123,21 +136,10 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.DocumentDetailID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WareName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SecondaryUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriceForUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiscountForUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndPriceForUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CurrencyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddPaymentCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -162,17 +164,17 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetailsGV)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.TopPanelP.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -184,6 +186,62 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1048, 85);
             this.panelControl1.TabIndex = 21;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 5;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.CancelBt, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.SaveBt, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.AddPaymentCB, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1044, 81);
+            this.tableLayoutPanel3.TabIndex = 20;
+            // 
+            // CancelBt
+            // 
+            this.CancelBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CancelBt.Image = global::Compas.AdminUI.Properties.Resources.button_cancel__1_;
+            this.CancelBt.Location = new System.Drawing.Point(525, 3);
+            this.CancelBt.Name = "CancelBt";
+            this.CancelBt.Size = new System.Drawing.Size(157, 67);
+            this.CancelBt.TabIndex = 1;
+            this.CancelBt.Text = "Відмінити";
+            this.CancelBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CancelBt.UseVisualStyleBackColor = true;
+            this.CancelBt.Click += new System.EventHandler(this.CancelBt_Click);
+            // 
+            // SaveBt
+            // 
+            this.SaveBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SaveBt.Image = global::Compas.AdminUI.Properties.Resources.button_ok__1_;
+            this.SaveBt.Location = new System.Drawing.Point(362, 3);
+            this.SaveBt.Name = "SaveBt";
+            this.SaveBt.Size = new System.Drawing.Size(157, 67);
+            this.SaveBt.TabIndex = 0;
+            this.SaveBt.Text = "Зберегти";
+            this.SaveBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.SaveBt.UseVisualStyleBackColor = true;
+            this.SaveBt.Click += new System.EventHandler(this.SaveBt_Click);
+            // 
+            // AddPaymentCB
+            // 
+            this.AddPaymentCB.EditValue = true;
+            this.AddPaymentCB.Location = new System.Drawing.Point(3, 3);
+            this.AddPaymentCB.Name = "AddPaymentCB";
+            this.AddPaymentCB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 16F);
+            this.AddPaymentCB.Properties.Appearance.Options.UseFont = true;
+            this.AddPaymentCB.Properties.Caption = "Провести оплату ";
+            this.AddPaymentCB.Size = new System.Drawing.Size(213, 30);
+            this.AddPaymentCB.TabIndex = 70;
             // 
             // panel2
             // 
@@ -285,43 +343,6 @@
             this.DocumentSumaL.Text = "label8";
             this.DocumentSumaL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SaveBt
-            // 
-            this.SaveBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SaveBt.Image = global::Compas.AdminUI.Properties.Resources.button_ok__1_;
-            this.SaveBt.Location = new System.Drawing.Point(362, 3);
-            this.SaveBt.Name = "SaveBt";
-            this.SaveBt.Size = new System.Drawing.Size(157, 67);
-            this.SaveBt.TabIndex = 0;
-            this.SaveBt.Text = "Зберегти";
-            this.SaveBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.SaveBt.UseVisualStyleBackColor = true;
-            this.SaveBt.Click += new System.EventHandler(this.SaveBt_Click);
-            // 
-            // CancelBt
-            // 
-            this.CancelBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CancelBt.Image = global::Compas.AdminUI.Properties.Resources.button_cancel__1_;
-            this.CancelBt.Location = new System.Drawing.Point(525, 3);
-            this.CancelBt.Name = "CancelBt";
-            this.CancelBt.Size = new System.Drawing.Size(157, 67);
-            this.CancelBt.TabIndex = 1;
-            this.CancelBt.Text = "Відмінити";
-            this.CancelBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.CancelBt.UseVisualStyleBackColor = true;
-            this.CancelBt.Click += new System.EventHandler(this.CancelBt_Click);
-            // 
-            // AddPaymentCB
-            // 
-            this.AddPaymentCB.EditValue = true;
-            this.AddPaymentCB.Location = new System.Drawing.Point(3, 3);
-            this.AddPaymentCB.Name = "AddPaymentCB";
-            this.AddPaymentCB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 16F);
-            this.AddPaymentCB.Properties.Appearance.Options.UseFont = true;
-            this.AddPaymentCB.Properties.Caption = "Провести оплату ";
-            this.AddPaymentCB.Size = new System.Drawing.Size(213, 30);
-            this.AddPaymentCB.TabIndex = 70;
-            // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -330,35 +351,8 @@
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.splitContainerControl1.Panel1.Appearance.Options.UseFont = true;
-            this.splitContainerControl1.Panel1.Controls.Add(this.AddressTE);
-            this.splitContainerControl1.Panel1.Controls.Add(this.label15);
+            this.splitContainerControl1.Panel1.Controls.Add(this.tableLayoutPanel4);
             this.splitContainerControl1.Panel1.Controls.Add(this.CarGB);
-            this.splitContainerControl1.Panel1.Controls.Add(this.label13);
-            this.splitContainerControl1.Panel1.Controls.Add(this.TeamsLUE);
-            this.splitContainerControl1.Panel1.Controls.Add(this.label12);
-            this.splitContainerControl1.Panel1.Controls.Add(this.label10);
-            this.splitContainerControl1.Panel1.Controls.Add(this.label8);
-            this.splitContainerControl1.Panel1.Controls.Add(this.RemoveEmployeeBt);
-            this.splitContainerControl1.Panel1.Controls.Add(this.EmployeesLB);
-            this.splitContainerControl1.Panel1.Controls.Add(this.EmployeesLUE);
-            this.splitContainerControl1.Panel1.Controls.Add(this.label11);
-            this.splitContainerControl1.Panel1.Controls.Add(this.CurrencyLUE);
-            this.splitContainerControl1.Panel1.Controls.Add(this.AddObject2Bt);
-            this.splitContainerControl1.Panel1.Controls.Add(this.AddObjectBt);
-            this.splitContainerControl1.Panel1.Controls.Add(this.AbbContractorBt);
-            this.splitContainerControl1.Panel1.Controls.Add(this.NumberTE);
-            this.splitContainerControl1.Panel1.Controls.Add(this.DateDE);
-            this.splitContainerControl1.Panel1.Controls.Add(this.FromObjectLUE);
-            this.splitContainerControl1.Panel1.Controls.Add(this.ToObjectLUE);
-            this.splitContainerControl1.Panel1.Controls.Add(this.ContractorLUE);
-            this.splitContainerControl1.Panel1.Controls.Add(this.label6);
-            this.splitContainerControl1.Panel1.Controls.Add(this.label5);
-            this.splitContainerControl1.Panel1.Controls.Add(this.label4);
-            this.splitContainerControl1.Panel1.Controls.Add(this.label3);
-            this.splitContainerControl1.Panel1.Controls.Add(this.label2);
-            this.splitContainerControl1.Panel1.Controls.Add(this.label1);
-            this.splitContainerControl1.Panel1.Controls.Add(this.DocumentTypeLUE);
-            this.splitContainerControl1.Panel1.Controls.Add(this.DescriptionTE);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.panel4);
             this.splitContainerControl1.Panel2.Controls.Add(this.TopPanelP);
@@ -370,18 +364,20 @@
             // 
             // AddressTE
             // 
-            this.AddressTE.Location = new System.Drawing.Point(109, 410);
+            this.AddressTE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddressTE.Location = new System.Drawing.Point(96, 395);
             this.AddressTE.Name = "AddressTE";
             this.AddressTE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddressTE.Properties.Appearance.Options.UseFont = true;
-            this.AddressTE.Size = new System.Drawing.Size(225, 26);
+            this.AddressTE.Size = new System.Drawing.Size(255, 26);
             this.AddressTE.TabIndex = 83;
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(46, 416);
+            this.label15.Location = new System.Drawing.Point(31, 401);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(59, 16);
             this.label15.TabIndex = 82;
@@ -395,9 +391,10 @@
             this.CarGB.Controls.Add(this.SetModelBt);
             this.CarGB.Controls.Add(this.label14);
             this.CarGB.Controls.Add(this.CarNumberTE);
-            this.CarGB.Location = new System.Drawing.Point(13, 437);
+            this.CarGB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CarGB.Location = new System.Drawing.Point(7, 431);
             this.CarGB.Name = "CarGB";
-            this.CarGB.Size = new System.Drawing.Size(358, 244);
+            this.CarGB.Size = new System.Drawing.Size(371, 212);
             this.CarGB.TabIndex = 81;
             this.CarGB.TabStop = false;
             this.CarGB.Text = "Дані про авто";
@@ -406,16 +403,16 @@
             // 
             this.CarCategoriesCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CarCategoriesCB.FormattingEnabled = true;
-            this.CarCategoriesCB.Location = new System.Drawing.Point(96, 45);
+            this.CarCategoriesCB.Location = new System.Drawing.Point(96, 47);
             this.CarCategoriesCB.Name = "CarCategoriesCB";
-            this.CarCategoriesCB.Size = new System.Drawing.Size(225, 28);
+            this.CarCategoriesCB.Size = new System.Drawing.Size(247, 28);
             this.CarCategoriesCB.TabIndex = 85;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(16, 57);
+            this.label17.Location = new System.Drawing.Point(16, 59);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(74, 16);
             this.label17.TabIndex = 84;
@@ -508,14 +505,15 @@
             this.CarNumberTE.Name = "CarNumberTE";
             this.CarNumberTE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CarNumberTE.Properties.Appearance.Options.UseFont = true;
-            this.CarNumberTE.Size = new System.Drawing.Size(225, 26);
+            this.CarNumberTE.Size = new System.Drawing.Size(247, 26);
             this.CarNumberTE.TabIndex = 80;
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(39, 263);
+            this.label13.Location = new System.Drawing.Point(24, 284);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(66, 16);
             this.label13.TabIndex = 79;
@@ -523,7 +521,8 @@
             // 
             // TeamsLUE
             // 
-            this.TeamsLUE.Location = new System.Drawing.Point(109, 260);
+            this.TeamsLUE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TeamsLUE.Location = new System.Drawing.Point(96, 279);
             this.TeamsLUE.Name = "TeamsLUE";
             this.TeamsLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TeamsLUE.Properties.Appearance.Options.UseFont = true;
@@ -532,15 +531,16 @@
             this.TeamsLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.TeamsLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
-            this.TeamsLUE.Size = new System.Drawing.Size(225, 26);
+            this.TeamsLUE.Size = new System.Drawing.Size(255, 26);
             this.TeamsLUE.TabIndex = 78;
             this.TeamsLUE.EditValueChanged += new System.EventHandler(this.TeamsLUE_EditValueChanged);
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(24, 325);
+            this.label12.Location = new System.Drawing.Point(9, 358);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(81, 16);
             this.label12.TabIndex = 77;
@@ -548,9 +548,10 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(18, 293);
+            this.label10.Location = new System.Drawing.Point(3, 316);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(87, 16);
             this.label10.TabIndex = 76;
@@ -558,9 +559,10 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(30, 210);
+            this.label8.Location = new System.Drawing.Point(15, 242);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 16);
             this.label8.TabIndex = 75;
@@ -572,10 +574,10 @@
             this.RemoveEmployeeBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RemoveEmployeeBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RemoveEmployeeBt.Image = global::Compas.AdminUI.Properties.Resources.delete16;
-            this.RemoveEmployeeBt.Location = new System.Drawing.Point(341, 322);
+            this.RemoveEmployeeBt.Location = new System.Drawing.Point(358, 344);
             this.RemoveEmployeeBt.Margin = new System.Windows.Forms.Padding(4);
             this.RemoveEmployeeBt.Name = "RemoveEmployeeBt";
-            this.RemoveEmployeeBt.Size = new System.Drawing.Size(30, 22);
+            this.RemoveEmployeeBt.Size = new System.Drawing.Size(17, 22);
             this.RemoveEmployeeBt.TabIndex = 74;
             this.RemoveEmployeeBt.UseVisualStyleBackColor = true;
             this.RemoveEmployeeBt.Click += new System.EventHandler(this.RemoveEmployeeBt_Click);
@@ -585,16 +587,18 @@
             this.EmployeesLB.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.EmployeesLB.Appearance.Options.UseFont = true;
             this.EmployeesLB.DisplayMember = "FullName";
-            this.EmployeesLB.Location = new System.Drawing.Point(109, 324);
+            this.EmployeesLB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmployeesLB.Location = new System.Drawing.Point(96, 343);
             this.EmployeesLB.MultiColumn = true;
             this.EmployeesLB.Name = "EmployeesLB";
-            this.EmployeesLB.Size = new System.Drawing.Size(225, 82);
+            this.EmployeesLB.Size = new System.Drawing.Size(255, 46);
             this.EmployeesLB.TabIndex = 72;
             this.EmployeesLB.ValueMember = "ID";
             // 
             // EmployeesLUE
             // 
-            this.EmployeesLUE.Location = new System.Drawing.Point(109, 290);
+            this.EmployeesLUE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmployeesLUE.Location = new System.Drawing.Point(96, 311);
             this.EmployeesLUE.Name = "EmployeesLUE";
             this.EmployeesLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EmployeesLUE.Properties.Appearance.Options.UseFont = true;
@@ -604,15 +608,16 @@
             this.EmployeesLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.EmployeesLUE.Properties.DropDownRows = 15;
-            this.EmployeesLUE.Size = new System.Drawing.Size(225, 26);
+            this.EmployeesLUE.Size = new System.Drawing.Size(255, 26);
             this.EmployeesLUE.TabIndex = 71;
             this.EmployeesLUE.EditValueChanged += new System.EventHandler(this.EmployeesLUE_EditValueChanged);
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(44, 186);
+            this.label11.Location = new System.Drawing.Point(29, 200);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 16);
             this.label11.TabIndex = 69;
@@ -620,7 +625,8 @@
             // 
             // CurrencyLUE
             // 
-            this.CurrencyLUE.Location = new System.Drawing.Point(109, 179);
+            this.CurrencyLUE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CurrencyLUE.Location = new System.Drawing.Point(96, 195);
             this.CurrencyLUE.Name = "CurrencyLUE";
             this.CurrencyLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CurrencyLUE.Properties.Appearance.Options.UseFont = true;
@@ -628,13 +634,13 @@
             this.CurrencyLUE.Properties.AppearanceDropDown.Options.UseFont = true;
             this.CurrencyLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.CurrencyLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
-            this.CurrencyLUE.Size = new System.Drawing.Size(225, 26);
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            this.CurrencyLUE.Size = new System.Drawing.Size(255, 26);
             this.CurrencyLUE.TabIndex = 6;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "This value is not valid";
-            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.dxValidationProvider1.SetValidationRule(this.CurrencyLUE, conditionValidationRule1);
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "This value is not valid";
+            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.dxValidationProvider1.SetValidationRule(this.CurrencyLUE, conditionValidationRule2);
             // 
             // AddObject2Bt
             // 
@@ -642,10 +648,10 @@
             this.AddObject2Bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddObject2Bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddObject2Bt.Image = global::Compas.AdminUI.Properties.Resources.add_16x161;
-            this.AddObject2Bt.Location = new System.Drawing.Point(341, 123);
+            this.AddObject2Bt.Location = new System.Drawing.Point(358, 132);
             this.AddObject2Bt.Margin = new System.Windows.Forms.Padding(4);
             this.AddObject2Bt.Name = "AddObject2Bt";
-            this.AddObject2Bt.Size = new System.Drawing.Size(30, 22);
+            this.AddObject2Bt.Size = new System.Drawing.Size(17, 22);
             this.AddObject2Bt.TabIndex = 28;
             this.AddObject2Bt.UseVisualStyleBackColor = true;
             this.AddObject2Bt.Click += new System.EventHandler(this.AddObject2Bt_Click);
@@ -656,10 +662,10 @@
             this.AddObjectBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddObjectBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddObjectBt.Image = global::Compas.AdminUI.Properties.Resources.add_16x161;
-            this.AddObjectBt.Location = new System.Drawing.Point(341, 95);
+            this.AddObjectBt.Location = new System.Drawing.Point(358, 100);
             this.AddObjectBt.Margin = new System.Windows.Forms.Padding(4);
             this.AddObjectBt.Name = "AddObjectBt";
-            this.AddObjectBt.Size = new System.Drawing.Size(30, 22);
+            this.AddObjectBt.Size = new System.Drawing.Size(17, 22);
             this.AddObjectBt.TabIndex = 27;
             this.AddObjectBt.UseVisualStyleBackColor = true;
             this.AddObjectBt.Click += new System.EventHandler(this.AddObjectBt_Click);
@@ -670,27 +676,29 @@
             this.AbbContractorBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AbbContractorBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AbbContractorBt.Image = global::Compas.AdminUI.Properties.Resources.add_16x161;
-            this.AbbContractorBt.Location = new System.Drawing.Point(341, 67);
+            this.AbbContractorBt.Location = new System.Drawing.Point(358, 68);
             this.AbbContractorBt.Margin = new System.Windows.Forms.Padding(4);
             this.AbbContractorBt.Name = "AbbContractorBt";
-            this.AbbContractorBt.Size = new System.Drawing.Size(30, 22);
+            this.AbbContractorBt.Size = new System.Drawing.Size(17, 22);
             this.AbbContractorBt.TabIndex = 26;
             this.AbbContractorBt.UseVisualStyleBackColor = true;
             this.AbbContractorBt.Click += new System.EventHandler(this.AbbContractorBt_Click);
             // 
             // NumberTE
             // 
-            this.NumberTE.Location = new System.Drawing.Point(109, 38);
+            this.NumberTE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NumberTE.Location = new System.Drawing.Point(96, 35);
             this.NumberTE.Name = "NumberTE";
             this.NumberTE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NumberTE.Properties.Appearance.Options.UseFont = true;
-            this.NumberTE.Size = new System.Drawing.Size(225, 26);
+            this.NumberTE.Size = new System.Drawing.Size(255, 26);
             this.NumberTE.TabIndex = 1;
             // 
             // DateDE
             // 
+            this.DateDE.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DateDE.EditValue = null;
-            this.DateDE.Location = new System.Drawing.Point(109, 150);
+            this.DateDE.Location = new System.Drawing.Point(96, 163);
             this.DateDE.Name = "DateDE";
             this.DateDE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DateDE.Properties.Appearance.Options.UseFont = true;
@@ -698,17 +706,18 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateDE.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.DateDE.Size = new System.Drawing.Size(150, 26);
+            this.DateDE.Size = new System.Drawing.Size(255, 26);
             this.DateDE.TabIndex = 5;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "This value is not valid";
-            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.dxValidationProvider1.SetValidationRule(this.DateDE, conditionValidationRule2);
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "This value is not valid";
+            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.dxValidationProvider1.SetValidationRule(this.DateDE, conditionValidationRule3);
             // 
             // FromObjectLUE
             // 
+            this.FromObjectLUE.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FromObjectLUE.EnterMoveNextControl = true;
-            this.FromObjectLUE.Location = new System.Drawing.Point(109, 123);
+            this.FromObjectLUE.Location = new System.Drawing.Point(96, 131);
             this.FromObjectLUE.Name = "FromObjectLUE";
             this.FromObjectLUE.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.FromObjectLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -717,21 +726,22 @@
             this.FromObjectLUE.Properties.AppearanceDropDown.Options.UseFont = true;
             this.FromObjectLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.FromObjectLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.FromObjectLUE.Properties.DropDownRows = 15;
             this.FromObjectLUE.Properties.NullText = "не обрано";
             this.FromObjectLUE.Properties.NullValuePrompt = "не обрано";
             this.FromObjectLUE.Properties.NullValuePromptShowForEmptyValue = true;
             this.FromObjectLUE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.FromObjectLUE.Size = new System.Drawing.Size(225, 26);
+            this.FromObjectLUE.Size = new System.Drawing.Size(255, 26);
             this.FromObjectLUE.TabIndex = 4;
             this.FromObjectLUE.EditValueChanged += new System.EventHandler(this.FromObjectLUE_EditValueChanged);
             this.FromObjectLUE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FromObjectLUE_KeyDown);
             // 
             // ToObjectLUE
             // 
+            this.ToObjectLUE.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ToObjectLUE.EnterMoveNextControl = true;
-            this.ToObjectLUE.Location = new System.Drawing.Point(109, 94);
+            this.ToObjectLUE.Location = new System.Drawing.Point(96, 99);
             this.ToObjectLUE.Name = "ToObjectLUE";
             this.ToObjectLUE.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.ToObjectLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -740,7 +750,7 @@
             this.ToObjectLUE.Properties.AppearanceDropDown.Options.UseFont = true;
             this.ToObjectLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.ToObjectLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.ToObjectLUE.Properties.DropDownRows = 15;
             this.ToObjectLUE.Properties.NullText = "не обрано";
             this.ToObjectLUE.Properties.NullValuePrompt = "не обрано";
@@ -748,15 +758,16 @@
             this.ToObjectLUE.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.ToObjectLUE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.ToObjectLUE.Properties.EditValueChanged += new System.EventHandler(this.ToObjectLUE_Properties_EditValueChanged);
-            this.ToObjectLUE.Size = new System.Drawing.Size(225, 26);
+            this.ToObjectLUE.Size = new System.Drawing.Size(255, 26);
             this.ToObjectLUE.TabIndex = 3;
             this.ToObjectLUE.TextChanged += new System.EventHandler(this.ToObjectLUE_TextChanged);
             this.ToObjectLUE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ToObjectLUE_KeyDown);
             // 
             // ContractorLUE
             // 
+            this.ContractorLUE.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContractorLUE.EnterMoveNextControl = true;
-            this.ContractorLUE.Location = new System.Drawing.Point(109, 67);
+            this.ContractorLUE.Location = new System.Drawing.Point(96, 67);
             this.ContractorLUE.Name = "ContractorLUE";
             this.ContractorLUE.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.ContractorLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -765,21 +776,22 @@
             this.ContractorLUE.Properties.AppearanceDropDown.Options.UseFont = true;
             this.ContractorLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.ContractorLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.ContractorLUE.Properties.DropDownRows = 15;
             this.ContractorLUE.Properties.NullText = "не обрано";
             this.ContractorLUE.Properties.NullValuePrompt = "не обрано";
             this.ContractorLUE.Properties.NullValuePromptShowForEmptyValue = true;
             this.ContractorLUE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.ContractorLUE.Size = new System.Drawing.Size(225, 26);
+            this.ContractorLUE.Size = new System.Drawing.Size(255, 26);
             this.ContractorLUE.TabIndex = 2;
             this.ContractorLUE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ContractorLUE_KeyDown);
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(62, 156);
+            this.label6.Location = new System.Drawing.Point(47, 168);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 16);
             this.label6.TabIndex = 14;
@@ -787,9 +799,10 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(33, 129);
+            this.label5.Location = new System.Drawing.Point(18, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 16);
             this.label5.TabIndex = 13;
@@ -797,9 +810,10 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(32, 101);
+            this.label4.Location = new System.Drawing.Point(17, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 16);
             this.label4.TabIndex = 12;
@@ -807,9 +821,10 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(18, 74);
+            this.label3.Location = new System.Drawing.Point(3, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 11;
@@ -817,9 +832,10 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(51, 46);
+            this.label2.Location = new System.Drawing.Point(36, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 16);
             this.label2.TabIndex = 1;
@@ -827,9 +843,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(69, 20);
+            this.label1.Location = new System.Drawing.Point(54, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 16);
             this.label1.TabIndex = 0;
@@ -837,7 +854,8 @@
             // 
             // DocumentTypeLUE
             // 
-            this.DocumentTypeLUE.Location = new System.Drawing.Point(109, 10);
+            this.DocumentTypeLUE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentTypeLUE.Location = new System.Drawing.Point(96, 3);
             this.DocumentTypeLUE.Name = "DocumentTypeLUE";
             this.DocumentTypeLUE.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.DocumentTypeLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -846,30 +864,31 @@
             this.DocumentTypeLUE.Properties.AppearanceDropDown.Options.UseFont = true;
             this.DocumentTypeLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.DocumentTypeLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.DocumentTypeLUE.Properties.LookAndFeel.SkinName = "Money Twins";
             this.DocumentTypeLUE.Properties.NullText = "не обрано";
             this.DocumentTypeLUE.Properties.NullValuePrompt = "не обрано";
             this.DocumentTypeLUE.Properties.NullValuePromptShowForEmptyValue = true;
             this.DocumentTypeLUE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.DocumentTypeLUE.Properties.EditValueChanged += new System.EventHandler(this.DocumentTypeLUE_Properties_EditValueChanged);
-            this.DocumentTypeLUE.Size = new System.Drawing.Size(225, 26);
+            this.DocumentTypeLUE.Size = new System.Drawing.Size(255, 26);
             this.DocumentTypeLUE.TabIndex = 0;
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule3.ErrorText = "This value is not valid";
-            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.dxValidationProvider1.SetValidationRule(this.DocumentTypeLUE, conditionValidationRule3);
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "This value is not valid";
+            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.dxValidationProvider1.SetValidationRule(this.DocumentTypeLUE, conditionValidationRule1);
             this.DocumentTypeLUE.EditValueChanged += new System.EventHandler(this.DocumentTypeLUE_EditValueChanged);
             this.DocumentTypeLUE.TextChanged += new System.EventHandler(this.DocumentTypeLUE_TextChanged);
             this.DocumentTypeLUE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DocumentTypeLUE_KeyDown);
             // 
             // DescriptionTE
             // 
-            this.DescriptionTE.Location = new System.Drawing.Point(109, 208);
+            this.DescriptionTE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DescriptionTE.Location = new System.Drawing.Point(96, 227);
             this.DescriptionTE.Name = "DescriptionTE";
             this.DescriptionTE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DescriptionTE.Properties.Appearance.Options.UseFont = true;
-            this.DescriptionTE.Size = new System.Drawing.Size(225, 46);
+            this.DescriptionTE.Size = new System.Drawing.Size(255, 46);
             this.DescriptionTE.TabIndex = 7;
             // 
             // panel4
@@ -892,6 +911,15 @@
             this.groupControl1.Size = new System.Drawing.Size(664, 573);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Позиції";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.DetailsGV);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(2, 65);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(660, 463);
+            this.panel6.TabIndex = 21;
             // 
             // DetailsGV
             // 
@@ -937,6 +965,131 @@
             this.DetailsGV.Size = new System.Drawing.Size(660, 463);
             this.DetailsGV.TabIndex = 4;
             this.DetailsGV.VirtualMode = true;
+            // 
+            // DocumentDetailID
+            // 
+            this.DocumentDetailID.DataPropertyName = "ID";
+            this.DocumentDetailID.HeaderText = "ID";
+            this.DocumentDetailID.Name = "DocumentDetailID";
+            this.DocumentDetailID.Visible = false;
+            this.DocumentDetailID.Width = 51;
+            // 
+            // WareName
+            // 
+            this.WareName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.WareName.DataPropertyName = "WareName";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.WareName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.WareName.HeaderText = "Назва одиниці";
+            this.WareName.MinimumWidth = 100;
+            this.WareName.Name = "WareName";
+            // 
+            // Unit
+            // 
+            this.Unit.DataPropertyName = "Unit";
+            this.Unit.HeaderText = "Од.";
+            this.Unit.MinimumWidth = 30;
+            this.Unit.Name = "Unit";
+            this.Unit.Width = 61;
+            // 
+            // SecondaryUnit
+            // 
+            this.SecondaryUnit.DataPropertyName = "SecondaryUnit";
+            this.SecondaryUnit.HeaderText = "Вт. од.";
+            this.SecondaryUnit.MinimumWidth = 30;
+            this.SecondaryUnit.Name = "SecondaryUnit";
+            this.SecondaryUnit.Width = 58;
+            // 
+            // PriceForUnit
+            // 
+            this.PriceForUnit.DataPropertyName = "PriceForUnit";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.PriceForUnit.DefaultCellStyle = dataGridViewCellStyle4;
+            this.PriceForUnit.HeaderText = "Ціна за од.";
+            this.PriceForUnit.Name = "PriceForUnit";
+            this.PriceForUnit.Width = 85;
+            // 
+            // DiscountForUnit
+            // 
+            this.DiscountForUnit.DataPropertyName = "DiscountForUnit";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.DiscountForUnit.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DiscountForUnit.HeaderText = "Зн. за од.";
+            this.DiscountForUnit.Name = "DiscountForUnit";
+            this.DiscountForUnit.Width = 98;
+            // 
+            // EndPriceForUnit
+            // 
+            this.EndPriceForUnit.DataPropertyName = "EndPriceForUnit";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.EndPriceForUnit.DefaultCellStyle = dataGridViewCellStyle6;
+            this.EndPriceForUnit.HeaderText = "Ціна зі зн. за од.";
+            this.EndPriceForUnit.Name = "EndPriceForUnit";
+            this.EndPriceForUnit.Width = 121;
+            // 
+            // EndPrice
+            // 
+            this.EndPrice.DataPropertyName = "EndPrice";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.EndPrice.DefaultCellStyle = dataGridViewCellStyle7;
+            this.EndPrice.HeaderText = "Кінцева ціна";
+            this.EndPrice.Name = "EndPrice";
+            this.EndPrice.Width = 115;
+            // 
+            // CurrencyName
+            // 
+            this.CurrencyName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.CurrencyName.DataPropertyName = "CurrencyName";
+            this.CurrencyName.HeaderText = "Вал.";
+            this.CurrencyName.Name = "CurrencyName";
+            this.CurrencyName.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.AutoSize = true;
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.tableLayoutPanel2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(2, 528);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(660, 43);
+            this.panel3.TabIndex = 20;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 8;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.label7, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.DurationL, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label19, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.DocumentSumaL, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.PaymentSumaL, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label9, 3, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(660, 43);
+            this.tableLayoutPanel2.TabIndex = 5;
             // 
             // panel1
             // 
@@ -1109,159 +1262,59 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
-            // DocumentDetailID
+            // tableLayoutPanel4
             // 
-            this.DocumentDetailID.DataPropertyName = "ID";
-            this.DocumentDetailID.HeaderText = "ID";
-            this.DocumentDetailID.Name = "DocumentDetailID";
-            this.DocumentDetailID.Visible = false;
-            this.DocumentDetailID.Width = 51;
-            // 
-            // WareName
-            // 
-            this.WareName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.WareName.DataPropertyName = "WareName";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.WareName.DefaultCellStyle = dataGridViewCellStyle3;
-            this.WareName.HeaderText = "Назва одиниці";
-            this.WareName.MinimumWidth = 100;
-            this.WareName.Name = "WareName";
-            // 
-            // Unit
-            // 
-            this.Unit.DataPropertyName = "Unit";
-            this.Unit.HeaderText = "Од.";
-            this.Unit.MinimumWidth = 30;
-            this.Unit.Name = "Unit";
-            this.Unit.Width = 61;
-            // 
-            // SecondaryUnit
-            // 
-            this.SecondaryUnit.DataPropertyName = "SecondaryUnit";
-            this.SecondaryUnit.HeaderText = "Вт. од.";
-            this.SecondaryUnit.MinimumWidth = 30;
-            this.SecondaryUnit.Name = "SecondaryUnit";
-            this.SecondaryUnit.Width = 58;
-            // 
-            // PriceForUnit
-            // 
-            this.PriceForUnit.DataPropertyName = "PriceForUnit";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.PriceForUnit.DefaultCellStyle = dataGridViewCellStyle4;
-            this.PriceForUnit.HeaderText = "Ціна за од.";
-            this.PriceForUnit.Name = "PriceForUnit";
-            this.PriceForUnit.Width = 85;
-            // 
-            // DiscountForUnit
-            // 
-            this.DiscountForUnit.DataPropertyName = "DiscountForUnit";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.DiscountForUnit.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DiscountForUnit.HeaderText = "Зн. за од.";
-            this.DiscountForUnit.Name = "DiscountForUnit";
-            this.DiscountForUnit.Width = 98;
-            // 
-            // EndPriceForUnit
-            // 
-            this.EndPriceForUnit.DataPropertyName = "EndPriceForUnit";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "N2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.EndPriceForUnit.DefaultCellStyle = dataGridViewCellStyle6;
-            this.EndPriceForUnit.HeaderText = "Ціна зі зн. за од.";
-            this.EndPriceForUnit.Name = "EndPriceForUnit";
-            this.EndPriceForUnit.Width = 121;
-            // 
-            // EndPrice
-            // 
-            this.EndPrice.DataPropertyName = "EndPrice";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle7.Format = "N2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.EndPrice.DefaultCellStyle = dataGridViewCellStyle7;
-            this.EndPrice.HeaderText = "Кінцева ціна";
-            this.EndPrice.Name = "EndPrice";
-            this.EndPrice.Width = 115;
-            // 
-            // CurrencyName
-            // 
-            this.CurrencyName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.CurrencyName.DataPropertyName = "CurrencyName";
-            this.CurrencyName.HeaderText = "Вал.";
-            this.CurrencyName.Name = "CurrencyName";
-            this.CurrencyName.Visible = false;
-            this.CurrencyName.Width = 68;
-            // 
-            // panel3
-            // 
-            this.panel3.AutoSize = true;
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Controls.Add(this.tableLayoutPanel2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(2, 528);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(660, 43);
-            this.panel3.TabIndex = 20;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.DetailsGV);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(2, 65);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(660, 463);
-            this.panel6.TabIndex = 21;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 8;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.label7, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.DurationL, 6, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label19, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.DocumentSumaL, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.PaymentSumaL, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label9, 3, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(660, 43);
-            this.tableLayoutPanel2.TabIndex = 5;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 5;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.CancelBt, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.SaveBt, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.AddPaymentCB, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1044, 81);
-            this.tableLayoutPanel3.TabIndex = 20;
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.RemoveEmployeeBt, 2, 10);
+            this.tableLayoutPanel4.Controls.Add(this.AddressTE, 1, 11);
+            this.tableLayoutPanel4.Controls.Add(this.AddObject2Bt, 2, 4);
+            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.AddObjectBt, 2, 3);
+            this.tableLayoutPanel4.Controls.Add(this.label15, 0, 11);
+            this.tableLayoutPanel4.Controls.Add(this.AbbContractorBt, 2, 2);
+            this.tableLayoutPanel4.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.label12, 0, 10);
+            this.tableLayoutPanel4.Controls.Add(this.EmployeesLB, 1, 10);
+            this.tableLayoutPanel4.Controls.Add(this.TeamsLUE, 1, 8);
+            this.tableLayoutPanel4.Controls.Add(this.EmployeesLUE, 1, 9);
+            this.tableLayoutPanel4.Controls.Add(this.label10, 0, 9);
+            this.tableLayoutPanel4.Controls.Add(this.label13, 0, 8);
+            this.tableLayoutPanel4.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.label5, 0, 4);
+            this.tableLayoutPanel4.Controls.Add(this.DocumentTypeLUE, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.NumberTE, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label8, 0, 7);
+            this.tableLayoutPanel4.Controls.Add(this.CurrencyLUE, 1, 6);
+            this.tableLayoutPanel4.Controls.Add(this.ContractorLUE, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.ToObjectLUE, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.FromObjectLUE, 1, 4);
+            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 5);
+            this.tableLayoutPanel4.Controls.Add(this.DateDE, 1, 5);
+            this.tableLayoutPanel4.Controls.Add(this.label11, 0, 6);
+            this.tableLayoutPanel4.Controls.Add(this.DescriptionTE, 1, 7);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 12;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(379, 427);
+            this.tableLayoutPanel4.TabIndex = 5;
             // 
             // DocumentData
             // 
@@ -1280,6 +1333,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AddPaymentCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
@@ -1307,7 +1361,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DetailsGV)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -1318,11 +1376,8 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1416,6 +1471,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
 
     }
 }

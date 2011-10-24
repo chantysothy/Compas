@@ -30,6 +30,7 @@ namespace Compas.Logic.Wares
         private decimal? secondaryUnitQuantity;
         private List<WareCode> wareCodes;
         private decimal? timeLimit;
+        private string wareCode = "";
 
         public int ID
         { get { return id; } set { id = value; } }
@@ -57,6 +58,12 @@ namespace Compas.Logic.Wares
         {
             get { return wareCodes; }
             set { wareCodes = value; }
+        }
+
+        public string WareCode
+        {
+            get { return wareCode; }
+            set { wareCode = value; }
         }
 
         public decimal? TimeLimit

@@ -167,7 +167,7 @@ namespace Compas.UC
             {
                 List<WareView> viewList = new List<WareView>();
                 if (WareCodeTE.Text.Length > 0)
-                    viewList = view.Where(a => a.WareCodesStringForSearch.StartsWith("<" + WareCodeTE.Text))
+                    viewList = view.Where(a => a.WareCode.StartsWith(WareCodeTE.Text))
                         .ToList();
                 else
                     viewList = view.ToList();
@@ -206,32 +206,34 @@ namespace Compas.UC
                 categoryId =Convert.ToInt32(WareCategoriesLUE.EditValue);
             if(UnitLUE.EditValue != null)
                 unitId =Convert.ToInt32(UnitLUE.EditValue);
-            
-            var waresList = wares.GetAll("", categoryId, manufacturerId, unitId).Select(a => new
-            {
-                a.ID,
-                Name = a.Name,
-                UnitName = a.WareUnit != null ? a.WareUnit.Name : "",
-                ManufacturerName = a.WareManufacturer != null ? a.WareManufacturer.Name : "",
-                CategoryName = a.WareCategory != null ? a.WareCategory.Name : "",
-                SecondaryUnitID = a.SecondaryUnitID != null ? a.SecondaryUnitID : null,
-                SecondaryUnitName = a.WareUnit1 != null ? a.WareUnit1.Name : "",
-                SecondaryUnitQuantity = a.SecondaryUnitQuantity != null ? a.SecondaryUnitQuantity : null,
-                a.WareCodes
-            });//.OrderBy(a => a.CategoryName).ThenBy(a=> a.Name).ToList();
+
+            var waresList = wares.GetAllView("", categoryId, manufacturerId, unitId);
+            //var waresList = wares.GetAll("", categoryId, manufacturerId, unitId).Select(a => new
+            //{
+            //    a.ID,
+            //    Name = a.Name,
+            //    UnitName = a.WareUnit != null ? a.WareUnit.Name : "",
+            //    ManufacturerName = a.WareManufacturer != null ? a.WareManufacturer.Name : "",
+            //    CategoryName = a.WareCategory != null ? a.WareCategory.Name : "",
+            //    SecondaryUnitID = a.SecondaryUnitID != null ? a.SecondaryUnitID : null,
+            //    SecondaryUnitName = a.WareUnit1 != null ? a.WareUnit1.Name : "",
+            //    SecondaryUnitQuantity = a.SecondaryUnitQuantity != null ? a.SecondaryUnitQuantity : null,
+            //    a.WareCodes
+            //});//.OrderBy(a => a.CategoryName).ThenBy(a=> a.Name).ToList();
             List<WareView> viewList = new List<WareView>();
             foreach (var a in waresList)
             {
                 WareView wv = new WareView();
                 wv.ID = a.ID;
                 wv.Name = a.Name;
-                wv.CategoryName = a.CategoryName;
+                wv.CategoryName = a.WareCategoryName;
                 wv.ManufacturerName = a.ManufacturerName;
                 wv.UnitName = a.UnitName;
                 wv.SecondaryUnitID = a.SecondaryUnitID;
                 wv.SecondaryUnitName = a.SecondaryUnitName;
                 wv.SecondaryUnitQuantity = a.SecondaryUnitQuantity;
-                wv.WareCodes = a.WareCodes.ToList();
+                wv.WareCode = a.WareCode == null ? "": a.WareCode;
+                //wv.WareCodes = a.WareCodes.ToList();
                 viewList.Add(wv);
             }
 
@@ -244,7 +246,7 @@ namespace Compas.UC
             WaresLUE.Properties.DataSource = view;
             WaresLUE.Properties.ValueMember = "ID";
             WaresLUE.Properties.DisplayMember = "Name";
-            WaresLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("WareCodesString", 0, "Код"));
+            WaresLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("WareCode", 0, "Код"));
             WaresLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", 0, "Назва"));
             WaresLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ManufacturerName", 0, "Виробник"));
             WaresLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("UnitName", 0, "Осн. од. вим."));
@@ -314,11 +316,15 @@ namespace Compas.UC
         public void Fill()
         {
             manager = new ContextManager();
+            CompasLogger.Add(String.Format("UniversalFilter FillFilters"), CompasLogger.Level.Info);
             FillFilters();
+            CompasLogger.Add(String.Format("UniversalFilter FillCurrencies"), CompasLogger.Level.Info);
             FillCurrencies();
+            CompasLogger.Add(String.Format("UniversalFilter FillWares"), CompasLogger.Level.Info);
             FillWares();
-
+            CompasLogger.Add(String.Format("UniversalFilter FillStates"), CompasLogger.Level.Info);
             FillStates();
+            CompasLogger.Add(String.Format("UniversalFilter End"), CompasLogger.Level.Info);
         }
 
 
