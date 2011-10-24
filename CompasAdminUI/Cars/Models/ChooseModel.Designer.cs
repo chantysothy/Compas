@@ -48,6 +48,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.AddBrandBt = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ModelsDataGV)).BeginInit();
@@ -60,14 +61,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.BrandsDataGV)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // CancelBt
             // 
+            this.CancelBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CancelBt.Image = global::Compas.AdminUI.Properties.Resources.button_cancel__1_;
-            this.CancelBt.Location = new System.Drawing.Point(363, 16);
+            this.CancelBt.Location = new System.Drawing.Point(435, 3);
             this.CancelBt.Name = "CancelBt";
-            this.CancelBt.Size = new System.Drawing.Size(150, 50);
+            this.CancelBt.Size = new System.Drawing.Size(200, 70);
             this.CancelBt.TabIndex = 17;
             this.CancelBt.Text = "Відмінити";
             this.CancelBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -76,10 +79,11 @@
             // 
             // SaveBt
             // 
+            this.SaveBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SaveBt.Image = global::Compas.AdminUI.Properties.Resources.button_ok__1_;
-            this.SaveBt.Location = new System.Drawing.Point(161, 16);
+            this.SaveBt.Location = new System.Drawing.Point(229, 3);
             this.SaveBt.Name = "SaveBt";
-            this.SaveBt.Size = new System.Drawing.Size(150, 50);
+            this.SaveBt.Size = new System.Drawing.Size(200, 70);
             this.SaveBt.TabIndex = 16;
             this.SaveBt.Text = "Зберегти";
             this.SaveBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -106,12 +110,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.CancelBt);
-            this.panel1.Controls.Add(this.SaveBt);
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 358);
+            this.panel1.Location = new System.Drawing.Point(0, 356);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(864, 78);
+            this.panel1.Size = new System.Drawing.Size(864, 80);
             this.panel1.TabIndex = 35;
             // 
             // groupBox2
@@ -122,7 +125,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(458, 358);
+            this.groupBox2.Size = new System.Drawing.Size(458, 356);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Модель";
@@ -144,7 +147,7 @@
             this.ModelsDataGV.ReadOnly = true;
             this.ModelsDataGV.RowTemplate.Height = 100;
             this.ModelsDataGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ModelsDataGV.Size = new System.Drawing.Size(402, 333);
+            this.ModelsDataGV.Size = new System.Drawing.Size(407, 331);
             this.ModelsDataGV.TabIndex = 13;
             this.ModelsDataGV.VirtualMode = true;
             // 
@@ -179,9 +182,9 @@
             // 
             this.panel5.Controls.Add(this.AddModelBt);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(405, 22);
+            this.panel5.Location = new System.Drawing.Point(410, 22);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(50, 333);
+            this.panel5.Size = new System.Drawing.Size(45, 331);
             this.panel5.TabIndex = 0;
             // 
             // splitContainer1
@@ -197,7 +200,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(864, 358);
+            this.splitContainer1.Size = new System.Drawing.Size(864, 356);
             this.splitContainer1.SplitterDistance = 402;
             this.splitContainer1.TabIndex = 39;
             // 
@@ -209,7 +212,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(402, 358);
+            this.groupBox1.Size = new System.Drawing.Size(402, 356);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Марка";
@@ -231,7 +234,7 @@
             this.BrandsDataGV.ReadOnly = true;
             this.BrandsDataGV.RowTemplate.Height = 60;
             this.BrandsDataGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BrandsDataGV.Size = new System.Drawing.Size(346, 333);
+            this.BrandsDataGV.Size = new System.Drawing.Size(351, 331);
             this.BrandsDataGV.TabIndex = 13;
             this.BrandsDataGV.VirtualMode = true;
             this.BrandsDataGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BrandsDataGV_CellClick);
@@ -271,9 +274,9 @@
             // 
             this.panel4.Controls.Add(this.AddBrandBt);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(349, 22);
+            this.panel4.Location = new System.Drawing.Point(354, 22);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(50, 333);
+            this.panel4.Size = new System.Drawing.Size(45, 331);
             this.panel4.TabIndex = 0;
             // 
             // AddBrandBt
@@ -296,17 +299,34 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(864, 358);
+            this.panel3.Size = new System.Drawing.Size(864, 356);
             this.panel3.TabIndex = 41;
             // 
-            // CarData
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.CancelBt, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.SaveBt, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(864, 80);
+            this.tableLayoutPanel1.TabIndex = 18;
+            // 
+            // ChooseModel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 436);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Name = "CarData";
+            this.Name = "ChooseModel";
             this.Text = "Дані автомобіля";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EnterpriseData_FormClosed);
@@ -322,6 +342,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BrandsDataGV)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -348,5 +369,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ModelID;
         private System.Windows.Forms.DataGridViewImageColumn ModelImage;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
