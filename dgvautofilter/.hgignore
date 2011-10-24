@@ -1,0 +1,9 @@
+syntax:glob
+Bin/*
+bin/*
+obj/*
+*.cache
+*.user
+*.Cache
+*.suo
+*.svn*/*

@@ -1,0 +1,99 @@
+DataGridView Extension Freeware Software License Agreement
+
+ This End-User License Agreement ("EULA") is a legal agreement between you ("you") and CompletIT 
+for the software product DataGridView Extension ("Software"). By installing, copying, or otherwise 
+using the Software, you agree to be bound by the terms of this EULA. The Software is protected by 
+copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. 
+The Software is licensed, not sold, and ALL SOFTWARE IS PROVIDED "AS IS."
+
+
+Agreement
+
+ By using our software products you are automatically agreeing to and show that you have read and 
+understood the terms and conditions contained within this Freeware Software License Agreement. This 
+Freeware Software License Agreement is then effective while you use and continue to make use of these 
+software products. If you do not agree with our Freeware Software License Agreement you must not use 
+our software products - this Freeware Software License Agreement will then not apply to you. This 
+Freeware Software License Agreement is subject to change without notice.
+
+
+Freeware License Rights
+
+ DataGridView Extension is provided free of charge. Occasionally the copyright holder may post a request 
+for a donation in support of this software. This type of request does not change the classification of this 
+software as freeware. Freeware software may be used as many times as you like, for as long as you like. 
+You may integrate in other applications, copy and distribute copies of this program provided that you 
+keep all copyright notices and disclaimers of warranty intact. You must not charge money or fees for the 
+software product to anyone. You may not modify or extend the freeware to compete with us or by doing 
+so help third parties to compete with us, be it for free or being paid. The copyright holder reserves the 
+right to reclassify this software as a non-freeware product at a later date (i.e. shareware, licensed royalty 
+software, or public domain). Doing so will not modify the license agreement of previously distributed 
+executables.
+
+You are allowed to incorporate the Software into proprietary programs.
+
+
+Disclaimer of warranty on software
+
+ You expressly acknowledge and agree that use of the software is at your sole risk. The software is 
+provided "as is" and without warranty of any kind and CompletIT expressly disclaims all warranties, 
+express or implied, including, but not limited to, the implied warranties of merchantability and fitness for 
+a particular purpose. CompletIT does not warrant that the functions contained in the software will meet 
+your requirements, or that the operation of the software will be uninterrupted or error-free, or that defects 
+in the software will be corrected. furthermore, CompletIT does not warrant or make any representations 
+regarding the use or the results of the use of the software or related documentation in terms of their 
+correctness, accuracy, reliability, or otherwise. No oral or written information or advice given by 
+CompletIT or an authorized representative of CompletIT's shall create a warranty or in any way increase 
+the scope of this warranty. Should the software prove defective, you (and not CompletIT or authorized 
+representatives of CompletIT’s) assume the entire cost of all necessary servicing, repair or correction. 
+Some jurisdictions do not allow the exclusion of implied warranties, so the above exclusion may not 
+apply to you. The entire risk arising out of use or performance of the software remains with you.
+
+
+Limitation of Liability
+
+ Under no circumstances, including negligence, shall CompletIT or its suppliers be liable for any 
+incidental, special, indirect or consequential damages (including, without limitation, damages for loss of 
+business profits, business interruption, loss of business information, or any other pecuniary loss) arising 
+out of or relating to this license, even if CompletIT has been advised of the possibility of such damages. 
+Some jurisdictions do not allow the limitation of incidental or consequential damages so this limitation 
+may not apply to you. In no event will any copyright holder be liable to you for damages, including any 
+general, special, incidental or consequential damages arising out of the use or inability to use the program 
+(including but not limited to loss of data or data being rendered inaccurate or losses sustained by you or 
+third parties or a failure of the program to operate with any other programs). The entire risk arising out of 
+use or performance of the software remains with you.
+Technical Support
+Technical support may be provided via e-mail and/or website postings. While every effort is made to 
+provided timely technical support no guarantees whatsoever are implied that technical support will be 
+provided or that technical support, when provided, will be accurate. The Software is basically 
+unsupported and supplied on an as-is basis unless you have obtained a specific maintenance contract 
+agreement with CompletIT.
+Code distribution 
+You may not reverse engineer, decompile or disassemble the Software except and only to the extent that 
+such activity is expressly permitted by applicable law notwithstanding this limitation or unless given 
+expressed permission.
+
+
+Copyright
+
+ All right, title and interest in and to the Software (including the copyrights in the Software and including, 
+but not limited to, any images, photographs, animations, video, audio, music, text, and "applets" 
+incorporated into the Software), the accompanying printed materials (if any), and any copies of the 
+Software are owned by CompletIT. The Software is protected by copyright laws and international treaty 
+provisions. Except as permitted by applicable law and this License, you may not modify, rent, lease, loan, 
+sublicense, or create derivative works from the Software.
+Any company names, logos, trademarks and product names mentioned or shown on associated website(s) 
+or in software products may be copyright, trademarked or registered trademarked by their respective 
+owners.
+
+
+Miscellaneous
+
+ If for any reason a court of competent jurisdiction finds any provision, or portion of this EULA, to be 
+unenforceable, the remainder of this EULA shall continue in full force and effect. This EULA constitutes 
+the entire agreement between the parties with respect to the use of the Software and supersedes all prior or 
+contemporaneous understandings regarding such subject matter. No amendment to or modification of this 
+EULA will be binding unless in writing and signed by CompletIT.
+
+Revision Date 10 August 2007
+© 2007 CompletIT Ltd. All rights reserved.

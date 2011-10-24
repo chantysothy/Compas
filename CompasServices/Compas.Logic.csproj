@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F8A89D5-0177-4582-AB5F-089CB4D85A82}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Compas.Logic</RootNamespace>
+    <AssemblyName>Compas.Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cards\CardTypesLogic.cs" />
+    <Compile Include="Cards\CardTypesDiscountsLogic.cs" />
+    <Compile Include="Cards\CardsLogic.cs" />
+    <Compile Include="Cards\CardBalanceOperationsLogic.cs" />
+    <Compile Include="CarWash\CWContractorCarsLogic.cs" />
+    <Compile Include="CarWash\CWCategoriesLogic.cs" />
+    <Compile Include="CarWash\CWCarsLogic.cs" />
+    <Compile Include="CarWash\CWCarBrandsLogic.cs" />
+    <Compile Include="CarWash\CWCarModelsLogic.cs" />
+    <Compile Include="Common\StatesOfDocumentsLogic.cs" />
+    <Compile Include="Common\CurrenciesLogic.cs" />
+    <Compile Include="Common\EnterprisesLogic.cs" />
+    <Compile Include="Security\SecurityInstallationsLogic.cs" />
+    <Compile Include="Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\InstallationIdentifyLogic.cs" />
+    <Compile Include="Configuration\ParametersLogic.cs" />
+    <Compile Include="Configuration\ModesLogic.cs" />
+    <Compile Include="Configuration\ConfigurationParametersLogic.cs" />
+    <Compile Include="ContextManager.cs" />
+    <Compile Include="Contractors\ContractorTypesLogic.cs" />
+    <Compile Include="Contractors\ContractorsLogic.cs" />
+    <Compile Include="Documents\DocumentStatesLogic.cs" />
+    <Compile Include="Documents\DocumentCarsLogic.cs" />
+    <Compile Include="Documents\DocumentPaymentTypesLogic.cs" />
+    <Compile Include="Documents\DocumentStaffDetailsLogic.cs" />
+    <Compile Include="Documents\DocumentPaymentsLogic.cs" />
+    <Compile Include="Documents\DocumentDetailsLogic.cs" />
+    <Compile Include="Documents\DocumentsLogic.cs" />
+    <Compile Include="Documents\DocumentTypesLogic.cs" />
+    <Compile Include="GenericInterface.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ReportsLogic.cs" />
+    <Compile Include="Security\CompasHash.cs" />
+    <Compile Include="Security\CompasIdentity.cs" />
+    <Compile Include="Security\CompasPrincipal.cs" />
+    <Compile Include="Security\CompasSecurityContext.cs" />
+    <Compile Include="Security\SecurityUserRolesLogic.cs" />
+    <Compile Include="Security\SecurityActionsLogic.cs" />
+    <Compile Include="Security\SecurityCategoriesLogic.cs" />
+    <Compile Include="Security\SecurityRoleActionsLogic.cs" />
+    <Compile Include="Security\SecurityRolesLogic.cs" />
+    <Compile Include="Security\SecurityUsersLogic.cs" />
+    <Compile Include="Staff\StaffEmployeeSalariesLogic.cs" />
+    <Compile Include="Staff\StaffShedulerEmployeesLogic.cs" />
+    <Compile Include="Staff\StaffShedulersLogic.cs" />
+    <Compile Include="Staff\StaffEmployeePositionsLogic.cs" />
+    <Compile Include="Staff\StaffPositions.cs" />
+    <Compile Include="Staff\StaffWorkPlacesLogic.cs" />
+    <Compile Include="Staff\StaffShiftsLogic.cs" />
+    <Compile Include="Staff\StaffEmployeeLogic.cs" />
+    <Compile Include="Staff\StaffTeamsLogic.cs" />
+    <Compile Include="Staff\StaffStructureObjectsLogic.cs" />
+    <Compile Include="Wares\WareTimeLimitsLogic.cs" />
+    <Compile Include="Wares\WareComponentsLogic.cs" />
+    <Compile Include="Wares\WareRemainsLogic.cs" />
+    <Compile Include="Wares\WareDiscountRulesLogic.cs" />
+    <Compile Include="Wares\WareDiscountsLogic.cs" />
+    <Compile Include="Wares\WareDiscountTypesLogic.cs" />
+    <Compile Include="Wares\WareCodesLogic.cs" />
+    <Compile Include="Wares\WareExtrasLogic.cs" />
+    <Compile Include="Wares\WarePriceGroupsLogic.cs" />
+    <Compile Include="Wares\WarePricesLogic.cs" />
+    <Compile Include="Wares\WaresLogic.cs" />
+    <Compile Include="Wares\WareUnitsLogic.cs" />
+    <Compile Include="Wares\WareCategoriesLogic.cs" />
+    <Compile Include="Wares\WareManufacturersLogic.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Compas.Helpers\Compas.Helpers.csproj">
+      <Project>{EA8AAECB-6E4C-469A-903C-E14DB2139F69}</Project>
+      <Name>Compas.Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CompasDataContext\Compas.Model.csproj">
+      <Project>{A910D535-6ADA-4F58-93A2-F7B9BDC2E3FD}</Project>
+      <Name>Compas.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Security\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

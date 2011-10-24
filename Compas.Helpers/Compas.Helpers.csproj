@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA8AAECB-6E4C-469A-903C-E14DB2139F69}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Compas.Helpers</RootNamespace>
+    <AssemblyName>Compas.Helpers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataGridViewExtension">
+      <HintPath>..\CompasAdminUI\DataGridViewExtensions\DataGridViewExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="DataGridViewExtension.XmlSerializers">
+      <HintPath>..\CompasAdminUI\DataGridViewExtensions\DataGridViewExtension.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="DGVEExcelExporting">
+      <HintPath>..\CompasAdminUI\DataGridViewExtensions\DGVEExcelExporting.dll</HintPath>
+    </Reference>
+    <Reference Include="DGVEHtmlExporting">
+      <HintPath>..\CompasAdminUI\DataGridViewExtensions\DGVEHtmlExporting.dll</HintPath>
+    </Reference>
+    <Reference Include="DGVEPdfExporting">
+      <HintPath>..\CompasAdminUI\DataGridViewExtensions\DGVEPdfExporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\Development\C#\ExportToExcel\NPOI 1.2.4 binary\bin\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL" />
+    <Reference Include="NPOI">
+      <HintPath>..\..\..\Development\C#\ExportToExcel\NPOI 1.2.4 binary\bin\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigDataTypeConverter.cs" />
+    <Compile Include="DataGridExport.cs" />
+    <Compile Include="Crypto.cs" />
+    <Compile Include="ExcelHelper.cs" />
+    <Compile Include="ExcelWriter\Alignment.cs" />
+    <Compile Include="ExcelWriter\BIFF.cs" />
+    <Compile Include="ExcelWriter\Cell.cs" />
+    <Compile Include="ExcelWriter\CellInfo.cs" />
+    <Compile Include="ExcelWriter\ColumnInfo.cs" />
+    <Compile Include="ExcelWriter\ExcelColor.cs" />
+    <Compile Include="ExcelWriter\ExcelDocument.cs" />
+    <Compile Include="ExcelWriter\ExcelWriter.cs" />
+    <Compile Include="ExcelWriter\FontInfo.cs" />
+    <Compile Include="ExcelWriter\FormatInfo.cs" />
+    <Compile Include="ImageOperations.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="GroupByGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CompasLogger.cs" />
+    <Compile Include="LINQ\GroupEnumerableExtensions.cs" />
+    <Compile Include="LINQ\GroupResult.cs" />
+    <Compile Include="ListToDataTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyComparer.cs" />
+    <Compile Include="SortableBindingList.cs" />
+    <Compile Include="ToolStripMenuConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ExcelNPOI\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
