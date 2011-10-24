@@ -120,8 +120,9 @@
     <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />
-    <Reference Include="Zen.Barcode.Core">
-      <HintPath>..\..\..\Development\C#\Barcodes\ZenBarcode2200Release\Zen.Barcode.Core.dll</HintPath>
+    <Reference Include="Zen.Barcode.Core, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\ZenBarcode2200Release\Zen.Barcode.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
