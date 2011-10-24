@@ -28,16 +28,24 @@ namespace Compas.CashRegisters
         /// </summary>
         public void Connect(CashRegisterModels Model, string Port, string LogicNumber, string UserId, string Password)
         {
-            model = Model;
-            switch (model)
+            try
             {
-                case CashRegisterModels.UNISYSTEM_MINI_FP:
-                    {
-                        miniFP = new CashRegisterMiniFP();
-                        miniFP.Connect(Port, LogicNumber, UserId, Password);
-                        break;
-                    }
+                model = Model;
+                switch (model)
+                {
+                    case CashRegisterModels.UNISYSTEM_MINI_FP:
+                        {
+                            miniFP = new CashRegisterMiniFP();
+                            miniFP.Connect(Port, LogicNumber, UserId, Password);
+                            break;
+                        }
+                }
             }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
         }
 
         /// <summary>
@@ -45,20 +53,27 @@ namespace Compas.CashRegisters
         /// </summary>
         public void StartShift()
         {
-            switch (model)
+            try
             {
-                case CashRegisterModels.UNISYSTEM_MINI_FP:
-                    {
-                        if (miniFP != null)
+                switch (model)
+                {
+                    case CashRegisterModels.UNISYSTEM_MINI_FP:
                         {
-                            miniFP.StartShift();
+                            if (miniFP != null)
+                            {
+                                miniFP.StartShift();
+                            }
+                            else
+                            {
+
+                            }
+                            break;
                         }
-                        else
-                        { 
-                            
-                        }
-                        break;
-                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
 
@@ -67,20 +82,27 @@ namespace Compas.CashRegisters
         /// </summary>
         public void EndShift()
         {
-            switch (model)
+            try
             {
-                case CashRegisterModels.UNISYSTEM_MINI_FP:
-                    {
-                        if (miniFP != null)
+                switch (model)
+                {
+                    case CashRegisterModels.UNISYSTEM_MINI_FP:
                         {
-                            miniFP.EndShift();
-                        }
-                        else
-                        {
+                            if (miniFP != null)
+                            {
+                                miniFP.EndShift();
+                            }
+                            else
+                            {
 
+                            }
+                            break;
                         }
-                        break;
-                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
         /// <summary>
