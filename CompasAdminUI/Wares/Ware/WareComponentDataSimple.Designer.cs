@@ -104,7 +104,7 @@
             this.AddComponentBt.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.AddComponentBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddComponentBt.Image = global::Compas.AdminUI.Properties.Resources.button_ok__1_;
-            this.AddComponentBt.Location = new System.Drawing.Point(214, 3);
+            this.AddComponentBt.Location = new System.Drawing.Point(210, 3);
             this.AddComponentBt.Name = "AddComponentBt";
             this.AddComponentBt.Size = new System.Drawing.Size(203, 45);
             this.AddComponentBt.TabIndex = 82;
@@ -162,9 +162,9 @@
             this.WareNameL.ForeColor = System.Drawing.Color.White;
             this.WareNameL.Location = new System.Drawing.Point(52, 16);
             this.WareNameL.Name = "WareNameL";
-            this.WareNameL.Size = new System.Drawing.Size(60, 24);
+            this.WareNameL.Size = new System.Drawing.Size(116, 24);
             this.WareNameL.TabIndex = 1;
-            this.WareNameL.Text = "label4";
+            this.WareNameL.Text = "WareNameL";
             // 
             // panel1
             // 
@@ -262,7 +262,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.60189F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.39811F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 214F));
             this.tableLayoutPanel1.Controls.Add(this.AddComponentBt, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.UnitQuantityNUD, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
@@ -278,9 +278,9 @@
             this.UnitQuantityNUD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.UnitQuantityNUD.DecimalPlaces = 3;
             this.UnitQuantityNUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UnitQuantityNUD.Location = new System.Drawing.Point(95, 12);
+            this.UnitQuantityNUD.Location = new System.Drawing.Point(93, 12);
             this.UnitQuantityNUD.Name = "UnitQuantityNUD";
-            this.UnitQuantityNUD.Size = new System.Drawing.Size(113, 26);
+            this.UnitQuantityNUD.Size = new System.Drawing.Size(111, 26);
             this.UnitQuantityNUD.TabIndex = 83;
             // 
             // label1
@@ -288,7 +288,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(7, 15);
+            this.label1.Location = new System.Drawing.Point(5, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 84;
@@ -327,6 +327,7 @@
             // 
             this.wareSelectorUC1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wareSelectorUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.wareSelectorUC1.FontSize = 12F;
             this.wareSelectorUC1.Location = new System.Drawing.Point(0, 0);
             this.wareSelectorUC1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.wareSelectorUC1.Name = "wareSelectorUC1";

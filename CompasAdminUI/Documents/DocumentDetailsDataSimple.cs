@@ -30,77 +30,77 @@ namespace Compas.AdminUI.Documents
 
         SortableBindingList<WareView> view;
 
-        private void FillWares()
-        {
-            WaresLogic wares = new WaresLogic(manager);
+        //private void FillWares()
+        //{
+        //    WaresLogic wares = new WaresLogic(manager);
 
-            int? categoryId = null;
-            int? manufacturerId = null;
-            int? unitId = null;
-            //string name = wareFilterUC1.WareName;
-            categoryId = categoriesUC1.SelectedCategoryID;
+        //    int? categoryId = null;
+        //    int? manufacturerId = null;
+        //    int? unitId = null;
+        //    //string name = wareFilterUC1.WareName;
+        //    //categoryId = categoriesUC1.SelectedCategoryID;
            
-            BindingSource bs = new BindingSource();
+        //    BindingSource bs = new BindingSource();
 
 
 
-            var waresList =
-                mode == "new" ?
-                wares.GetAll("", categoryId, manufacturerId, unitId).Select(a => new
-                {
-                    a.ID,
-                    Name = a.Name,
-                    UnitName = a.WareUnit != null ? a.WareUnit.Name : "",
-                    ManufacturerName = a.WareManufacturer != null ? a.WareManufacturer.Name : "",
-                    CategoryName = a.WareCategory != null ? a.WareCategory.Name : "",
-                    SecondaryUnitID = a.SecondaryUnitID != null ? a.SecondaryUnitID : null,
-                    SecondaryUnitName = a.WareUnit1 != null ? a.WareUnit1.Name : "",
-                    SecondaryUnitQuantity = a.SecondaryUnitQuantity != null ? a.SecondaryUnitQuantity : null,
-                    a.WareCodes
-                }) :
-            wares.GetAllByWareID(DocumentDetail.WareID).Select(a => new
-            {
-                a.ID,
-                Name = a.Name,
-                UnitName = a.WareUnit != null ? a.WareUnit.Name : "",
-                ManufacturerName = a.WareManufacturer != null ? a.WareManufacturer.Name : "",
-                CategoryName = a.WareCategory != null ? a.WareCategory.Name : "",
-                SecondaryUnitID = a.SecondaryUnitID != null ? a.SecondaryUnitID : null,
-                SecondaryUnitName = a.WareUnit1 != null ? a.WareUnit1.Name : "",
-                SecondaryUnitQuantity = a.SecondaryUnitQuantity != null ? a.SecondaryUnitQuantity : null,
-                a.WareCodes
-            })
+        //    var waresList =
+        //        mode == "new" ?
+        //        wares.GetAll("", categoryId, manufacturerId, unitId).Select(a => new
+        //        {
+        //            a.ID,
+        //            Name = a.Name,
+        //            UnitName = a.WareUnit != null ? a.WareUnit.Name : "",
+        //            ManufacturerName = a.WareManufacturer != null ? a.WareManufacturer.Name : "",
+        //            CategoryName = a.WareCategory != null ? a.WareCategory.Name : "",
+        //            SecondaryUnitID = a.SecondaryUnitID != null ? a.SecondaryUnitID : null,
+        //            SecondaryUnitName = a.WareUnit1 != null ? a.WareUnit1.Name : "",
+        //            SecondaryUnitQuantity = a.SecondaryUnitQuantity != null ? a.SecondaryUnitQuantity : null,
+        //            a.WareCodes
+        //        }) :
+        //    wares.GetAllByWareID(DocumentDetail.WareID).Select(a => new
+        //    {
+        //        a.ID,
+        //        Name = a.Name,
+        //        UnitName = a.WareUnit != null ? a.WareUnit.Name : "",
+        //        ManufacturerName = a.WareManufacturer != null ? a.WareManufacturer.Name : "",
+        //        CategoryName = a.WareCategory != null ? a.WareCategory.Name : "",
+        //        SecondaryUnitID = a.SecondaryUnitID != null ? a.SecondaryUnitID : null,
+        //        SecondaryUnitName = a.WareUnit1 != null ? a.WareUnit1.Name : "",
+        //        SecondaryUnitQuantity = a.SecondaryUnitQuantity != null ? a.SecondaryUnitQuantity : null,
+        //        a.WareCodes
+        //    })
 
-            ;//.OrderBy(a => a.CategoryName).ThenBy(a=> a.Name).ToList();
-            List<WareView> viewList = new List<WareView>();
-            foreach (var a in waresList)
-            {
-                WareView wv = new WareView();
-                wv.ID = a.ID;
-                wv.Name = a.Name;
-                wv.CategoryName = a.CategoryName;
-                wv.ManufacturerName = a.ManufacturerName;
-                wv.UnitName = a.UnitName;
-                wv.SecondaryUnitID = a.SecondaryUnitID;
-                wv.SecondaryUnitName = a.SecondaryUnitName;
-                wv.SecondaryUnitQuantity = a.SecondaryUnitQuantity;
-                wv.WareCodes = a.WareCodes.ToList();
-                viewList.Add(wv);
-            }
+        //    ;//.OrderBy(a => a.CategoryName).ThenBy(a=> a.Name).ToList();
+        //    List<WareView> viewList = new List<WareView>();
+        //    foreach (var a in waresList)
+        //    {
+        //        WareView wv = new WareView();
+        //        wv.ID = a.ID;
+        //        wv.Name = a.Name;
+        //        wv.CategoryName = a.CategoryName;
+        //        wv.ManufacturerName = a.ManufacturerName;
+        //        wv.UnitName = a.UnitName;
+        //        wv.SecondaryUnitID = a.SecondaryUnitID;
+        //        wv.SecondaryUnitName = a.SecondaryUnitName;
+        //        wv.SecondaryUnitQuantity = a.SecondaryUnitQuantity;
+        //        wv.WareCodes = a.WareCodes.ToList();
+        //        viewList.Add(wv);
+        //    }
 
-            //BindingListView<WareView> view = new BindingListView<WareView>(viewList);
-            //bs.DataSource = view;
-            //bs.Sort = columnName;
+        //    //BindingListView<WareView> view = new BindingListView<WareView>(viewList);
+        //    //bs.DataSource = view;
+        //    //bs.Sort = columnName;
 
-            view = new SortableBindingList<WareView>(viewList);
+        //    view = new SortableBindingList<WareView>(viewList);
 
-            WaresGV.AutoGenerateColumns = false;
-            WaresGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            WaresGV.DataSource = view;
+        //    WaresGV.AutoGenerateColumns = false;
+        //    WaresGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+        //    WaresGV.DataSource = view;
 
             
 
-        }
+        //}
 
         private void FillSummaryPrice()
         {
@@ -115,9 +115,10 @@ namespace Compas.AdminUI.Documents
 
         private void FillPrices()
         {
-            if (WaresGV.SelectedRows.Count > 0)
+            if (wareSelectorUC1.WareID != null)
             {
-                int wareId = Convert.ToInt32(WaresGV.SelectedRows[0].Cells["WareID"].Value);
+
+                int wareId = Convert.ToInt32(/*WaresGV.SelectedRows[0].Cells["WareID"].Value*/wareSelectorUC1.WareID);
                 //int priceGroupId = Convert.ToInt32(PriceGroupsCBE.EditValue);
                 decimal discount = Convert.ToDecimal(DiscountForUnitNUD.Value);
                 decimal unitQuantity = Convert.ToDecimal(UnitQuantityNUD.Value);
@@ -129,8 +130,10 @@ namespace Compas.AdminUI.Documents
                 if (price != null)
                 {
                     UnitPriceNUD.Value = price.SalePriceForUnit;
-
-                   
+                }
+                else
+                {
+                    UnitPriceNUD.Value = 0;
                 }
                 
             }
@@ -147,8 +150,9 @@ namespace Compas.AdminUI.Documents
             Document = document;
             DocumentDetails = documentDetails;
             DocumentDetail = documentDetail;
-            categoriesUC1.Fill();
-            categoriesUC1.ExpandAll();
+            //categoriesUC1.Fill();
+            //categoriesUC1.ExpandAll();
+            wareSelectorUC1.Init("");
 
             ConfigurationParametersLogic config = new ConfigurationParametersLogic(manager);
             ConfigurationParameter param0 = config.Get(ParametersLogic.Parameter.DOCUMENTDETAILS_SHOW_SECONDARY_UNIT.ToString());
@@ -171,30 +175,10 @@ namespace Compas.AdminUI.Documents
 
         private void categoriesUC1_SelectedCategoryChanged(object sender, EventArgs e)
         {
-            FillWares();
+            ////FillWares();
         }
 
-        private void WaresUpBt_Click(object sender, EventArgs e)
-        {
-            if (WaresGV.FirstDisplayedScrollingRowIndex > 0)
-                WaresGV.FirstDisplayedScrollingRowIndex = WaresGV.FirstDisplayedScrollingRowIndex - 1;
-        }
-
-        private void WaresDownBt_Click(object sender, EventArgs e)
-        {
-            if(WaresGV.FirstDisplayedScrollingRowIndex < WaresGV.RowCount)
-                WaresGV.FirstDisplayedScrollingRowIndex = WaresGV.FirstDisplayedScrollingRowIndex + 1;
-        }
-
-        private void CategoriesUpBt_Click(object sender, EventArgs e)
-        {
-            categoriesUC1.ScrollUp();
-        }
-
-        private void CategoriesDownBt_Click(object sender, EventArgs e)
-        {
-            categoriesUC1.ScrollDown();
-        }
+        
 
         private void WaresGV_SelectionChanged(object sender, EventArgs e)
         {
@@ -230,9 +214,9 @@ namespace Compas.AdminUI.Documents
         private void SaveBt_Click(object sender, EventArgs e)
         {
             DocumentDetailsLogic details = new DocumentDetailsLogic(manager);
-            if (WaresGV.SelectedRows.Count > 0)
+            if (wareSelectorUC1.WareID != null)
             {
-                int wareId = (int)(WaresGV.SelectedRows[0].Cells["WareID"].Value);
+                int wareId = (int)(wareSelectorUC1.WareID);
                 decimal unitQuantity = Convert.ToDecimal(UnitQuantityNUD.Value);
                 decimal secondaryUnitQuantity = Convert.ToDecimal(SecondaryUnitQuantityNUD.Value);
                 decimal priceForUnit = Convert.ToDecimal(UnitPriceNUD.Value);
@@ -290,7 +274,7 @@ namespace Compas.AdminUI.Documents
         private void AddAndCloseBt_Click(object sender, EventArgs e)
         {
             DocumentDetailsLogic details = new DocumentDetailsLogic(manager);
-            int wareId = (int)(WaresGV.SelectedRows[0].Cells["WareID"].Value);
+            int wareId = (int)(wareSelectorUC1.WareID);
             decimal unitQuantity = Convert.ToDecimal(UnitQuantityNUD.Value);
             decimal secondaryUnitQuantity = Convert.ToDecimal(SecondaryUnitQuantityNUD.Value);
             decimal priceForUnit = Convert.ToDecimal(UnitPriceNUD.Value);
@@ -328,6 +312,12 @@ namespace Compas.AdminUI.Documents
             //manager.Save();
             MessageL.Text = "Додано";
             this.Close();
+        }
+
+        private void wareSelectorUC1_SelectedWareChanged(object sender, EventArgs e)
+        {
+            FillPrices();
+            FillSummaryPrice();
         }
     }
 }

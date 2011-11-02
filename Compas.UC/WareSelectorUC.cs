@@ -62,7 +62,7 @@ namespace Compas.UC
             {
                 fontSize = value;
                 categoriesUC2.Font = new Font(categoriesUC2.Font.Name, value);
-                WaresGV.RowsDefaultCellStyle.Font = new Font(categoriesUC2.Font.Name, value);
+                WaresGV.RowTemplate.DefaultCellStyle.Font = new Font(categoriesUC2.Font.Name, value);
             }
         }
         

@@ -79,7 +79,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 64);
+            this.panel1.Size = new System.Drawing.Size(342, 64);
             this.panel1.TabIndex = 0;
             this.panel1.Visible = false;
             // 
@@ -90,7 +90,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(552, 75);
+            this.panel8.Size = new System.Drawing.Size(452, 75);
             this.panel8.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -163,7 +163,7 @@
             this.WaresUpBt.Image = global::Compas.UC.Properties.Resources.navigate_up;
             this.WaresUpBt.Location = new System.Drawing.Point(0, 0);
             this.WaresUpBt.Name = "WaresUpBt";
-            this.WaresUpBt.Size = new System.Drawing.Size(552, 62);
+            this.WaresUpBt.Size = new System.Drawing.Size(452, 62);
             this.WaresUpBt.TabIndex = 0;
             this.WaresUpBt.UseVisualStyleBackColor = true;
             this.WaresUpBt.Click += new System.EventHandler(this.WaresUpBt_Click);
@@ -175,7 +175,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 75);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(552, 62);
+            this.panel7.Size = new System.Drawing.Size(452, 62);
             this.panel7.TabIndex = 4;
             // 
             // panel4
@@ -184,7 +184,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 126);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(242, 367);
+            this.panel4.Size = new System.Drawing.Size(342, 367);
             this.panel4.TabIndex = 3;
             // 
             // WaresDownBt
@@ -193,7 +193,7 @@
             this.WaresDownBt.Image = global::Compas.UC.Properties.Resources.navigate_down__1_;
             this.WaresDownBt.Location = new System.Drawing.Point(0, 0);
             this.WaresDownBt.Name = "WaresDownBt";
-            this.WaresDownBt.Size = new System.Drawing.Size(552, 62);
+            this.WaresDownBt.Size = new System.Drawing.Size(452, 62);
             this.WaresDownBt.TabIndex = 1;
             this.WaresDownBt.UseVisualStyleBackColor = true;
             this.WaresDownBt.Click += new System.EventHandler(this.WaresDownBt_Click);
@@ -204,7 +204,7 @@
             this.CategoriesDownBt.Image = global::Compas.UC.Properties.Resources.navigate_down__1_;
             this.CategoriesDownBt.Location = new System.Drawing.Point(0, 0);
             this.CategoriesDownBt.Name = "CategoriesDownBt";
-            this.CategoriesDownBt.Size = new System.Drawing.Size(242, 62);
+            this.CategoriesDownBt.Size = new System.Drawing.Size(342, 62);
             this.CategoriesDownBt.TabIndex = 2;
             this.CategoriesDownBt.UseVisualStyleBackColor = true;
             this.CategoriesDownBt.Click += new System.EventHandler(this.CategoriesDownBt_Click);
@@ -216,7 +216,7 @@
             this.CategoriesUpBt.Image = global::Compas.UC.Properties.Resources.navigate_up;
             this.CategoriesUpBt.Location = new System.Drawing.Point(0, 0);
             this.CategoriesUpBt.Name = "CategoriesUpBt";
-            this.CategoriesUpBt.Size = new System.Drawing.Size(242, 62);
+            this.CategoriesUpBt.Size = new System.Drawing.Size(342, 62);
             this.CategoriesUpBt.TabIndex = 1;
             this.CategoriesUpBt.UseVisualStyleBackColor = true;
             this.CategoriesUpBt.Click += new System.EventHandler(this.CategoriesUpBt_Click);
@@ -228,7 +228,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 493);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(242, 62);
+            this.panel3.Size = new System.Drawing.Size(342, 62);
             this.panel3.TabIndex = 2;
             // 
             // splitContainer1
@@ -248,7 +248,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(798, 555);
-            this.splitContainer1.SplitterDistance = 242;
+            this.splitContainer1.SplitterDistance = 342;
             this.splitContainer1.TabIndex = 1;
             // 
             // panel2
@@ -258,7 +258,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(242, 62);
+            this.panel2.Size = new System.Drawing.Size(342, 62);
             this.panel2.TabIndex = 1;
             // 
             // splitContainer2
@@ -278,7 +278,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.CancelBt);
             this.splitContainer2.Panel2Collapsed = true;
-            this.splitContainer2.Size = new System.Drawing.Size(552, 555);
+            this.splitContainer2.Size = new System.Drawing.Size(452, 555);
             this.splitContainer2.SplitterDistance = 356;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -288,7 +288,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 137);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(552, 356);
+            this.panel5.Size = new System.Drawing.Size(452, 356);
             this.panel5.TabIndex = 7;
             // 
             // WaresGV
@@ -310,7 +310,7 @@
             this.WaresGV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.WaresGV.RowTemplate.Height = 40;
             this.WaresGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.WaresGV.Size = new System.Drawing.Size(552, 356);
+            this.WaresGV.Size = new System.Drawing.Size(452, 356);
             this.WaresGV.TabIndex = 0;
             this.WaresGV.SelectionChanged += new System.EventHandler(this.WaresGV_SelectionChanged);
             // 
@@ -355,7 +355,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 493);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(552, 62);
+            this.panel6.Size = new System.Drawing.Size(452, 62);
             this.panel6.TabIndex = 6;
             // 
             // CancelBt
@@ -378,7 +378,7 @@
             this.categoriesUC2.Location = new System.Drawing.Point(0, 0);
             this.categoriesUC2.Margin = new System.Windows.Forms.Padding(6);
             this.categoriesUC2.Name = "categoriesUC2";
-            this.categoriesUC2.Size = new System.Drawing.Size(242, 367);
+            this.categoriesUC2.Size = new System.Drawing.Size(342, 367);
             this.categoriesUC2.TabIndex = 0;
             this.categoriesUC2.SelectedCategoryChanged += new System.EventHandler(this.categoriesUC2_SelectedCategoryChanged_1);
             // 
