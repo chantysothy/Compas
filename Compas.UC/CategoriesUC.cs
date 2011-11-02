@@ -123,7 +123,7 @@ namespace Compas.UC
 
         private void HandleSelectedCategoryChanged(object sender, EventArgs e)
         {
-            // we'll explain this in a minute
+            
             this.OnSelectedCategoryChanged(EventArgs.Empty);
         }
 

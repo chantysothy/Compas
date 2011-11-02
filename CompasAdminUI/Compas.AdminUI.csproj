@@ -709,6 +709,12 @@
     <Compile Include="Wares\Unit\UnitsList.Designer.cs">
       <DependentUpon>UnitsList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wares\Ware\WareComponentDataSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wares\Ware\WareComponentDataSimple.Designer.cs">
+      <DependentUpon>WareComponentDataSimple.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wares\Ware\NoWareFound.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -726,6 +732,12 @@
     </Compile>
     <Compile Include="Wares\Ware\WareData.Designer.cs">
       <DependentUpon>WareData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wares\Ware\WareMinQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wares\Ware\WareMinQuantity.Designer.cs">
+      <DependentUpon>WareMinQuantity.cs</DependentUpon>
     </Compile>
     <Compile Include="Wares\Ware\WaresList.cs">
       <SubType>Form</SubType>
@@ -1038,6 +1050,9 @@
     <EmbeddedResource Include="Wares\Unit\UnitsList.resx">
       <DependentUpon>UnitsList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Wares\Ware\WareComponentDataSimple.resx">
+      <DependentUpon>WareComponentDataSimple.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wares\Ware\NoWareFound.resx">
       <DependentUpon>NoWareFound.cs</DependentUpon>
     </EmbeddedResource>
@@ -1046,6 +1061,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Wares\Ware\WareData.resx">
       <DependentUpon>WareData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wares\Ware\WareMinQuantity.resx">
+      <DependentUpon>WareMinQuantity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wares\Ware\WaresList.resx">
       <DependentUpon>WaresList.cs</DependentUpon>
@@ -1465,6 +1483,9 @@
     <Content Include="DataGridViewExtensions\DGVEHtmlExporting.dll" />
     <Content Include="DataGridViewExtensions\DGVEPdfExporting.dll" />
     <Content Include="DataGridViewExtensions\LICENSE.txt" />
+    <None Include="Resources\quantity_capsule_3 %2824%29.png" />
+    <None Include="Resources\quantity_capsule_3.png" />
+    <None Include="Resources\quantity_capsule_4.png" />
     <None Include="Resources\money_add.png" />
     <None Include="Resources\Money1.png" />
     <None Include="Resources\cash2.png" />

@@ -29,15 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WaresList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.NewSB = new System.Windows.Forms.ToolStripButton();
-            this.EditSB = new System.Windows.Forms.ToolStripButton();
-            this.DeleteSB = new System.Windows.Forms.ToolStripButton();
-            this.PricesSB = new System.Windows.Forms.ToolStripButton();
-            this.ComponentsSB = new System.Windows.Forms.ToolStripButton();
             this.label2 = new System.Windows.Forms.Label();
             this.NameTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,8 +42,6 @@
             this.редагуватиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.видалитиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ціниToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -57,10 +50,6 @@
             this.categoriesFilterUC1 = new Compas.UC.CategoriesFilterUC();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.AddCategorySB = new System.Windows.Forms.ToolStripButton();
-            this.EditCategorySB = new System.Windows.Forms.ToolStripButton();
-            this.DeleteCategorySB = new System.Windows.Forms.ToolStripButton();
-            this.RefreshCategoriesSB = new System.Windows.Forms.ToolStripButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.ComponentsTV = new System.Windows.Forms.TreeView();
             this.DataGV = new System.Windows.Forms.DataGridView();
@@ -75,6 +64,18 @@
             this.TimeLimit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PricesC = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ComponentsC = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.AddCategorySB = new System.Windows.Forms.ToolStripButton();
+            this.EditCategorySB = new System.Windows.Forms.ToolStripButton();
+            this.DeleteCategorySB = new System.Windows.Forms.ToolStripButton();
+            this.RefreshCategoriesSB = new System.Windows.Forms.ToolStripButton();
+            this.NewSB = new System.Windows.Forms.ToolStripButton();
+            this.EditSB = new System.Windows.Forms.ToolStripButton();
+            this.DeleteSB = new System.Windows.Forms.ToolStripButton();
+            this.PricesSB = new System.Windows.Forms.ToolStripButton();
+            this.ComponentsSB = new System.Windows.Forms.ToolStripButton();
+            this.MinQuantitySB = new System.Windows.Forms.ToolStripButton();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.toolStrip1.SuspendLayout();
             this.DataGVContextMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -103,58 +104,14 @@
             this.EditSB,
             this.DeleteSB,
             this.PricesSB,
-            this.ComponentsSB});
+            this.ComponentsSB,
+            this.MinQuantitySB});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.toolStrip1.Size = new System.Drawing.Size(942, 39);
             this.toolStrip1.TabIndex = 13;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // NewSB
-            // 
-            this.NewSB.Image = global::Compas.AdminUI.Properties.Resources.add2_;
-            this.NewSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NewSB.Name = "NewSB";
-            this.NewSB.Size = new System.Drawing.Size(99, 36);
-            this.NewSB.Text = "Додати";
-            this.NewSB.Click += new System.EventHandler(this.NewSB_Click);
-            // 
-            // EditSB
-            // 
-            this.EditSB.Image = global::Compas.AdminUI.Properties.Resources.edit;
-            this.EditSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.EditSB.Name = "EditSB";
-            this.EditSB.Size = new System.Drawing.Size(126, 36);
-            this.EditSB.Text = "Редагувати";
-            this.EditSB.Click += new System.EventHandler(this.EditSB_Click);
-            // 
-            // DeleteSB
-            // 
-            this.DeleteSB.Image = global::Compas.AdminUI.Properties.Resources.delete;
-            this.DeleteSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.DeleteSB.Name = "DeleteSB";
-            this.DeleteSB.Size = new System.Drawing.Size(114, 36);
-            this.DeleteSB.Text = "Видалити";
-            this.DeleteSB.Click += new System.EventHandler(this.DeleteSB_Click);
-            // 
-            // PricesSB
-            // 
-            this.PricesSB.Image = ((System.Drawing.Image)(resources.GetObject("PricesSB.Image")));
-            this.PricesSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PricesSB.Name = "PricesSB";
-            this.PricesSB.Size = new System.Drawing.Size(80, 36);
-            this.PricesSB.Text = "Ціни";
-            this.PricesSB.Click += new System.EventHandler(this.PricesSB_Click);
-            // 
-            // ComponentsSB
-            // 
-            this.ComponentsSB.Image = global::Compas.AdminUI.Properties.Resources.puzzlered32;
-            this.ComponentsSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ComponentsSB.Name = "ComponentsSB";
-            this.ComponentsSB.Size = new System.Drawing.Size(135, 36);
-            this.ComponentsSB.Text = "Компоненти";
-            this.ComponentsSB.Click += new System.EventHandler(this.ComponentsSB_Click);
             // 
             // label2
             // 
@@ -228,22 +185,6 @@
             this.ціниToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.ціниToolStripMenuItem.Text = "Ціни";
             this.ціниToolStripMenuItem.Click += new System.EventHandler(this.PricesSB_Click);
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::Compas.AdminUI.Properties.Resources.file_edit;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.HeaderText = "";
-            this.dataGridViewImageColumn2.Image = global::Compas.AdminUI.Properties.Resources.file_delete;
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // splitContainerControl1
             // 
@@ -346,46 +287,6 @@
             this.toolStrip2.TabIndex = 15;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // AddCategorySB
-            // 
-            this.AddCategorySB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.AddCategorySB.Image = global::Compas.AdminUI.Properties.Resources.add2_;
-            this.AddCategorySB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.AddCategorySB.Name = "AddCategorySB";
-            this.AddCategorySB.Size = new System.Drawing.Size(23, 22);
-            this.AddCategorySB.Text = "Додати";
-            this.AddCategorySB.Click += new System.EventHandler(this.AddCategorySB_Click);
-            // 
-            // EditCategorySB
-            // 
-            this.EditCategorySB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.EditCategorySB.Image = global::Compas.AdminUI.Properties.Resources.edit;
-            this.EditCategorySB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.EditCategorySB.Name = "EditCategorySB";
-            this.EditCategorySB.Size = new System.Drawing.Size(23, 22);
-            this.EditCategorySB.Text = "Редагувати";
-            this.EditCategorySB.Click += new System.EventHandler(this.EditCategorySB_Click);
-            // 
-            // DeleteCategorySB
-            // 
-            this.DeleteCategorySB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.DeleteCategorySB.Image = global::Compas.AdminUI.Properties.Resources.delete;
-            this.DeleteCategorySB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.DeleteCategorySB.Name = "DeleteCategorySB";
-            this.DeleteCategorySB.Size = new System.Drawing.Size(23, 22);
-            this.DeleteCategorySB.Text = "Видалити";
-            this.DeleteCategorySB.Click += new System.EventHandler(this.DeleteCategorySB_Click);
-            // 
-            // RefreshCategoriesSB
-            // 
-            this.RefreshCategoriesSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.RefreshCategoriesSB.Image = global::Compas.AdminUI.Properties.Resources.refresh_blue;
-            this.RefreshCategoriesSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.RefreshCategoriesSB.Name = "RefreshCategoriesSB";
-            this.RefreshCategoriesSB.Size = new System.Drawing.Size(23, 22);
-            this.RefreshCategoriesSB.Text = "RefreshSB";
-            this.RefreshCategoriesSB.Click += new System.EventHandler(this.RefreshCategoriesSB_Click);
-            // 
             // groupControl3
             // 
             this.groupControl3.Controls.Add(this.ComponentsTV);
@@ -422,14 +323,14 @@
             this.TimeLimit,
             this.PricesC,
             this.ComponentsC});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGV.DefaultCellStyle = dataGridViewCellStyle4;
             this.DataGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DataGV.Location = new System.Drawing.Point(0, 0);
             this.DataGV.MultiSelect = false;
@@ -460,8 +361,8 @@
             // WareCodesString
             // 
             this.WareCodesString.DataPropertyName = "WareCode";
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.WareCodesString.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.WareCodesString.DefaultCellStyle = dataGridViewCellStyle3;
             this.WareCodesString.HeaderText = "Коди";
             this.WareCodesString.Name = "WareCodesString";
             this.WareCodesString.ReadOnly = true;
@@ -534,6 +435,116 @@
             this.ComponentsC.ToolTipText = "Компоненти";
             this.ComponentsC.UseColumnTextForButtonValue = true;
             this.ComponentsC.Width = 30;
+            // 
+            // AddCategorySB
+            // 
+            this.AddCategorySB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AddCategorySB.Image = global::Compas.AdminUI.Properties.Resources.add2_;
+            this.AddCategorySB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AddCategorySB.Name = "AddCategorySB";
+            this.AddCategorySB.Size = new System.Drawing.Size(23, 22);
+            this.AddCategorySB.Text = "Додати";
+            this.AddCategorySB.Click += new System.EventHandler(this.AddCategorySB_Click);
+            // 
+            // EditCategorySB
+            // 
+            this.EditCategorySB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.EditCategorySB.Image = global::Compas.AdminUI.Properties.Resources.edit;
+            this.EditCategorySB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EditCategorySB.Name = "EditCategorySB";
+            this.EditCategorySB.Size = new System.Drawing.Size(23, 22);
+            this.EditCategorySB.Text = "Редагувати";
+            this.EditCategorySB.Click += new System.EventHandler(this.EditCategorySB_Click);
+            // 
+            // DeleteCategorySB
+            // 
+            this.DeleteCategorySB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.DeleteCategorySB.Image = global::Compas.AdminUI.Properties.Resources.delete;
+            this.DeleteCategorySB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.DeleteCategorySB.Name = "DeleteCategorySB";
+            this.DeleteCategorySB.Size = new System.Drawing.Size(23, 22);
+            this.DeleteCategorySB.Text = "Видалити";
+            this.DeleteCategorySB.Click += new System.EventHandler(this.DeleteCategorySB_Click);
+            // 
+            // RefreshCategoriesSB
+            // 
+            this.RefreshCategoriesSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.RefreshCategoriesSB.Image = global::Compas.AdminUI.Properties.Resources.refresh_blue;
+            this.RefreshCategoriesSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.RefreshCategoriesSB.Name = "RefreshCategoriesSB";
+            this.RefreshCategoriesSB.Size = new System.Drawing.Size(23, 22);
+            this.RefreshCategoriesSB.Text = "RefreshSB";
+            this.RefreshCategoriesSB.Click += new System.EventHandler(this.RefreshCategoriesSB_Click);
+            // 
+            // NewSB
+            // 
+            this.NewSB.Image = global::Compas.AdminUI.Properties.Resources.add2_;
+            this.NewSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NewSB.Name = "NewSB";
+            this.NewSB.Size = new System.Drawing.Size(99, 36);
+            this.NewSB.Text = "Додати";
+            this.NewSB.Click += new System.EventHandler(this.NewSB_Click);
+            // 
+            // EditSB
+            // 
+            this.EditSB.Image = global::Compas.AdminUI.Properties.Resources.edit;
+            this.EditSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EditSB.Name = "EditSB";
+            this.EditSB.Size = new System.Drawing.Size(126, 36);
+            this.EditSB.Text = "Редагувати";
+            this.EditSB.Click += new System.EventHandler(this.EditSB_Click);
+            // 
+            // DeleteSB
+            // 
+            this.DeleteSB.Image = global::Compas.AdminUI.Properties.Resources.delete;
+            this.DeleteSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.DeleteSB.Name = "DeleteSB";
+            this.DeleteSB.Size = new System.Drawing.Size(114, 36);
+            this.DeleteSB.Text = "Видалити";
+            this.DeleteSB.Click += new System.EventHandler(this.DeleteSB_Click);
+            // 
+            // PricesSB
+            // 
+            this.PricesSB.Image = ((System.Drawing.Image)(resources.GetObject("PricesSB.Image")));
+            this.PricesSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PricesSB.Name = "PricesSB";
+            this.PricesSB.Size = new System.Drawing.Size(80, 36);
+            this.PricesSB.Text = "Ціни";
+            this.PricesSB.Click += new System.EventHandler(this.PricesSB_Click);
+            // 
+            // ComponentsSB
+            // 
+            this.ComponentsSB.Image = global::Compas.AdminUI.Properties.Resources.puzzlered32;
+            this.ComponentsSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ComponentsSB.Name = "ComponentsSB";
+            this.ComponentsSB.Size = new System.Drawing.Size(135, 36);
+            this.ComponentsSB.Text = "Компоненти";
+            this.ComponentsSB.Click += new System.EventHandler(this.ComponentsSB_Click);
+            // 
+            // MinQuantitySB
+            // 
+            this.MinQuantitySB.Image = global::Compas.AdminUI.Properties.Resources.quantity_capsule_3;
+            this.MinQuantitySB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.MinQuantitySB.Name = "MinQuantitySB";
+            this.MinQuantitySB.Size = new System.Drawing.Size(118, 36);
+            this.MinQuantitySB.Text = "Індикатор";
+            this.MinQuantitySB.Click += new System.EventHandler(this.MinQuantitySB_Click);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::Compas.AdminUI.Properties.Resources.file_edit;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = global::Compas.AdminUI.Properties.Resources.file_delete;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // WaresList
             // 
@@ -618,5 +629,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TimeLimit;
         private System.Windows.Forms.DataGridViewButtonColumn PricesC;
         private System.Windows.Forms.DataGridViewButtonColumn ComponentsC;
+        private System.Windows.Forms.ToolStripButton MinQuantitySB;
     }
 }

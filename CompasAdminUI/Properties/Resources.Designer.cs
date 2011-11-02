@@ -683,6 +683,27 @@ namespace Compas.AdminUI.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap quantity_capsule_3 {
+            get {
+                object obj = ResourceManager.GetObject("quantity_capsule_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap quantity_capsule_3__24_ {
+            get {
+                object obj = ResourceManager.GetObject("quantity_capsule_3 (24)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap quantity_capsule_4 {
+            get {
+                object obj = ResourceManager.GetObject("quantity_capsule_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap refresh_blue {
             get {
                 object obj = ResourceManager.GetObject("refresh blue", resourceCulture);

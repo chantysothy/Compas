@@ -286,7 +286,7 @@ namespace Compas.AdminUI.Wares.Ware
 
         private void ComponentsSB_Click(object sender, EventArgs e)
         {
-            Wares.Ware.WareComponentData form = new Wares.Ware.WareComponentData("edit", Convert.ToInt32(DataGV.SelectedRows[0].Cells["ID"].Value));
+            Wares.Ware.WareComponentDataSimple form = new Wares.Ware.WareComponentDataSimple("edit", Convert.ToInt32(DataGV.SelectedRows[0].Cells["ID"].Value));
             form.MdiParent = this.MdiParent;
             form.Show();           
             //wareFilterUC1.Fill();
@@ -313,7 +313,7 @@ namespace Compas.AdminUI.Wares.Ware
             }
             if (DataGV.SelectedRows[0].Cells[e.ColumnIndex].OwningColumn.Name == "ComponentsC")
             {
-                Wares.Ware.WareComponentData form = new Wares.Ware.WareComponentData("edit", Convert.ToInt32(DataGV.SelectedRows[0].Cells["ID"].Value));
+                Wares.Ware.WareComponentDataSimple form = new Wares.Ware.WareComponentDataSimple("edit", Convert.ToInt32(DataGV.SelectedRows[0].Cells["ID"].Value));
                 form.ShowDialog();
             }
             
@@ -380,6 +380,13 @@ namespace Compas.AdminUI.Wares.Ware
                 form.ShowDialog();
                 Fill("Name");
             }
+        }
+
+        private void MinQuantitySB_Click(object sender, EventArgs e)
+        {
+            int wareId = Convert.ToInt32(DataGV.SelectedRows[0].Cells["ID"].Value);
+            WareMinQuantity form = new WareMinQuantity(wareId);
+            form.ShowDialog();
         }
 
         

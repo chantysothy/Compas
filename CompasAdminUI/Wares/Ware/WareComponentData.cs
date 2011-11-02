@@ -187,11 +187,11 @@ namespace Compas.AdminUI.Wares.Ware
                 WareLUE.Properties.DisplayMember = "Name";
 
 
-                WareLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("WareCodesString", 0, "Код"));
+                //WareLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("WareCodesString", 0, "Код"));
                 WareLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", 0, "Назва"));
-                WareLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ManufacturerName", 0, "Виробник"));
-                WareLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("UnitName", 0, "Осн. од. вим."));
-                WareLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SecondUnitName", 0, "втор. од. вим."));
+                //WareLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ManufacturerName", 0, "Виробник"));
+                //WareLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("UnitName", 0, "Осн. од. вим."));
+               // WareLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SecondUnitName", 0, "втор. од. вим."));
                 WareLUE.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CategoryName", 0, "Категорія"));
 
                 columnsCreated = true;

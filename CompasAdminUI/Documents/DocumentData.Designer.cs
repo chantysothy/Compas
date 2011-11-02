@@ -32,14 +32,14 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -62,8 +62,35 @@
             this.label7 = new System.Windows.Forms.Label();
             this.DocumentSumaL = new System.Windows.Forms.Label();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.RemoveEmployeeBt = new System.Windows.Forms.Button();
             this.AddressTE = new DevExpress.XtraEditors.TextEdit();
+            this.AddObject2Bt = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.AddObjectBt = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.AbbContractorBt = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.EmployeesLB = new DevExpress.XtraEditors.ListBoxControl();
+            this.TeamsLUE = new DevExpress.XtraEditors.LookUpEdit();
+            this.EmployeesLUE = new DevExpress.XtraEditors.LookUpEdit();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.DocumentTypeLUE = new DevExpress.XtraEditors.LookUpEdit();
+            this.NumberTE = new DevExpress.XtraEditors.TextEdit();
+            this.label8 = new System.Windows.Forms.Label();
+            this.CurrencyLUE = new DevExpress.XtraEditors.LookUpEdit();
+            this.ContractorLUE = new DevExpress.XtraEditors.LookUpEdit();
+            this.ToObjectLUE = new DevExpress.XtraEditors.LookUpEdit();
+            this.FromObjectLUE = new DevExpress.XtraEditors.LookUpEdit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.DateDE = new DevExpress.XtraEditors.DateEdit();
+            this.label11 = new System.Windows.Forms.Label();
+            this.DescriptionTE = new DevExpress.XtraEditors.MemoEdit();
             this.CarGB = new System.Windows.Forms.GroupBox();
             this.CarCategoriesCB = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -75,32 +102,6 @@
             this.SetModelBt = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.CarNumberTE = new DevExpress.XtraEditors.TextEdit();
-            this.label13 = new System.Windows.Forms.Label();
-            this.TeamsLUE = new DevExpress.XtraEditors.LookUpEdit();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.RemoveEmployeeBt = new System.Windows.Forms.Button();
-            this.EmployeesLB = new DevExpress.XtraEditors.ListBoxControl();
-            this.EmployeesLUE = new DevExpress.XtraEditors.LookUpEdit();
-            this.label11 = new System.Windows.Forms.Label();
-            this.CurrencyLUE = new DevExpress.XtraEditors.LookUpEdit();
-            this.AddObject2Bt = new System.Windows.Forms.Button();
-            this.AddObjectBt = new System.Windows.Forms.Button();
-            this.AbbContractorBt = new System.Windows.Forms.Button();
-            this.NumberTE = new DevExpress.XtraEditors.TextEdit();
-            this.DateDE = new DevExpress.XtraEditors.DateEdit();
-            this.FromObjectLUE = new DevExpress.XtraEditors.LookUpEdit();
-            this.ToObjectLUE = new DevExpress.XtraEditors.LookUpEdit();
-            this.ContractorLUE = new DevExpress.XtraEditors.LookUpEdit();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.DocumentTypeLUE = new DevExpress.XtraEditors.LookUpEdit();
-            this.DescriptionTE = new DevExpress.XtraEditors.MemoEdit();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -136,31 +137,31 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddPaymentCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddressTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeesLB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TeamsLUE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeesLUE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DocumentTypeLUE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumberTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrencyLUE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContractorLUE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ToObjectLUE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FromObjectLUE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateDE.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateDE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescriptionTE.Properties)).BeginInit();
             this.CarGB.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CarModelPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarBrandPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarNumberTE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TeamsLUE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeesLB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeesLUE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CurrencyLUE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumberTE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateDE.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateDE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FromObjectLUE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ToObjectLUE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContractorLUE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DocumentTypeLUE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DescriptionTE.Properties)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -174,7 +175,6 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
-            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -362,6 +362,85 @@
             this.splitContainerControl1.TabIndex = 22;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.RemoveEmployeeBt, 2, 10);
+            this.tableLayoutPanel4.Controls.Add(this.AddressTE, 1, 11);
+            this.tableLayoutPanel4.Controls.Add(this.AddObject2Bt, 2, 4);
+            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.AddObjectBt, 2, 3);
+            this.tableLayoutPanel4.Controls.Add(this.label15, 0, 11);
+            this.tableLayoutPanel4.Controls.Add(this.AbbContractorBt, 2, 2);
+            this.tableLayoutPanel4.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.label12, 0, 10);
+            this.tableLayoutPanel4.Controls.Add(this.EmployeesLB, 1, 10);
+            this.tableLayoutPanel4.Controls.Add(this.TeamsLUE, 1, 8);
+            this.tableLayoutPanel4.Controls.Add(this.EmployeesLUE, 1, 9);
+            this.tableLayoutPanel4.Controls.Add(this.label10, 0, 9);
+            this.tableLayoutPanel4.Controls.Add(this.label13, 0, 8);
+            this.tableLayoutPanel4.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.label5, 0, 4);
+            this.tableLayoutPanel4.Controls.Add(this.DocumentTypeLUE, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.NumberTE, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label8, 0, 7);
+            this.tableLayoutPanel4.Controls.Add(this.CurrencyLUE, 1, 6);
+            this.tableLayoutPanel4.Controls.Add(this.ContractorLUE, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.ToObjectLUE, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.FromObjectLUE, 1, 4);
+            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 5);
+            this.tableLayoutPanel4.Controls.Add(this.DateDE, 1, 5);
+            this.tableLayoutPanel4.Controls.Add(this.label11, 0, 6);
+            this.tableLayoutPanel4.Controls.Add(this.DescriptionTE, 1, 7);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 12;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(379, 427);
+            this.tableLayoutPanel4.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(54, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Тип:";
+            // 
+            // RemoveEmployeeBt
+            // 
+            this.RemoveEmployeeBt.FlatAppearance.BorderSize = 0;
+            this.RemoveEmployeeBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RemoveEmployeeBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RemoveEmployeeBt.Image = global::Compas.AdminUI.Properties.Resources.delete16;
+            this.RemoveEmployeeBt.Location = new System.Drawing.Point(358, 344);
+            this.RemoveEmployeeBt.Margin = new System.Windows.Forms.Padding(4);
+            this.RemoveEmployeeBt.Name = "RemoveEmployeeBt";
+            this.RemoveEmployeeBt.Size = new System.Drawing.Size(17, 22);
+            this.RemoveEmployeeBt.TabIndex = 74;
+            this.RemoveEmployeeBt.UseVisualStyleBackColor = true;
+            this.RemoveEmployeeBt.Click += new System.EventHandler(this.RemoveEmployeeBt_Click);
+            // 
             // AddressTE
             // 
             this.AddressTE.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -371,6 +450,45 @@
             this.AddressTE.Properties.Appearance.Options.UseFont = true;
             this.AddressTE.Size = new System.Drawing.Size(255, 26);
             this.AddressTE.TabIndex = 83;
+            // 
+            // AddObject2Bt
+            // 
+            this.AddObject2Bt.FlatAppearance.BorderSize = 0;
+            this.AddObject2Bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddObject2Bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddObject2Bt.Image = global::Compas.AdminUI.Properties.Resources.add_16x161;
+            this.AddObject2Bt.Location = new System.Drawing.Point(358, 132);
+            this.AddObject2Bt.Margin = new System.Windows.Forms.Padding(4);
+            this.AddObject2Bt.Name = "AddObject2Bt";
+            this.AddObject2Bt.Size = new System.Drawing.Size(17, 22);
+            this.AddObject2Bt.TabIndex = 28;
+            this.AddObject2Bt.UseVisualStyleBackColor = true;
+            this.AddObject2Bt.Click += new System.EventHandler(this.AddObject2Bt_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(36, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Номер:";
+            // 
+            // AddObjectBt
+            // 
+            this.AddObjectBt.FlatAppearance.BorderSize = 0;
+            this.AddObjectBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddObjectBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddObjectBt.Image = global::Compas.AdminUI.Properties.Resources.add_16x161;
+            this.AddObjectBt.Location = new System.Drawing.Point(358, 100);
+            this.AddObjectBt.Margin = new System.Windows.Forms.Padding(4);
+            this.AddObjectBt.Name = "AddObjectBt";
+            this.AddObjectBt.Size = new System.Drawing.Size(17, 22);
+            this.AddObjectBt.TabIndex = 27;
+            this.AddObjectBt.UseVisualStyleBackColor = true;
+            this.AddObjectBt.Click += new System.EventHandler(this.AddObjectBt_Click);
             // 
             // label15
             // 
@@ -382,6 +500,325 @@
             this.label15.Size = new System.Drawing.Size(59, 16);
             this.label15.TabIndex = 82;
             this.label15.Text = "Адреса:";
+            // 
+            // AbbContractorBt
+            // 
+            this.AbbContractorBt.FlatAppearance.BorderSize = 0;
+            this.AbbContractorBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AbbContractorBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AbbContractorBt.Image = global::Compas.AdminUI.Properties.Resources.add_16x161;
+            this.AbbContractorBt.Location = new System.Drawing.Point(358, 68);
+            this.AbbContractorBt.Margin = new System.Windows.Forms.Padding(4);
+            this.AbbContractorBt.Name = "AbbContractorBt";
+            this.AbbContractorBt.Size = new System.Drawing.Size(17, 22);
+            this.AbbContractorBt.TabIndex = 26;
+            this.AbbContractorBt.UseVisualStyleBackColor = true;
+            this.AbbContractorBt.Click += new System.EventHandler(this.AbbContractorBt_Click);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(3, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 16);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Контрагент:";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(9, 358);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 16);
+            this.label12.TabIndex = 77;
+            this.label12.Text = "Закріплені:";
+            // 
+            // EmployeesLB
+            // 
+            this.EmployeesLB.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.EmployeesLB.Appearance.Options.UseFont = true;
+            this.EmployeesLB.DisplayMember = "FullName";
+            this.EmployeesLB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmployeesLB.Location = new System.Drawing.Point(96, 343);
+            this.EmployeesLB.MultiColumn = true;
+            this.EmployeesLB.Name = "EmployeesLB";
+            this.EmployeesLB.Size = new System.Drawing.Size(255, 46);
+            this.EmployeesLB.TabIndex = 72;
+            this.EmployeesLB.ValueMember = "ID";
+            // 
+            // TeamsLUE
+            // 
+            this.TeamsLUE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TeamsLUE.Location = new System.Drawing.Point(96, 279);
+            this.TeamsLUE.Name = "TeamsLUE";
+            this.TeamsLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TeamsLUE.Properties.Appearance.Options.UseFont = true;
+            this.TeamsLUE.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TeamsLUE.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.TeamsLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.TeamsLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.TeamsLUE.Size = new System.Drawing.Size(255, 26);
+            this.TeamsLUE.TabIndex = 78;
+            this.TeamsLUE.EditValueChanged += new System.EventHandler(this.TeamsLUE_EditValueChanged);
+            // 
+            // EmployeesLUE
+            // 
+            this.EmployeesLUE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmployeesLUE.Location = new System.Drawing.Point(96, 311);
+            this.EmployeesLUE.Name = "EmployeesLUE";
+            this.EmployeesLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EmployeesLUE.Properties.Appearance.Options.UseFont = true;
+            this.EmployeesLUE.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EmployeesLUE.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.EmployeesLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.EmployeesLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.EmployeesLUE.Properties.DropDownRows = 15;
+            this.EmployeesLUE.Size = new System.Drawing.Size(255, 26);
+            this.EmployeesLUE.TabIndex = 71;
+            this.EmployeesLUE.EditValueChanged += new System.EventHandler(this.EmployeesLUE_EditValueChanged);
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(3, 316);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(87, 16);
+            this.label10.TabIndex = 76;
+            this.label10.Text = "Працівники:";
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(24, 284);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(66, 16);
+            this.label13.TabIndex = 79;
+            this.label13.Text = "Бригада:";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(17, 104);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 16);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "На об\'єкт:";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(18, 136);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 16);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "З об\'єкта:";
+            // 
+            // DocumentTypeLUE
+            // 
+            this.DocumentTypeLUE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentTypeLUE.Location = new System.Drawing.Point(96, 3);
+            this.DocumentTypeLUE.Name = "DocumentTypeLUE";
+            this.DocumentTypeLUE.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.DocumentTypeLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DocumentTypeLUE.Properties.Appearance.Options.UseFont = true;
+            this.DocumentTypeLUE.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DocumentTypeLUE.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.DocumentTypeLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.DocumentTypeLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            this.DocumentTypeLUE.Properties.LookAndFeel.SkinName = "Money Twins";
+            this.DocumentTypeLUE.Properties.NullText = "не обрано";
+            this.DocumentTypeLUE.Properties.NullValuePrompt = "не обрано";
+            this.DocumentTypeLUE.Properties.NullValuePromptShowForEmptyValue = true;
+            this.DocumentTypeLUE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.DocumentTypeLUE.Properties.EditValueChanged += new System.EventHandler(this.DocumentTypeLUE_Properties_EditValueChanged);
+            this.DocumentTypeLUE.Size = new System.Drawing.Size(255, 26);
+            this.DocumentTypeLUE.TabIndex = 0;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "This value is not valid";
+            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.dxValidationProvider1.SetValidationRule(this.DocumentTypeLUE, conditionValidationRule1);
+            this.DocumentTypeLUE.EditValueChanged += new System.EventHandler(this.DocumentTypeLUE_EditValueChanged);
+            this.DocumentTypeLUE.TextChanged += new System.EventHandler(this.DocumentTypeLUE_TextChanged);
+            this.DocumentTypeLUE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DocumentTypeLUE_KeyDown);
+            // 
+            // NumberTE
+            // 
+            this.NumberTE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NumberTE.Location = new System.Drawing.Point(96, 35);
+            this.NumberTE.Name = "NumberTE";
+            this.NumberTE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NumberTE.Properties.Appearance.Options.UseFont = true;
+            this.NumberTE.Size = new System.Drawing.Size(255, 26);
+            this.NumberTE.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(15, 242);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 16);
+            this.label8.TabIndex = 75;
+            this.label8.Text = "Коментар:";
+            // 
+            // CurrencyLUE
+            // 
+            this.CurrencyLUE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CurrencyLUE.Location = new System.Drawing.Point(96, 195);
+            this.CurrencyLUE.Name = "CurrencyLUE";
+            this.CurrencyLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CurrencyLUE.Properties.Appearance.Options.UseFont = true;
+            this.CurrencyLUE.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CurrencyLUE.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.CurrencyLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.CurrencyLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            this.CurrencyLUE.Size = new System.Drawing.Size(255, 26);
+            this.CurrencyLUE.TabIndex = 6;
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "This value is not valid";
+            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.dxValidationProvider1.SetValidationRule(this.CurrencyLUE, conditionValidationRule2);
+            // 
+            // ContractorLUE
+            // 
+            this.ContractorLUE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContractorLUE.EnterMoveNextControl = true;
+            this.ContractorLUE.Location = new System.Drawing.Point(96, 67);
+            this.ContractorLUE.Name = "ContractorLUE";
+            this.ContractorLUE.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.ContractorLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ContractorLUE.Properties.Appearance.Options.UseFont = true;
+            this.ContractorLUE.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ContractorLUE.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.ContractorLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.ContractorLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            this.ContractorLUE.Properties.DropDownRows = 15;
+            this.ContractorLUE.Properties.NullText = "не обрано";
+            this.ContractorLUE.Properties.NullValuePrompt = "не обрано";
+            this.ContractorLUE.Properties.NullValuePromptShowForEmptyValue = true;
+            this.ContractorLUE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.ContractorLUE.Size = new System.Drawing.Size(255, 26);
+            this.ContractorLUE.TabIndex = 2;
+            this.ContractorLUE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ContractorLUE_KeyDown);
+            // 
+            // ToObjectLUE
+            // 
+            this.ToObjectLUE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ToObjectLUE.EnterMoveNextControl = true;
+            this.ToObjectLUE.Location = new System.Drawing.Point(96, 99);
+            this.ToObjectLUE.Name = "ToObjectLUE";
+            this.ToObjectLUE.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.ToObjectLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ToObjectLUE.Properties.Appearance.Options.UseFont = true;
+            this.ToObjectLUE.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ToObjectLUE.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.ToObjectLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.ToObjectLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            this.ToObjectLUE.Properties.DropDownRows = 15;
+            this.ToObjectLUE.Properties.NullText = "не обрано";
+            this.ToObjectLUE.Properties.NullValuePrompt = "не обрано";
+            this.ToObjectLUE.Properties.NullValuePromptShowForEmptyValue = true;
+            this.ToObjectLUE.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
+            this.ToObjectLUE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.ToObjectLUE.Properties.EditValueChanged += new System.EventHandler(this.ToObjectLUE_Properties_EditValueChanged);
+            this.ToObjectLUE.Size = new System.Drawing.Size(255, 26);
+            this.ToObjectLUE.TabIndex = 3;
+            this.ToObjectLUE.TextChanged += new System.EventHandler(this.ToObjectLUE_TextChanged);
+            this.ToObjectLUE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ToObjectLUE_KeyDown);
+            // 
+            // FromObjectLUE
+            // 
+            this.FromObjectLUE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FromObjectLUE.EnterMoveNextControl = true;
+            this.FromObjectLUE.Location = new System.Drawing.Point(96, 131);
+            this.FromObjectLUE.Name = "FromObjectLUE";
+            this.FromObjectLUE.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.FromObjectLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FromObjectLUE.Properties.Appearance.Options.UseFont = true;
+            this.FromObjectLUE.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FromObjectLUE.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.FromObjectLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.FromObjectLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
+            this.FromObjectLUE.Properties.DropDownRows = 15;
+            this.FromObjectLUE.Properties.NullText = "не обрано";
+            this.FromObjectLUE.Properties.NullValuePrompt = "не обрано";
+            this.FromObjectLUE.Properties.NullValuePromptShowForEmptyValue = true;
+            this.FromObjectLUE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.FromObjectLUE.Size = new System.Drawing.Size(255, 26);
+            this.FromObjectLUE.TabIndex = 4;
+            this.FromObjectLUE.EditValueChanged += new System.EventHandler(this.FromObjectLUE_EditValueChanged);
+            this.FromObjectLUE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FromObjectLUE_KeyDown);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(47, 168);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 16);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Дата:";
+            // 
+            // DateDE
+            // 
+            this.DateDE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DateDE.EditValue = null;
+            this.DateDE.Location = new System.Drawing.Point(96, 163);
+            this.DateDE.Name = "DateDE";
+            this.DateDE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateDE.Properties.Appearance.Options.UseFont = true;
+            this.DateDE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateDE.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.DateDE.Size = new System.Drawing.Size(255, 26);
+            this.DateDE.TabIndex = 5;
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "This value is not valid";
+            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.dxValidationProvider1.SetValidationRule(this.DateDE, conditionValidationRule3);
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(29, 200);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(61, 16);
+            this.label11.TabIndex = 69;
+            this.label11.Text = "Валюта:";
+            // 
+            // DescriptionTE
+            // 
+            this.DescriptionTE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DescriptionTE.Location = new System.Drawing.Point(96, 227);
+            this.DescriptionTE.Name = "DescriptionTE";
+            this.DescriptionTE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DescriptionTE.Properties.Appearance.Options.UseFont = true;
+            this.DescriptionTE.Size = new System.Drawing.Size(255, 46);
+            this.DescriptionTE.TabIndex = 7;
             // 
             // CarGB
             // 
@@ -507,389 +944,6 @@
             this.CarNumberTE.Properties.Appearance.Options.UseFont = true;
             this.CarNumberTE.Size = new System.Drawing.Size(247, 26);
             this.CarNumberTE.TabIndex = 80;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(24, 284);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(66, 16);
-            this.label13.TabIndex = 79;
-            this.label13.Text = "Бригада:";
-            // 
-            // TeamsLUE
-            // 
-            this.TeamsLUE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TeamsLUE.Location = new System.Drawing.Point(96, 279);
-            this.TeamsLUE.Name = "TeamsLUE";
-            this.TeamsLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TeamsLUE.Properties.Appearance.Options.UseFont = true;
-            this.TeamsLUE.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TeamsLUE.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.TeamsLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
-            this.TeamsLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
-            this.TeamsLUE.Size = new System.Drawing.Size(255, 26);
-            this.TeamsLUE.TabIndex = 78;
-            this.TeamsLUE.EditValueChanged += new System.EventHandler(this.TeamsLUE_EditValueChanged);
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(9, 358);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 16);
-            this.label12.TabIndex = 77;
-            this.label12.Text = "Закріплені:";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(3, 316);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 16);
-            this.label10.TabIndex = 76;
-            this.label10.Text = "Працівники:";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(15, 242);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 16);
-            this.label8.TabIndex = 75;
-            this.label8.Text = "Коментар:";
-            // 
-            // RemoveEmployeeBt
-            // 
-            this.RemoveEmployeeBt.FlatAppearance.BorderSize = 0;
-            this.RemoveEmployeeBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RemoveEmployeeBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RemoveEmployeeBt.Image = global::Compas.AdminUI.Properties.Resources.delete16;
-            this.RemoveEmployeeBt.Location = new System.Drawing.Point(358, 344);
-            this.RemoveEmployeeBt.Margin = new System.Windows.Forms.Padding(4);
-            this.RemoveEmployeeBt.Name = "RemoveEmployeeBt";
-            this.RemoveEmployeeBt.Size = new System.Drawing.Size(17, 22);
-            this.RemoveEmployeeBt.TabIndex = 74;
-            this.RemoveEmployeeBt.UseVisualStyleBackColor = true;
-            this.RemoveEmployeeBt.Click += new System.EventHandler(this.RemoveEmployeeBt_Click);
-            // 
-            // EmployeesLB
-            // 
-            this.EmployeesLB.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.EmployeesLB.Appearance.Options.UseFont = true;
-            this.EmployeesLB.DisplayMember = "FullName";
-            this.EmployeesLB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EmployeesLB.Location = new System.Drawing.Point(96, 343);
-            this.EmployeesLB.MultiColumn = true;
-            this.EmployeesLB.Name = "EmployeesLB";
-            this.EmployeesLB.Size = new System.Drawing.Size(255, 46);
-            this.EmployeesLB.TabIndex = 72;
-            this.EmployeesLB.ValueMember = "ID";
-            // 
-            // EmployeesLUE
-            // 
-            this.EmployeesLUE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EmployeesLUE.Location = new System.Drawing.Point(96, 311);
-            this.EmployeesLUE.Name = "EmployeesLUE";
-            this.EmployeesLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EmployeesLUE.Properties.Appearance.Options.UseFont = true;
-            this.EmployeesLUE.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EmployeesLUE.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.EmployeesLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
-            this.EmployeesLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
-            this.EmployeesLUE.Properties.DropDownRows = 15;
-            this.EmployeesLUE.Size = new System.Drawing.Size(255, 26);
-            this.EmployeesLUE.TabIndex = 71;
-            this.EmployeesLUE.EditValueChanged += new System.EventHandler(this.EmployeesLUE_EditValueChanged);
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(29, 200);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 16);
-            this.label11.TabIndex = 69;
-            this.label11.Text = "Валюта:";
-            // 
-            // CurrencyLUE
-            // 
-            this.CurrencyLUE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CurrencyLUE.Location = new System.Drawing.Point(96, 195);
-            this.CurrencyLUE.Name = "CurrencyLUE";
-            this.CurrencyLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CurrencyLUE.Properties.Appearance.Options.UseFont = true;
-            this.CurrencyLUE.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CurrencyLUE.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.CurrencyLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
-            this.CurrencyLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
-            this.CurrencyLUE.Size = new System.Drawing.Size(255, 26);
-            this.CurrencyLUE.TabIndex = 6;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "This value is not valid";
-            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.dxValidationProvider1.SetValidationRule(this.CurrencyLUE, conditionValidationRule2);
-            // 
-            // AddObject2Bt
-            // 
-            this.AddObject2Bt.FlatAppearance.BorderSize = 0;
-            this.AddObject2Bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddObject2Bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddObject2Bt.Image = global::Compas.AdminUI.Properties.Resources.add_16x161;
-            this.AddObject2Bt.Location = new System.Drawing.Point(358, 132);
-            this.AddObject2Bt.Margin = new System.Windows.Forms.Padding(4);
-            this.AddObject2Bt.Name = "AddObject2Bt";
-            this.AddObject2Bt.Size = new System.Drawing.Size(17, 22);
-            this.AddObject2Bt.TabIndex = 28;
-            this.AddObject2Bt.UseVisualStyleBackColor = true;
-            this.AddObject2Bt.Click += new System.EventHandler(this.AddObject2Bt_Click);
-            // 
-            // AddObjectBt
-            // 
-            this.AddObjectBt.FlatAppearance.BorderSize = 0;
-            this.AddObjectBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddObjectBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddObjectBt.Image = global::Compas.AdminUI.Properties.Resources.add_16x161;
-            this.AddObjectBt.Location = new System.Drawing.Point(358, 100);
-            this.AddObjectBt.Margin = new System.Windows.Forms.Padding(4);
-            this.AddObjectBt.Name = "AddObjectBt";
-            this.AddObjectBt.Size = new System.Drawing.Size(17, 22);
-            this.AddObjectBt.TabIndex = 27;
-            this.AddObjectBt.UseVisualStyleBackColor = true;
-            this.AddObjectBt.Click += new System.EventHandler(this.AddObjectBt_Click);
-            // 
-            // AbbContractorBt
-            // 
-            this.AbbContractorBt.FlatAppearance.BorderSize = 0;
-            this.AbbContractorBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AbbContractorBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AbbContractorBt.Image = global::Compas.AdminUI.Properties.Resources.add_16x161;
-            this.AbbContractorBt.Location = new System.Drawing.Point(358, 68);
-            this.AbbContractorBt.Margin = new System.Windows.Forms.Padding(4);
-            this.AbbContractorBt.Name = "AbbContractorBt";
-            this.AbbContractorBt.Size = new System.Drawing.Size(17, 22);
-            this.AbbContractorBt.TabIndex = 26;
-            this.AbbContractorBt.UseVisualStyleBackColor = true;
-            this.AbbContractorBt.Click += new System.EventHandler(this.AbbContractorBt_Click);
-            // 
-            // NumberTE
-            // 
-            this.NumberTE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NumberTE.Location = new System.Drawing.Point(96, 35);
-            this.NumberTE.Name = "NumberTE";
-            this.NumberTE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NumberTE.Properties.Appearance.Options.UseFont = true;
-            this.NumberTE.Size = new System.Drawing.Size(255, 26);
-            this.NumberTE.TabIndex = 1;
-            // 
-            // DateDE
-            // 
-            this.DateDE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DateDE.EditValue = null;
-            this.DateDE.Location = new System.Drawing.Point(96, 163);
-            this.DateDE.Name = "DateDE";
-            this.DateDE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateDE.Properties.Appearance.Options.UseFont = true;
-            this.DateDE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DateDE.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.DateDE.Size = new System.Drawing.Size(255, 26);
-            this.DateDE.TabIndex = 5;
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule3.ErrorText = "This value is not valid";
-            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.dxValidationProvider1.SetValidationRule(this.DateDE, conditionValidationRule3);
-            // 
-            // FromObjectLUE
-            // 
-            this.FromObjectLUE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FromObjectLUE.EnterMoveNextControl = true;
-            this.FromObjectLUE.Location = new System.Drawing.Point(96, 131);
-            this.FromObjectLUE.Name = "FromObjectLUE";
-            this.FromObjectLUE.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.FromObjectLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FromObjectLUE.Properties.Appearance.Options.UseFont = true;
-            this.FromObjectLUE.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FromObjectLUE.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.FromObjectLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
-            this.FromObjectLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
-            this.FromObjectLUE.Properties.DropDownRows = 15;
-            this.FromObjectLUE.Properties.NullText = "не обрано";
-            this.FromObjectLUE.Properties.NullValuePrompt = "не обрано";
-            this.FromObjectLUE.Properties.NullValuePromptShowForEmptyValue = true;
-            this.FromObjectLUE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.FromObjectLUE.Size = new System.Drawing.Size(255, 26);
-            this.FromObjectLUE.TabIndex = 4;
-            this.FromObjectLUE.EditValueChanged += new System.EventHandler(this.FromObjectLUE_EditValueChanged);
-            this.FromObjectLUE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FromObjectLUE_KeyDown);
-            // 
-            // ToObjectLUE
-            // 
-            this.ToObjectLUE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ToObjectLUE.EnterMoveNextControl = true;
-            this.ToObjectLUE.Location = new System.Drawing.Point(96, 99);
-            this.ToObjectLUE.Name = "ToObjectLUE";
-            this.ToObjectLUE.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.ToObjectLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ToObjectLUE.Properties.Appearance.Options.UseFont = true;
-            this.ToObjectLUE.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ToObjectLUE.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.ToObjectLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
-            this.ToObjectLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
-            this.ToObjectLUE.Properties.DropDownRows = 15;
-            this.ToObjectLUE.Properties.NullText = "не обрано";
-            this.ToObjectLUE.Properties.NullValuePrompt = "не обрано";
-            this.ToObjectLUE.Properties.NullValuePromptShowForEmptyValue = true;
-            this.ToObjectLUE.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
-            this.ToObjectLUE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.ToObjectLUE.Properties.EditValueChanged += new System.EventHandler(this.ToObjectLUE_Properties_EditValueChanged);
-            this.ToObjectLUE.Size = new System.Drawing.Size(255, 26);
-            this.ToObjectLUE.TabIndex = 3;
-            this.ToObjectLUE.TextChanged += new System.EventHandler(this.ToObjectLUE_TextChanged);
-            this.ToObjectLUE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ToObjectLUE_KeyDown);
-            // 
-            // ContractorLUE
-            // 
-            this.ContractorLUE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ContractorLUE.EnterMoveNextControl = true;
-            this.ContractorLUE.Location = new System.Drawing.Point(96, 67);
-            this.ContractorLUE.Name = "ContractorLUE";
-            this.ContractorLUE.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.ContractorLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ContractorLUE.Properties.Appearance.Options.UseFont = true;
-            this.ContractorLUE.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ContractorLUE.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.ContractorLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
-            this.ContractorLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
-            this.ContractorLUE.Properties.DropDownRows = 15;
-            this.ContractorLUE.Properties.NullText = "не обрано";
-            this.ContractorLUE.Properties.NullValuePrompt = "не обрано";
-            this.ContractorLUE.Properties.NullValuePromptShowForEmptyValue = true;
-            this.ContractorLUE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.ContractorLUE.Size = new System.Drawing.Size(255, 26);
-            this.ContractorLUE.TabIndex = 2;
-            this.ContractorLUE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ContractorLUE_KeyDown);
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(47, 168);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 16);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Дата:";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(18, 136);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 16);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "З об\'єкта:";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(17, 104);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 16);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "На об\'єкт:";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(3, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 16);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Контрагент:";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(36, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Номер:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(54, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Тип:";
-            // 
-            // DocumentTypeLUE
-            // 
-            this.DocumentTypeLUE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DocumentTypeLUE.Location = new System.Drawing.Point(96, 3);
-            this.DocumentTypeLUE.Name = "DocumentTypeLUE";
-            this.DocumentTypeLUE.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.DocumentTypeLUE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DocumentTypeLUE.Properties.Appearance.Options.UseFont = true;
-            this.DocumentTypeLUE.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DocumentTypeLUE.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.DocumentTypeLUE.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
-            this.DocumentTypeLUE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 30, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
-            this.DocumentTypeLUE.Properties.LookAndFeel.SkinName = "Money Twins";
-            this.DocumentTypeLUE.Properties.NullText = "не обрано";
-            this.DocumentTypeLUE.Properties.NullValuePrompt = "не обрано";
-            this.DocumentTypeLUE.Properties.NullValuePromptShowForEmptyValue = true;
-            this.DocumentTypeLUE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.DocumentTypeLUE.Properties.EditValueChanged += new System.EventHandler(this.DocumentTypeLUE_Properties_EditValueChanged);
-            this.DocumentTypeLUE.Size = new System.Drawing.Size(255, 26);
-            this.DocumentTypeLUE.TabIndex = 0;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "This value is not valid";
-            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.dxValidationProvider1.SetValidationRule(this.DocumentTypeLUE, conditionValidationRule1);
-            this.DocumentTypeLUE.EditValueChanged += new System.EventHandler(this.DocumentTypeLUE_EditValueChanged);
-            this.DocumentTypeLUE.TextChanged += new System.EventHandler(this.DocumentTypeLUE_TextChanged);
-            this.DocumentTypeLUE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DocumentTypeLUE_KeyDown);
-            // 
-            // DescriptionTE
-            // 
-            this.DescriptionTE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DescriptionTE.Location = new System.Drawing.Point(96, 227);
-            this.DescriptionTE.Name = "DescriptionTE";
-            this.DescriptionTE.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DescriptionTE.Properties.Appearance.Options.UseFont = true;
-            this.DescriptionTE.Size = new System.Drawing.Size(255, 46);
-            this.DescriptionTE.TabIndex = 7;
             // 
             // panel4
             // 
@@ -1262,60 +1316,6 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.RemoveEmployeeBt, 2, 10);
-            this.tableLayoutPanel4.Controls.Add(this.AddressTE, 1, 11);
-            this.tableLayoutPanel4.Controls.Add(this.AddObject2Bt, 2, 4);
-            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.AddObjectBt, 2, 3);
-            this.tableLayoutPanel4.Controls.Add(this.label15, 0, 11);
-            this.tableLayoutPanel4.Controls.Add(this.AbbContractorBt, 2, 2);
-            this.tableLayoutPanel4.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.label12, 0, 10);
-            this.tableLayoutPanel4.Controls.Add(this.EmployeesLB, 1, 10);
-            this.tableLayoutPanel4.Controls.Add(this.TeamsLUE, 1, 8);
-            this.tableLayoutPanel4.Controls.Add(this.EmployeesLUE, 1, 9);
-            this.tableLayoutPanel4.Controls.Add(this.label10, 0, 9);
-            this.tableLayoutPanel4.Controls.Add(this.label13, 0, 8);
-            this.tableLayoutPanel4.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel4.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel4.Controls.Add(this.DocumentTypeLUE, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.NumberTE, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label8, 0, 7);
-            this.tableLayoutPanel4.Controls.Add(this.CurrencyLUE, 1, 6);
-            this.tableLayoutPanel4.Controls.Add(this.ContractorLUE, 1, 2);
-            this.tableLayoutPanel4.Controls.Add(this.ToObjectLUE, 1, 3);
-            this.tableLayoutPanel4.Controls.Add(this.FromObjectLUE, 1, 4);
-            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel4.Controls.Add(this.DateDE, 1, 5);
-            this.tableLayoutPanel4.Controls.Add(this.label11, 0, 6);
-            this.tableLayoutPanel4.Controls.Add(this.DescriptionTE, 1, 7);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 12;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(379, 427);
-            this.tableLayoutPanel4.TabIndex = 5;
-            // 
             // DocumentData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1337,7 +1337,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.AddPaymentCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddressTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeesLB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TeamsLUE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeesLUE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DocumentTypeLUE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumberTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrencyLUE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContractorLUE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ToObjectLUE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FromObjectLUE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateDE.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateDE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescriptionTE.Properties)).EndInit();
             this.CarGB.ResumeLayout(false);
             this.CarGB.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -1345,18 +1359,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CarModelPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarBrandPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarNumberTE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TeamsLUE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeesLB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeesLUE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CurrencyLUE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumberTE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateDE.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateDE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FromObjectLUE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ToObjectLUE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContractorLUE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DocumentTypeLUE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DescriptionTE.Properties)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -1376,8 +1378,6 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
