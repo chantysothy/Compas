@@ -41,6 +41,7 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.wareSelectorUC1 = new Compas.UC.WareSelectorUC();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -52,7 +53,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.wareSelectorUC1 = new Compas.UC.WareSelectorUC();
             ((System.ComponentModel.ISupportInitialize)(this.WareComponentsGV)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -104,7 +104,7 @@
             this.AddComponentBt.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.AddComponentBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddComponentBt.Image = global::Compas.AdminUI.Properties.Resources.button_ok__1_;
-            this.AddComponentBt.Location = new System.Drawing.Point(210, 3);
+            this.AddComponentBt.Location = new System.Drawing.Point(208, 3);
             this.AddComponentBt.Name = "AddComponentBt";
             this.AddComponentBt.Size = new System.Drawing.Size(203, 45);
             this.AddComponentBt.TabIndex = 82;
@@ -194,6 +194,18 @@
             this.splitContainer1.SplitterDistance = 634;
             this.splitContainer1.TabIndex = 82;
             // 
+            // wareSelectorUC1
+            // 
+            this.wareSelectorUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wareSelectorUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.wareSelectorUC1.FontSize = 12F;
+            this.wareSelectorUC1.Location = new System.Drawing.Point(0, 0);
+            this.wareSelectorUC1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.wareSelectorUC1.Name = "wareSelectorUC1";
+            this.wareSelectorUC1.Size = new System.Drawing.Size(634, 430);
+            this.wareSelectorUC1.TabIndex = 0;
+            this.wareSelectorUC1.SelectedWareChanged += new System.EventHandler(this.wareSelectorUC1_SelectedWareChanged);
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.groupBox3);
@@ -262,7 +274,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.60189F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.39811F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 214F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 216F));
             this.tableLayoutPanel1.Controls.Add(this.AddComponentBt, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.UnitQuantityNUD, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
@@ -278,9 +290,9 @@
             this.UnitQuantityNUD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.UnitQuantityNUD.DecimalPlaces = 3;
             this.UnitQuantityNUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UnitQuantityNUD.Location = new System.Drawing.Point(93, 12);
+            this.UnitQuantityNUD.Location = new System.Drawing.Point(92, 12);
             this.UnitQuantityNUD.Name = "UnitQuantityNUD";
-            this.UnitQuantityNUD.Size = new System.Drawing.Size(111, 26);
+            this.UnitQuantityNUD.Size = new System.Drawing.Size(110, 26);
             this.UnitQuantityNUD.TabIndex = 83;
             // 
             // label1
@@ -288,7 +300,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(5, 15);
+            this.label1.Location = new System.Drawing.Point(4, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 84;
@@ -322,18 +334,6 @@
             this.splitContainer3.Size = new System.Drawing.Size(1132, 487);
             this.splitContainer3.SplitterDistance = 53;
             this.splitContainer3.TabIndex = 83;
-            // 
-            // wareSelectorUC1
-            // 
-            this.wareSelectorUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wareSelectorUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.wareSelectorUC1.FontSize = 12F;
-            this.wareSelectorUC1.Location = new System.Drawing.Point(0, 0);
-            this.wareSelectorUC1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.wareSelectorUC1.Name = "wareSelectorUC1";
-            this.wareSelectorUC1.Size = new System.Drawing.Size(634, 430);
-            this.wareSelectorUC1.TabIndex = 0;
-            this.wareSelectorUC1.SelectedWareChanged += new System.EventHandler(this.wareSelectorUC1_SelectedWareChanged);
             // 
             // WareComponentDataSimple
             // 

@@ -38,6 +38,8 @@ namespace Compas.Helpers
     {
         int _id;
         string _name;
+        byte[] _image;
+
 
         public int ID
         {
@@ -49,6 +51,12 @@ namespace Compas.Helpers
         {
             get { return _name; }
             set { _name = value; }
+        }
+
+        public byte[] Image
+        {
+            get { return _image; }
+            set { _image = value; }
         }
 
 

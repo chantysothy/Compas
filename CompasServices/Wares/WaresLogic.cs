@@ -241,7 +241,7 @@ namespace Compas.Logic.Wares
         }
 
         public Model.Ware Create(string Name, int UnitID, decimal UnitQuantity, int? ManufacturerID, int? CategoryID,
-            int? SecondaryUnitID, decimal? SecondaryUnitQuantity)
+            int? SecondaryUnitID, decimal? SecondaryUnitQuantity, byte[] Image)
         {
             
             Ware sr = Ware.CreateWare(1, Name, UnitID, UnitQuantity);
@@ -249,29 +249,60 @@ namespace Compas.Logic.Wares
             sr.ManufacturerID = ManufacturerID;
             sr.SecondaryUnitID = SecondaryUnitID;
             sr.SecondaryUnitQuantity = SecondaryUnitQuantity;
+            sr.Image = Image;
            
             context.AddToWares(sr);
             return sr;
         }
 
-        public Model.Ware Update(int ID, string Name, int UnitID, int? ManufacturerID, int? CategoryID,
+        public Model.Ware Create(string Name, int UnitID, decimal UnitQuantity, int? ManufacturerID, int? CategoryID,
             int? SecondaryUnitID, decimal? SecondaryUnitQuantity)
+        {
+
+            Ware sr = Ware.CreateWare(1, Name, UnitID, UnitQuantity);
+            sr.CategoryID = CategoryID;
+            sr.ManufacturerID = ManufacturerID;
+            sr.SecondaryUnitID = SecondaryUnitID;
+            sr.SecondaryUnitQuantity = SecondaryUnitQuantity;
+            
+
+            context.AddToWares(sr);
+            return sr;
+        }
+
+        public Model.Ware Update(int ID, string Name, int UnitID, int? ManufacturerID, int? CategoryID,
+            int? SecondaryUnitID, decimal? SecondaryUnitQuantity, byte[] Image)
         {
             
             Ware sr = (from a in context.Wares
                                where a.ID == ID
                                select a).FirstOrDefault();
             sr.Name = Name;
-            sr.UnitID = UnitID;
-            
+            sr.UnitID = UnitID;            
             sr.ManufacturerID = ManufacturerID;
             sr.CategoryID = CategoryID;
             sr.SecondaryUnitID = SecondaryUnitID;
             sr.SecondaryUnitQuantity = SecondaryUnitQuantity;
-     
+            sr.Image = Image;
             return sr;
         }
 
+        public Model.Ware Update(int ID, string Name, int UnitID, int? ManufacturerID, int? CategoryID,
+            int? SecondaryUnitID, decimal? SecondaryUnitQuantity)
+        {
+
+            Ware sr = (from a in context.Wares
+                       where a.ID == ID
+                       select a).FirstOrDefault();
+            sr.Name = Name;
+            sr.UnitID = UnitID;
+            sr.ManufacturerID = ManufacturerID;
+            sr.CategoryID = CategoryID;
+            sr.SecondaryUnitID = SecondaryUnitID;
+            sr.SecondaryUnitQuantity = SecondaryUnitQuantity;
+            
+            return sr;
+        }
         public int Delete(int ID)
         {
             int result = 1;

@@ -178,7 +178,8 @@
       [ViewWares].[ManufacturerName] AS [ManufacturerName], 
       [ViewWares].[WareCategoryName] AS [WareCategoryName], 
       [ViewWares].[TimeLimit] AS [TimeLimit], 
-      [ViewWares].[WareCode] AS [WareCode]
+      [ViewWares].[WareCode] AS [WareCode], 
+      [ViewWares].[Image] AS [Image]
       FROM [dbo].[ViewWares] AS [ViewWares]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="ViewWaresDetalisation" EntityType="CompasModel.Store.ViewWaresDetalisation" store:Type="Views" store:Schema="dbo" store:Name="ViewWaresDetalisation">
@@ -937,6 +938,7 @@
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ParentCategoryID" Type="int" />
           <Property Name="Name" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="Image" Type="image" />
         </EntityType>
         <EntityType Name="WareCodes">
           <Key>
@@ -1157,6 +1159,7 @@
           <Property Name="SecondaryUnitQuantity" Type="decimal" Scale="3" />
           <Property Name="OneChoiceComponent" Type="bit" />
           <Property Name="MinimumQuantity" Type="decimal" Scale="3" />
+          <Property Name="Image" Type="image" />
         </EntityType>
         <EntityType Name="WareTimeLimits">
           <Key>
@@ -1339,6 +1342,7 @@
           <Property Name="WareCategoryName" Type="varchar" MaxLength="1000" />
           <Property Name="TimeLimit" Type="decimal" Scale="2" />
           <Property Name="WareCode" Type="varchar" MaxLength="1000" />
+          <Property Name="Image" Type="image" />
         </EntityType>
         <!--Ошибки, обнаруженные при создании:
       предупреждение 6002: В таблице или представлении "MKSDBTest.dbo.ViewWaresDetalisation" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.
@@ -2447,7 +2451,6 @@
           <EntitySet Name="WareCards" EntityType="CompasModel.WareCard" />
           <EntitySet Name="WareCardTypeDiscounts" EntityType="CompasModel.WareCardTypeDiscount" />
           <EntitySet Name="WareCardTypes" EntityType="CompasModel.WareCardType" />
-          <EntitySet Name="WareCategories" EntityType="CompasModel.WareCategory" />
           <EntitySet Name="WareCodes" EntityType="CompasModel.WareCode" />
           <EntitySet Name="WareComponents" EntityType="CompasModel.WareComponent" />
           <EntitySet Name="WareDiscountRules" EntityType="CompasModel.WareDiscountRule" />
@@ -2714,14 +2717,6 @@
             <End Role="WareDiscount" EntitySet="WareDiscounts" />
             <End Role="WareCardTypeDiscount" EntitySet="WareCardTypeDiscounts" />
           </AssociationSet>
-          <AssociationSet Name="FK_WareCategories_WareCategories" Association="CompasModel.FK_WareCategories_WareCategories">
-            <End Role="WareCategory" EntitySet="WareCategories" />
-            <End Role="WareCategory1" EntitySet="WareCategories" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Wares_WareCategories" Association="CompasModel.FK_Wares_WareCategories">
-            <End Role="WareCategory" EntitySet="WareCategories" />
-            <End Role="Ware" EntitySet="Wares" />
-          </AssociationSet>
           <AssociationSet Name="FK_WareCodes_Wares" Association="CompasModel.FK_WareCodes_Wares">
             <End Role="Ware" EntitySet="Wares" />
             <End Role="WareCode" EntitySet="WareCodes" />
@@ -2821,6 +2816,15 @@
           <EntitySet Name="ViewStaffEmployeeSalaries" EntityType="CompasModel.ViewStaffEmployeeSalary" />
           <EntitySet Name="ViewConfigurationParameters" EntityType="CompasModel.ViewConfigurationParameter" />
           <EntitySet Name="ViewWares" EntityType="CompasModel.ViewWare" />
+          <EntitySet Name="WareCategories" EntityType="CompasModel.WareCategory" />
+          <AssociationSet Name="FK_WareCategories_WareCategories" Association="CompasModel.FK_WareCategories_WareCategories">
+            <End Role="WareCategory" EntitySet="WareCategories" />
+            <End Role="WareCategory1" EntitySet="WareCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Wares_WareCategories" Association="CompasModel.FK_Wares_WareCategories">
+            <End Role="WareCategory" EntitySet="WareCategories" />
+            <End Role="Ware" EntitySet="Wares" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="ConfigurationParameter">
           <Key>
@@ -3303,17 +3307,6 @@
           <NavigationProperty Name="WareCards" Relationship="CompasModel.FK_WareCards_WareCardTypes" FromRole="WareCardType" ToRole="WareCard" />
           <NavigationProperty Name="WareCardTypeDiscounts" Relationship="CompasModel.FK_WareCardTypeDiscounts_WareCardTypes" FromRole="WareCardType" ToRole="WareCardTypeDiscount" />
         </EntityType>
-        <EntityType Name="WareCategory">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int32" Name="ParentCategoryID" />
-          <Property Type="String" Name="Name" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="WareCategories1" Relationship="CompasModel.FK_WareCategories_WareCategories" FromRole="WareCategory" ToRole="WareCategory1" />
-          <NavigationProperty Name="WareCategory1" Relationship="CompasModel.FK_WareCategories_WareCategories" FromRole="WareCategory1" ToRole="WareCategory" />
-          <NavigationProperty Name="Wares" Relationship="CompasModel.FK_Wares_WareCategories" FromRole="WareCategory" ToRole="Ware" />
-        </EntityType>
         <EntityType Name="WareCode">
           <Key>
             <PropertyRef Name="ID" />
@@ -3587,7 +3580,6 @@
           <Property Type="Decimal" Name="SecondaryUnitQuantity" Precision="18" Scale="3" />
           <Property Type="Boolean" Name="OneChoiceComponent" />
           <Property Type="Decimal" Name="MinimumQuantity" Precision="18" Scale="3" />
-          <NavigationProperty Name="WareCategory" Relationship="CompasModel.FK_Wares_WareCategories" FromRole="Ware" ToRole="WareCategory" />
           <NavigationProperty Name="WareCodes" Relationship="CompasModel.FK_WareCodes_Wares" FromRole="Ware" ToRole="WareCode" />
           <NavigationProperty Name="WareComponents" Relationship="CompasModel.FK_WareComponentDetails_Wares" FromRole="Ware" ToRole="WareComponent" />
           <NavigationProperty Name="WareComponents1" Relationship="CompasModel.FK_WareComponents_Component_Wares" FromRole="Ware" ToRole="WareComponent" />
@@ -3598,6 +3590,8 @@
           <NavigationProperty Name="WareUnit" Relationship="CompasModel.FK_Wares_WareUnits" FromRole="Ware" ToRole="WareUnit" />
           <NavigationProperty Name="WareUnit1" Relationship="CompasModel.FK_Wares_WareUnits1" FromRole="Ware" ToRole="WareUnit" />
           <NavigationProperty Name="WareTimeLimits" Relationship="CompasModel.FK_WareTimeLimits_Wares" FromRole="Ware" ToRole="WareTimeLimit" />
+          <NavigationProperty Name="WareCategory" Relationship="CompasModel.FK_Wares_WareCategories" FromRole="Ware" ToRole="WareCategory" />
+          <Property Type="Binary" Name="Image" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="WareTimeLimit">
           <Key>
@@ -4350,30 +4344,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_WareCategories_WareCategories">
-          <End Type="CompasModel.WareCategory" Role="WareCategory" Multiplicity="0..1" />
-          <End Type="CompasModel.WareCategory" Role="WareCategory1" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="WareCategory">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="WareCategory1">
-              <PropertyRef Name="ParentCategoryID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Wares_WareCategories">
-          <End Type="CompasModel.WareCategory" Role="WareCategory" Multiplicity="0..1" />
-          <End Type="CompasModel.Ware" Role="Ware" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="WareCategory">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Ware">
-              <PropertyRef Name="CategoryID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_WareCodes_Wares">
           <End Type="CompasModel.Ware" Role="Ware" Multiplicity="1" />
           <End Type="CompasModel.WareCode" Role="WareCode" Multiplicity="*" />
@@ -4824,7 +4794,44 @@
           <Property Type="String" Name="WareCategoryName" MaxLength="1000" FixedLength="false" Unicode="false" />
           <Property Type="Decimal" Name="TimeLimit" Precision="18" Scale="2" />
           <Property Type="String" Name="WareCode" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="Image" MaxLength="Max" FixedLength="false" />
         </EntityType>
+        <EntityType Name="WareCategory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ParentCategoryID" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="WareCategories1" Relationship="CompasModel.FK_WareCategories_WareCategories" FromRole="WareCategory" ToRole="WareCategory1" />
+          <NavigationProperty Name="WareCategory1" Relationship="CompasModel.FK_WareCategories_WareCategories" FromRole="WareCategory1" ToRole="WareCategory" />
+          <NavigationProperty Name="Wares" Relationship="CompasModel.FK_Wares_WareCategories" FromRole="WareCategory" ToRole="Ware" />
+          <Property Type="Binary" Name="Image" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_WareCategories_WareCategories">
+          <End Type="CompasModel.WareCategory" Role="WareCategory" Multiplicity="0..1" />
+          <End Type="CompasModel.WareCategory" Role="WareCategory1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WareCategory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WareCategory1">
+              <PropertyRef Name="ParentCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Wares_WareCategories">
+          <End Type="CompasModel.WareCategory" Role="WareCategory" Multiplicity="0..1" />
+          <End Type="CompasModel.Ware" Role="Ware" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WareCategory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Ware">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -5251,15 +5258,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="WareCategories">
-            <EntityTypeMapping TypeName="CompasModel.WareCategory">
-              <MappingFragment StoreEntitySet="WareCategories">
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ParentCategoryID" ColumnName="ParentCategoryID" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="WareCodes">
             <EntityTypeMapping TypeName="CompasModel.WareCode">
               <MappingFragment StoreEntitySet="WareCodes">
@@ -5487,6 +5485,7 @@
           <EntitySetMapping Name="Wares">
             <EntityTypeMapping TypeName="CompasModel.Ware">
               <MappingFragment StoreEntitySet="Wares">
+                <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="MinimumQuantity" ColumnName="MinimumQuantity" />
                 <ScalarProperty Name="OneChoiceComponent" ColumnName="OneChoiceComponent" />
                 <ScalarProperty Name="SecondaryUnitQuantity" ColumnName="SecondaryUnitQuantity" />
@@ -5649,6 +5648,7 @@
           <EntitySetMapping Name="ViewWares">
             <EntityTypeMapping TypeName="CompasModel.ViewWare">
               <MappingFragment StoreEntitySet="ViewWares">
+                <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="WareCode" ColumnName="WareCode" />
                 <ScalarProperty Name="TimeLimit" ColumnName="TimeLimit" />
                 <ScalarProperty Name="WareCategoryName" ColumnName="WareCategoryName" />
@@ -5664,6 +5664,16 @@
                 <ScalarProperty Name="UnitQuantity" ColumnName="UnitQuantity" />
                 <ScalarProperty Name="UnitID" ColumnName="UnitID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WareCategories">
+            <EntityTypeMapping TypeName="CompasModel.WareCategory">
+              <MappingFragment StoreEntitySet="WareCategories">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ParentCategoryID" ColumnName="ParentCategoryID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -5730,7 +5740,6 @@
         <EntityTypeShape EntityType="CompasModel.WareCard" Width="1.5" PointX="11.25" PointY="41.875" Height="3.3263964843749818" />
         <EntityTypeShape EntityType="CompasModel.WareCardTypeDiscount" Width="1.5" PointX="19.25" PointY="22.375" Height="2.3648893229166674" />
         <EntityTypeShape EntityType="CompasModel.WareCardType" Width="1.5" PointX="9" PointY="42.5" Height="2.1725878906249818" />
-        <EntityTypeShape EntityType="CompasModel.WareCategory" Width="1.5" PointX="12" PointY="8.625" Height="2.1725878906249818" />
         <EntityTypeShape EntityType="CompasModel.WareCode" Width="1.5" PointX="16.5" PointY="9.25" Height="1.7879850260416106" />
         <EntityTypeShape EntityType="CompasModel.WareComponent" Width="1.5" PointX="16.5" PointY="11.875" Height="2.557190755208353" />
         <EntityTypeShape EntityType="CompasModel.WareDiscountRule" Width="1.5" PointX="18.25" PointY="5.75" Height="2.1725878906249818" />
@@ -5814,14 +5823,12 @@
           <ConnectorPoint PointX="11.125" PointY="16.493871256510417" />
           <ConnectorPoint PointX="11.197916666666666" PointY="16.493871256510417" />
           <ConnectorPoint PointX="11.364583333333334" PointY="16.493871256510417" />
-          <ConnectorPoint PointX="14.291666666666666" PointY="16.493871256510417" />
-          <ConnectorPoint PointX="14.458333333333334" PointY="16.493871256510417" />
-          <ConnectorPoint PointX="16.052083333333336" PointY="16.493871256510417" />
-          <ConnectorPoint PointX="16.458333333333336" PointY="16.493871256510417" />
+          <ConnectorPoint PointX="13.854166666666666" PointY="16.493871256510417" />
+          <ConnectorPoint PointX="14.083333333333334" PointY="16.493871256510417" />
+          <ConnectorPoint PointX="16.041666666666668" PointY="16.493871256510417" />
+          <ConnectorPoint PointX="16.348958333333332" PointY="16.493871256510417" />
           <ConnectorPoint PointX="18.916666666666668" PointY="16.493871256510417" />
           <ConnectorPoint PointX="19.083333333333332" PointY="16.493871256510417" />
-          <ConnectorPoint PointX="19.083333333333336" PointY="16.493871256510417" />
-          <ConnectorPoint PointX="19.25" PointY="16.493871256510417" />
           <ConnectorPoint PointX="19.5" PointY="16.493871256510417" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareDocuments_Contractors" >
@@ -5888,43 +5895,41 @@
           <ConnectorPoint PointX="11.25" PointY="4.2545475260416765" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_CWContractorCars_CWCars" >
-          <ConnectorPoint PointX="11.296875" PointY="6.2013964843749818" />
-          <ConnectorPoint PointX="11.296875" PointY="16.106613769531251" />
-          <ConnectorPoint PointX="14.291666666666666" PointY="16.106613769531251" />
-          <ConnectorPoint PointX="14.458333333333334" PointY="16.106613769531251" />
-          <ConnectorPoint PointX="16.052083333333336" PointY="16.106613769531251" />
-          <ConnectorPoint PointX="16.458333333333336" PointY="16.106613769531251" />
+          <ConnectorPoint PointX="11.500000499999999" PointY="6.2013964843749818" />
+          <ConnectorPoint PointX="11.500000499999999" PointY="16.106613769531251" />
+          <ConnectorPoint PointX="13.854166666666666" PointY="16.106613769531251" />
+          <ConnectorPoint PointX="14.083333333333334" PointY="16.106613769531251" />
+          <ConnectorPoint PointX="16.041666666666668" PointY="16.106613769531251" />
+          <ConnectorPoint PointX="16.348958333333332" PointY="16.106613769531251" />
           <ConnectorPoint PointX="18.916666666666668" PointY="16.106613769531251" />
           <ConnectorPoint PointX="19.083333333333332" PointY="16.106613769531251" />
-          <ConnectorPoint PointX="19.083333333333336" PointY="16.106613769531251" />
-          <ConnectorPoint PointX="19.25" PointY="16.106613769531251" />
           <ConnectorPoint PointX="19.5" PointY="16.106613769531251" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareCardCars_CWCars" >
-          <ConnectorPoint PointX="12.578127" PointY="6.2013964843749818" />
-          <ConnectorPoint PointX="12.578127" PointY="8.375" />
-          <ConnectorPoint PointX="13.166666666666666" PointY="8.375" />
-          <ConnectorPoint PointX="13.333333333333334" PointY="8.375" />
-          <ConnectorPoint PointX="16.135416666666668" PointY="8.375" />
-          <ConnectorPoint PointX="16.302083333333332" PointY="8.375" />
-          <ConnectorPoint PointX="19.166666666666668" PointY="8.375" />
-          <ConnectorPoint PointX="19.166666666666668" PointY="20.115143229166677" />
-          <ConnectorPoint PointX="19.5" PointY="20.115143229166677" />
+          <ConnectorPoint PointX="12.15625225" PointY="6.2013964843749818" />
+          <ConnectorPoint PointX="12.15625225" PointY="11.375" />
+          <ConnectorPoint PointX="14" PointY="11.375" />
+          <ConnectorPoint PointX="14" PointY="20.421007595054739" />
+          <ConnectorPoint PointX="15.437149935897436" PointY="20.421007595054739" />
+          <ConnectorPoint PointX="15.603816602564104" PointY="20.421007595054739" />
+          <ConnectorPoint PointX="16.041666666666668" PointY="20.421007595054739" />
+          <ConnectorPoint PointX="16.348958333333332" PointY="20.421007595054739" />
+          <ConnectorPoint PointX="18.916666666666668" PointY="20.421007595054739" />
+          <ConnectorPoint PointX="19.083333333333332" PointY="20.421007595054739" />
+          <ConnectorPoint PointX="19.5" PointY="20.421007595054739" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareDocumentCars_CWCars" >
           <ConnectorPoint PointX="12.75" PointY="4.5381982421874909" />
           <ConnectorPoint PointX="13.25" PointY="4.5381982421874909" />
-          <ConnectorPoint PointX="13.25" PointY="8.5" />
-          <ConnectorPoint PointX="14.375" PointY="8.5" />
-          <ConnectorPoint PointX="14.375" PointY="23.25" />
-          <ConnectorPoint PointX="14.625" PointY="23.25" />
-          <ConnectorPoint PointX="14.625" PointY="23.625" />
+          <ConnectorPoint PointX="13.25" PointY="11.125" />
+          <ConnectorPoint PointX="13.9375" PointY="11.125" />
+          <ConnectorPoint PointX="13.9375" PointY="23.25" />
+          <ConnectorPoint PointX="14.25" PointY="23.25" />
+          <ConnectorPoint PointX="14.25" PointY="23.625" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareOrderCars_CWCars" >
-          <ConnectorPoint PointX="12.75" PointY="5.3628511210937386" />
-          <ConnectorPoint PointX="13.166666666666666" PointY="5.3628511210937377" />
-          <ConnectorPoint PointX="13.333333333333334" PointY="5.3628511210937386" />
-          <ConnectorPoint PointX="13.59375" PointY="5.3628511210937386" />
+          <ConnectorPoint PointX="12.75" PointY="4.0250880408653789" />
+          <ConnectorPoint PointX="13.59375" PointY="4.0250880408653789" />
           <ConnectorPoint PointX="13.59375" PointY="6.125" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareDocuments_Enterprises" >
@@ -6281,21 +6286,21 @@
           <ConnectorPoint PointX="5.74648432612682" PointY="13" />
           <ConnectorPoint PointX="8.5" PointY="13" />
           <ConnectorPoint PointX="8.5" PointY="14.057109374999982" />
-          <ConnectorPoint PointX="11.213541666666666" PointY="14.057109374999982" />
-          <ConnectorPoint PointX="11.380208333333334" PointY="14.057109374999982" />
-          <ConnectorPoint PointX="11.5" PointY="14.057109374999982" />
-          <ConnectorPoint PointX="11.5" PointY="13.75" />
-          <ConnectorPoint PointX="14" PointY="13.75" />
-          <ConnectorPoint PointX="14" PointY="14.932109374999982" />
-          <ConnectorPoint PointX="14.291666666666666" PointY="14.932109374999982" />
-          <ConnectorPoint PointX="14.458333333333334" PointY="14.932109374999982" />
-          <ConnectorPoint PointX="15.87974358974359" PointY="14.93210937499998" />
-          <ConnectorPoint PointX="16.302083333333336" PointY="14.932109374999982" />
-          <ConnectorPoint PointX="19.041666666666668" PointY="14.932109374999982" />
-          <ConnectorPoint PointX="19.041666666666668" PointY="13.334727878705962" />
-          <ConnectorPoint PointX="19.083333333333336" PointY="13.334727878705962" />
-          <ConnectorPoint PointX="19.25" PointY="13.334727878705962" />
-          <ConnectorPoint PointX="19.5" PointY="13.334727878705962" />
+          <ConnectorPoint PointX="11.416667166666665" PointY="14.057109374999982" />
+          <ConnectorPoint PointX="11.583333833333333" PointY="14.057109374999982" />
+          <ConnectorPoint PointX="11.75" PointY="14.057109374999982" />
+          <ConnectorPoint PointX="11.75" PointY="13.470683593749982" />
+          <ConnectorPoint PointX="13.875" PointY="13.470683593749982" />
+          <ConnectorPoint PointX="13.875" PointY="14.682190755208353" />
+          <ConnectorPoint PointX="13.916666666666666" PointY="14.682190755208353" />
+          <ConnectorPoint PointX="14.083333333333334" PointY="14.682190755208353" />
+          <ConnectorPoint PointX="15.734825969951942" PointY="14.682190755208353" />
+          <ConnectorPoint PointX="15.90149263661861" PointY="14.682190755208353" />
+          <ConnectorPoint PointX="16.130208333333336" PointY="14.682190755208353" />
+          <ConnectorPoint PointX="16.296875" PointY="14.682190755208353" />
+          <ConnectorPoint PointX="19.125" PointY="14.682190755208353" />
+          <ConnectorPoint PointX="19.125" PointY="13.303475378705969" />
+          <ConnectorPoint PointX="19.5" PointY="13.303475378705969" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_StaffTeamEmployees_StaffTeams" >
           <ConnectorPoint PointX="7.5" PointY="14.90625" />
@@ -6306,14 +6311,14 @@
           <ConnectorPoint PointX="7.5" PointY="15.390627499999994" />
           <ConnectorPoint PointX="8.5104166666666661" PointY="15.390627499999994" />
           <ConnectorPoint PointX="8.6770833333333339" PointY="15.390627499999994" />
-          <ConnectorPoint PointX="11.213541666666666" PointY="15.390627499999994" />
-          <ConnectorPoint PointX="11.380208333333334" PointY="15.390627499999994" />
+          <ConnectorPoint PointX="11.416667166666665" PointY="15.390627499999994" />
+          <ConnectorPoint PointX="11.583333833333333" PointY="15.390627499999994" />
           <ConnectorPoint PointX="11.75" PointY="15.390627499999994" />
           <ConnectorPoint PointX="11.75" PointY="15.912985026041667" />
-          <ConnectorPoint PointX="14.291666666666666" PointY="15.912985026041667" />
-          <ConnectorPoint PointX="14.458333333333334" PointY="15.912985026041667" />
-          <ConnectorPoint PointX="16.052083333333336" PointY="15.912985026041666" />
-          <ConnectorPoint PointX="16.458333333333336" PointY="15.912985026041667" />
+          <ConnectorPoint PointX="13.854166666666666" PointY="15.912985026041667" />
+          <ConnectorPoint PointX="14.083333333333334" PointY="15.912985026041667" />
+          <ConnectorPoint PointX="16.041666666666668" PointY="15.912985026041666" />
+          <ConnectorPoint PointX="16.348958333333332" PointY="15.912985026041667" />
           <ConnectorPoint PointX="19" PointY="15.912985026041667" />
           <ConnectorPoint PointX="19" PointY="26.375" />
           <ConnectorPoint PointX="19.5" PointY="26.375" />
@@ -6370,43 +6375,29 @@
           <ConnectorPoint PointX="20" PointY="24.739889322916667" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareCardTypeDiscounts_WareDiscounts" >
-          <ConnectorPoint PointX="16.21875" PointY="5.057190755208353" />
-          <ConnectorPoint PointX="16.21875" PointY="24.46824218750001" />
-          <ConnectorPoint PointX="16.291666666666668" PointY="24.46824218750001" />
-          <ConnectorPoint PointX="16.458333333333332" PointY="24.46824218750001" />
+          <ConnectorPoint PointX="16.213541666666668" PointY="5.057190755208353" />
+          <ConnectorPoint PointX="16.213541666666668" PointY="24.46824218750001" />
           <ConnectorPoint PointX="18.916666666666668" PointY="24.46824218750001" />
           <ConnectorPoint PointX="19.083333333333332" PointY="24.46824218750001" />
           <ConnectorPoint PointX="19.25" PointY="24.46824218750001" />
         </AssociationConnector>
-        <AssociationConnector Association="CompasModel.FK_WareCategories_WareCategories" >
-          <ConnectorPoint PointX="12.531923076923077" PointY="10.797587890624982" />
-          <ConnectorPoint PointX="12.531923076923077" PointY="11.047587890624982" />
-          <ConnectorPoint PointX="12.978461538461538" PointY="11.047587890624982" />
-          <ConnectorPoint PointX="12.978461538461538" PointY="10.797587890624982" />
-        </AssociationConnector>
-        <AssociationConnector Association="CompasModel.FK_Wares_WareCategories" >
-          <ConnectorPoint PointX="13.5" PointY="10.211293945312491" />
-          <ConnectorPoint PointX="13.916666666666666" PointY="10.211293945312491" />
-          <ConnectorPoint PointX="14.083333333333334" PointY="10.211293945312491" />
-          <ConnectorPoint PointX="14.25" PointY="10.211293945312491" />
-        </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareCodes_Wares" >
           <ConnectorPoint PointX="15.75" PointY="10.331492513020805" />
-          <ConnectorPoint PointX="16.135416666666668" PointY="10.331492513020805" />
-          <ConnectorPoint PointX="16.302083333333332" PointY="10.331492513020805" />
+          <ConnectorPoint PointX="16.130208333333336" PointY="10.331492513020805" />
+          <ConnectorPoint PointX="16.296875" PointY="10.331492513020805" />
           <ConnectorPoint PointX="16.5" PointY="10.331492513020805" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareComponentDetails_Wares" >
-          <ConnectorPoint PointX="15.75" PointY="13.153595377604177" />
-          <ConnectorPoint PointX="16.135416666666668" PointY="13.153595377604177" />
-          <ConnectorPoint PointX="16.302083333333332" PointY="13.153595377604177" />
-          <ConnectorPoint PointX="16.5" PointY="13.153595377604177" />
+          <ConnectorPoint PointX="15.75" PointY="13.592218933105482" />
+          <ConnectorPoint PointX="16.130208333333336" PointY="13.592218933105482" />
+          <ConnectorPoint PointX="16.296875" PointY="13.592218933105482" />
+          <ConnectorPoint PointX="16.5" PointY="13.592218933105482" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareComponents_Component_Wares" >
-          <ConnectorPoint PointX="15.75" PointY="12.451797688802088" />
-          <ConnectorPoint PointX="16.135416666666668" PointY="12.451797688802088" />
-          <ConnectorPoint PointX="16.302083333333332" PointY="12.451797688802088" />
-          <ConnectorPoint PointX="16.5" PointY="12.451797688802088" />
+          <ConnectorPoint PointX="15.75" PointY="12.671109466552741" />
+          <ConnectorPoint PointX="16.130208333333336" PointY="12.671109466552741" />
+          <ConnectorPoint PointX="16.296875" PointY="12.671109466552741" />
+          <ConnectorPoint PointX="16.5" PointY="12.671109466552741" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareDiscountRules_WareDiscounts" >
           <ConnectorPoint PointX="17.5" PointY="4.7903450520833388" />
@@ -6423,17 +6414,17 @@
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareDocumentDetails_WareDocuments" >
           <ConnectorPoint PointX="12.75" PointY="25.96875" />
-          <ConnectorPoint PointX="16.291666666666668" PointY="25.96875" />
-          <ConnectorPoint PointX="16.458333333333332" PointY="25.96875" />
+          <ConnectorPoint PointX="16.182291666666668" PointY="25.96875" />
+          <ConnectorPoint PointX="16.348958333333332" PointY="25.96875" />
           <ConnectorPoint PointX="16.5" PointY="25.96875" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareDocumentDetails_Wares" >
-          <ConnectorPoint PointX="15.713076923076924" PointY="14.682109374999982" />
-          <ConnectorPoint PointX="16.159824434901122" PointY="15.128856886824178" />
-          <ConnectorPoint PointX="16.35059223176555" PointY="15.319624683688605" />
-          <ConnectorPoint PointX="16.375" PointY="15.344032451923058" />
-          <ConnectorPoint PointX="16.375" PointY="27.703127500000051" />
-          <ConnectorPoint PointX="16.5" PointY="27.703127500000051" />
+          <ConnectorPoint PointX="15.713076923076924" PointY="14.682109375" />
+          <ConnectorPoint PointX="16.097324434901122" PointY="15.066356886824195" />
+          <ConnectorPoint PointX="16.215175565098878" PointY="15.184208017021954" />
+          <ConnectorPoint PointX="16.265625" PointY="15.234657451923075" />
+          <ConnectorPoint PointX="16.265625" PointY="27.341095877604175" />
+          <ConnectorPoint PointX="16.5" PointY="27.341095877604175" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareDocumentStaffDetails_WareDocumentDetails" >
           <ConnectorPoint PointX="18" PointY="27.422948404947903" />
@@ -6492,21 +6483,19 @@
         <AssociationConnector Association="CompasModel.FK_WarePrices_WareDocuments" >
           <ConnectorPoint PointX="12.75" PointY="23.75" />
           <ConnectorPoint PointX="13.125" PointY="23.375" />
-          <ConnectorPoint PointX="13.125" PointY="20.625" />
-          <ConnectorPoint PointX="14.291666666666666" PointY="20.625" />
-          <ConnectorPoint PointX="14.458333333333334" PointY="20.625" />
-          <ConnectorPoint PointX="15.437149935897436" PointY="20.625" />
-          <ConnectorPoint PointX="15.603816602564104" PointY="20.625" />
-          <ConnectorPoint PointX="16.125" PointY="20.625" />
+          <ConnectorPoint PointX="13.125" PointY="20.659824434901122" />
+          <ConnectorPoint PointX="13.854166666666666" PointY="20.659824434901122" />
+          <ConnectorPoint PointX="14.020833333333334" PointY="20.659824434901122" />
+          <ConnectorPoint PointX="15.437149935897436" PointY="20.659824434901122" />
+          <ConnectorPoint PointX="15.603816602564104" PointY="20.659824434901122" />
           <ConnectorPoint PointX="16.159824434901122" PointY="20.659824434901122" />
-          <ConnectorPoint PointX="16.277675565098878" PointY="20.777675565098878" />
-          <ConnectorPoint PointX="16.316074434901122" PointY="20.816074434901122" />
-          <ConnectorPoint PointX="16.433925565098878" PointY="20.933925565098878" />
+          <ConnectorPoint PointX="16.206699434901122" PointY="20.706699434901122" />
+          <ConnectorPoint PointX="16.324550565098878" PointY="20.824550565098878" />
           <ConnectorPoint PointX="16.5" PointY="21" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_Wares_WareManufacturers" >
           <ConnectorPoint PointX="13.5" PointY="12.422841796874991" />
-          <ConnectorPoint PointX="13.916666666666666" PointY="12.422841796874991" />
+          <ConnectorPoint PointX="13.854166666666666" PointY="12.422841796874991" />
           <ConnectorPoint PointX="14.083333333333334" PointY="12.422841796874991" />
           <ConnectorPoint PointX="14.25" PointY="12.422841796874991" />
         </AssociationConnector>
@@ -6518,45 +6507,43 @@
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WarePrices_WarePriceGroups" >
           <ConnectorPoint PointX="15.52048326923077" PointY="19.932190755208353" />
-          <ConnectorPoint PointX="15.52048326923077" PointY="22.312502500000051" />
-          <ConnectorPoint PointX="16.052083333333336" PointY="22.312502500000051" />
-          <ConnectorPoint PointX="16.458333333333336" PointY="22.312502500000051" />
-          <ConnectorPoint PointX="16.5" PointY="22.312502500000051" />
+          <ConnectorPoint PointX="15.52048326923077" PointY="22.598299526041671" />
+          <ConnectorPoint PointX="16.130208333333336" PointY="22.598299526041671" />
+          <ConnectorPoint PointX="16.348958333333336" PointY="22.598299526041671" />
+          <ConnectorPoint PointX="16.5" PointY="22.598299526041671" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WarePrices_Wares" >
-          <ConnectorPoint PointX="15.75" PointY="14.682109374999982" />
-          <ConnectorPoint PointX="16.135416666666668" PointY="15.057109374999982" />
-          <ConnectorPoint PointX="16.135416666666668" PointY="23.254550776041754" />
-          <ConnectorPoint PointX="16.291666666666668" PointY="23.254550776041754" />
-          <ConnectorPoint PointX="16.458333333333332" PointY="23.254550776041754" />
-          <ConnectorPoint PointX="16.5" PointY="23.254550776041754" />
+          <ConnectorPoint PointX="15.75" PointY="14.682109375" />
+          <ConnectorPoint PointX="16.125" PointY="15.057109375" />
+          <ConnectorPoint PointX="16.125" PointY="22.598299526041671" />
+          <ConnectorPoint PointX="16.130208333333336" PointY="22.598299526041671" />
+          <ConnectorPoint PointX="16.348958333333336" PointY="22.598299526041671" />
+          <ConnectorPoint PointX="16.5" PointY="22.598299526041671" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareRemains_Wares" >
-          <ConnectorPoint PointX="15.75" PointY="14.544454757411923" />
-          <ConnectorPoint PointX="16.135416666666668" PointY="14.544454757411923" />
-          <ConnectorPoint PointX="16.302083333333332" PointY="14.544454757411923" />
-          <ConnectorPoint PointX="18.916666666666668" PointY="14.544454757411922" />
-          <ConnectorPoint PointX="19.208333333333332" PointY="14.544454757411923" />
-          <ConnectorPoint PointX="19.5" PointY="14.544454757411923" />
+          <ConnectorPoint PointX="15.75" PointY="14.638164067307642" />
+          <ConnectorPoint PointX="16.130208333333336" PointY="14.638164067307642" />
+          <ConnectorPoint PointX="16.296875" PointY="14.638164067307642" />
+          <ConnectorPoint PointX="19.5" PointY="14.638164067307642" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_Wares_WareUnits" >
-          <ConnectorPoint PointX="13.5" PointY="14.341054687499991" />
-          <ConnectorPoint PointX="13.916666666666666" PointY="14.341054687499991" />
-          <ConnectorPoint PointX="14.083333333333334" PointY="14.341054687499991" />
-          <ConnectorPoint PointX="14.25" PointY="14.341054687499991" />
+          <ConnectorPoint PointX="13.5" PointY="14.462659098307292" />
+          <ConnectorPoint PointX="13.791666666666666" PointY="14.46265909830729" />
+          <ConnectorPoint PointX="14.083333333333334" PointY="14.462659098307292" />
+          <ConnectorPoint PointX="14.25" PointY="14.462659098307292" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_Wares_WareUnits1" >
-          <ConnectorPoint PointX="13.5" PointY="14.108027343749996" />
-          <ConnectorPoint PointX="13.916666666666666" PointY="14.108027343749996" />
-          <ConnectorPoint PointX="14.083333333333334" PointY="14.108027343749996" />
-          <ConnectorPoint PointX="14.25" PointY="14.108027343749996" />
+          <ConnectorPoint PointX="13.5" PointY="14.168829549153646" />
+          <ConnectorPoint PointX="13.791666666666666" PointY="14.168829549153644" />
+          <ConnectorPoint PointX="14.083333333333334" PointY="14.168829549153646" />
+          <ConnectorPoint PointX="14.25" PointY="14.168829549153646" />
         </AssociationConnector>
         <AssociationConnector Association="CompasModel.FK_WareTimeLimits_Wares" >
-          <ConnectorPoint PointX="15.75" PointY="14.61403145192306" />
-          <ConnectorPoint PointX="16.159255145950315" PointY="15.015416306605095" />
-          <ConnectorPoint PointX="16.278244854049689" PointY="15.132117751087174" />
-          <ConnectorPoint PointX="16.291666666666668" PointY="15.14528145192306" />
-          <ConnectorPoint PointX="16.291666666666668" PointY="18.490143229166677" />
+          <ConnectorPoint PointX="15.75" PointY="14.614031451923077" />
+          <ConnectorPoint PointX="16.15625" PointY="15.020281451923077" />
+          <ConnectorPoint PointX="16.15625" PointY="18.490143229166677" />
+          <ConnectorPoint PointX="16.182291666666668" PointY="18.490143229166677" />
+          <ConnectorPoint PointX="16.348958333333332" PointY="18.490143229166677" />
           <ConnectorPoint PointX="16.5" PointY="18.490143229166677" />
         </AssociationConnector>
         <EntityTypeShape EntityType="CompasModel.ViewContractorCard" Width="1.5" PointX="5.75" PointY="0.75" Height="3.134095052083353" />
@@ -6566,6 +6553,20 @@
         <EntityTypeShape EntityType="CompasModel.ViewStaffEmployeeSalary" Width="1.5" PointX="11.375" PointY="16.75" Height="2.9417936197916674" />
         <EntityTypeShape EntityType="CompasModel.ViewConfigurationParameter" Width="1.5" PointX="18.375" PointY="0.75" Height="3.7109993489583246" />
         <EntityTypeShape EntityType="CompasModel.ViewWare" Width="1.5" PointX="20.375" PointY="0.75" Height="3.4001269531249818" />
+        <EntityTypeShape EntityType="CompasModel.WareCategory" Width="1.5" PointX="19.375" PointY="8.875" Height="2.1725878906249818" />
+        <AssociationConnector Association="CompasModel.FK_WareCategories_WareCategories" >
+          <ConnectorPoint PointX="19.906923076923075" PointY="11.047587890624982" />
+          <ConnectorPoint PointX="19.906923076923075" PointY="11.297587890624982" />
+          <ConnectorPoint PointX="20.353461538461538" PointY="11.297587890624982" />
+          <ConnectorPoint PointX="20.353461538461538" PointY="11.047587890624982" />
+        </AssociationConnector>
+        <AssociationConnector Association="CompasModel.FK_Wares_WareCategories" >
+          <ConnectorPoint PointX="19.40625" PointY="11.047587890624982" />
+          <ConnectorPoint PointX="19.40625" PointY="11.555043945312491" />
+          <ConnectorPoint PointX="16.296875" PointY="11.555043945312491" />
+          <ConnectorPoint PointX="16.130208333333336" PointY="11.555043945312491" />
+          <ConnectorPoint PointX="15.75" PointY="11.555043945312491" />
+        </AssociationConnector>
       </Diagram>
     </Diagrams>
   </Designer>

@@ -16,6 +16,8 @@ namespace Compas.AdminUI.Wares.Category
 {
     public partial class CategoryData : Form
     {
+        byte[] image;
+        Image _image;
         string mode;
         List<ItemIntValue> items = new List<ItemIntValue>();
 
@@ -40,6 +42,10 @@ namespace Compas.AdminUI.Wares.Category
                         }
                         
                     }
+                    ImagePB.SizeMode = PictureBoxSizeMode.Zoom;
+                    _image = Helpers.ImageOperations.ByteArrayToImage(category.Image);
+                    image = category.Image;
+                    ImagePB.Image = _image;
                 }
             }
 
@@ -113,13 +119,18 @@ namespace Compas.AdminUI.Wares.Category
                     
 
             if (mode == "new")
-            {               
-                
-                cl.Create(NameTB.Text, parentCategoryId);
+            {
+                if (openFileDialog1.CheckPathExists == true)
+                    image = Helpers.ImageOperations.ConvertImageToByteArray(openFileDialog1.FileName);
+                cl.Create(NameTB.Text, parentCategoryId, image);
             }
             if (mode == "edit")
             {
-                cl.Update(Convert.ToInt32(id), NameTB.Text, parentCategoryId);
+                if (_image != null)
+                    image = Helpers.ImageOperations.ImageToByteArray(_image);
+                else
+                    image = null;
+                cl.Update(Convert.ToInt32(id), NameTB.Text, parentCategoryId, image);
             }
             manager.Save();
             
@@ -135,6 +146,22 @@ namespace Compas.AdminUI.Wares.Category
         private void CancelBt_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AddImageBt_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                ImagePB.SizeMode = PictureBoxSizeMode.Zoom;
+                ImagePB.Image = new Bitmap(openFileDialog1.OpenFile());
+                _image = ImagePB.Image;
+            }        
+        }
+
+        private void DeleteBt_Click(object sender, EventArgs e)
+        {
+            _image = null;
+            ImagePB.Image = _image;
         }
     }
 }

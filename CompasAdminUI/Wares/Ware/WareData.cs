@@ -17,6 +17,8 @@ namespace Compas.AdminUI.Wares.Ware
 {
     public partial class WareData : Form
     {
+        byte[] image;
+        Image _image;
         string mode;
         int? defaultCategoryId;
         int? id;
@@ -242,6 +244,11 @@ namespace Compas.AdminUI.Wares.Ware
                             i++;
                         }
                     }
+
+                    ImagePB.SizeMode = PictureBoxSizeMode.Zoom;
+                    _image = Helpers.ImageOperations.ByteArrayToImage(ware.Image);
+                    image = ware.Image;
+                    ImagePB.Image = _image;
                 }
             }
             
@@ -295,17 +302,25 @@ namespace Compas.AdminUI.Wares.Ware
 
             if (mode == "new")
             {
-                ware = wares.Create(NameTB.Text, unitId, 0, manufacturerId, categoryId, secondaryUnitId, secondaryUnitQuantity);
+                if (openFileDialog1.CheckPathExists == true)
+                    image = Helpers.ImageOperations.ConvertImageToByteArray(openFileDialog1.FileName);
+                ware = wares.Create(NameTB.Text, unitId, 0, manufacturerId, categoryId, secondaryUnitId, secondaryUnitQuantity,image);
             }
             if (mode == "edit")
             {
-                ware = wares.Update(Convert.ToInt32(id), NameTB.Text, unitId, manufacturerId, categoryId, secondaryUnitId, secondaryUnitQuantity);
+                if (_image != null)
+                    image = Helpers.ImageOperations.ImageToByteArray(_image);
+                else
+                    image = null;
+                ware = wares.Update(Convert.ToInt32(id), NameTB.Text, unitId, manufacturerId, categoryId, secondaryUnitId, secondaryUnitQuantity, image);
                 foreach (string code in codesListForDelete)
                 {
                     codes.Delete(Convert.ToInt32(id), code);
                 }
             }
 
+
+            
            
 
             foreach (string code in codesList)
@@ -457,6 +472,22 @@ namespace Compas.AdminUI.Wares.Ware
         private void ManufacturersCB_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddImageBt_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                ImagePB.SizeMode = PictureBoxSizeMode.Zoom;
+                ImagePB.Image = new Bitmap(openFileDialog1.OpenFile());
+                _image = ImagePB.Image;
+            }
+        }
+
+        private void DeleteBt_Click(object sender, EventArgs e)
+        {
+            _image = null;
+            ImagePB.Image = _image;
         }
 
        

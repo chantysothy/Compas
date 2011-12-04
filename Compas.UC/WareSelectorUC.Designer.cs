@@ -54,6 +54,7 @@
             this.UnitName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.CancelBt = new System.Windows.Forms.Button();
+            this.WaresFLP = new System.Windows.Forms.FlowLayoutPanel();
             this.categoriesUC2 = new Compas.UC.CategoriesUC();
             this.panel8.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -284,6 +285,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.WaresFLP);
             this.panel5.Controls.Add(this.WaresGV);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 137);
@@ -371,6 +373,14 @@
             this.CancelBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CancelBt.UseVisualStyleBackColor = true;
             // 
+            // WaresFLP
+            // 
+            this.WaresFLP.AutoScroll = true;
+            this.WaresFLP.Location = new System.Drawing.Point(36, 28);
+            this.WaresFLP.Name = "WaresFLP";
+            this.WaresFLP.Size = new System.Drawing.Size(377, 280);
+            this.WaresFLP.TabIndex = 1;
+            // 
             // categoriesUC2
             // 
             this.categoriesUC2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -380,6 +390,7 @@
             this.categoriesUC2.Name = "categoriesUC2";
             this.categoriesUC2.Size = new System.Drawing.Size(342, 367);
             this.categoriesUC2.TabIndex = 0;
+            this.categoriesUC2.ViewMode = Compas.UC.CategoriesUC.Mode.Button;
             this.categoriesUC2.SelectedCategoryChanged += new System.EventHandler(this.categoriesUC2_SelectedCategoryChanged_1);
             // 
             // WareSelectorUC
@@ -442,5 +453,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnitName;
         private CategoriesUC categoriesUC2;
+        private System.Windows.Forms.FlowLayoutPanel WaresFLP;
     }
 }

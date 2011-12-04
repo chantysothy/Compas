@@ -30,77 +30,7 @@ namespace Compas.AdminUI.Documents
 
         SortableBindingList<WareView> view;
 
-        //private void FillWares()
-        //{
-        //    WaresLogic wares = new WaresLogic(manager);
-
-        //    int? categoryId = null;
-        //    int? manufacturerId = null;
-        //    int? unitId = null;
-        //    //string name = wareFilterUC1.WareName;
-        //    //categoryId = categoriesUC1.SelectedCategoryID;
-           
-        //    BindingSource bs = new BindingSource();
-
-
-
-        //    var waresList =
-        //        mode == "new" ?
-        //        wares.GetAll("", categoryId, manufacturerId, unitId).Select(a => new
-        //        {
-        //            a.ID,
-        //            Name = a.Name,
-        //            UnitName = a.WareUnit != null ? a.WareUnit.Name : "",
-        //            ManufacturerName = a.WareManufacturer != null ? a.WareManufacturer.Name : "",
-        //            CategoryName = a.WareCategory != null ? a.WareCategory.Name : "",
-        //            SecondaryUnitID = a.SecondaryUnitID != null ? a.SecondaryUnitID : null,
-        //            SecondaryUnitName = a.WareUnit1 != null ? a.WareUnit1.Name : "",
-        //            SecondaryUnitQuantity = a.SecondaryUnitQuantity != null ? a.SecondaryUnitQuantity : null,
-        //            a.WareCodes
-        //        }) :
-        //    wares.GetAllByWareID(DocumentDetail.WareID).Select(a => new
-        //    {
-        //        a.ID,
-        //        Name = a.Name,
-        //        UnitName = a.WareUnit != null ? a.WareUnit.Name : "",
-        //        ManufacturerName = a.WareManufacturer != null ? a.WareManufacturer.Name : "",
-        //        CategoryName = a.WareCategory != null ? a.WareCategory.Name : "",
-        //        SecondaryUnitID = a.SecondaryUnitID != null ? a.SecondaryUnitID : null,
-        //        SecondaryUnitName = a.WareUnit1 != null ? a.WareUnit1.Name : "",
-        //        SecondaryUnitQuantity = a.SecondaryUnitQuantity != null ? a.SecondaryUnitQuantity : null,
-        //        a.WareCodes
-        //    })
-
-        //    ;//.OrderBy(a => a.CategoryName).ThenBy(a=> a.Name).ToList();
-        //    List<WareView> viewList = new List<WareView>();
-        //    foreach (var a in waresList)
-        //    {
-        //        WareView wv = new WareView();
-        //        wv.ID = a.ID;
-        //        wv.Name = a.Name;
-        //        wv.CategoryName = a.CategoryName;
-        //        wv.ManufacturerName = a.ManufacturerName;
-        //        wv.UnitName = a.UnitName;
-        //        wv.SecondaryUnitID = a.SecondaryUnitID;
-        //        wv.SecondaryUnitName = a.SecondaryUnitName;
-        //        wv.SecondaryUnitQuantity = a.SecondaryUnitQuantity;
-        //        wv.WareCodes = a.WareCodes.ToList();
-        //        viewList.Add(wv);
-        //    }
-
-        //    //BindingListView<WareView> view = new BindingListView<WareView>(viewList);
-        //    //bs.DataSource = view;
-        //    //bs.Sort = columnName;
-
-        //    view = new SortableBindingList<WareView>(viewList);
-
-        //    WaresGV.AutoGenerateColumns = false;
-        //    WaresGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-        //    WaresGV.DataSource = view;
-
-            
-
-        //}
+        
 
         private void FillSummaryPrice()
         {
@@ -160,6 +90,42 @@ namespace Compas.AdminUI.Documents
             {
                SecondaryGroupGB.Visible = Helpers.ConfigDataTypeConverter.ConvertToBoolean(param0.Value);
             }
+
+            ConfigurationParameter param1 = config.Get(ParametersLogic.Parameter.DOCUMENTDETAILS_SHOW_FONTSIZE.ToString());
+            if (param1 != null)
+            {
+                float size = Helpers.ConfigDataTypeConverter.ConvertToFloat(param1.Value);
+                wareSelectorUC1.FontSize = size;
+
+                //this.Font = new Font(this.Font.Name, size);
+            }
+
+            ConfigurationParameter param2 = config.Get(ParametersLogic.Parameter.DOCUMENTDETAILS_SHOW_WARES_MINROWHEIGHT.ToString());
+            if (param2 != null)
+            {
+                int size = Convert.ToInt32(param2.Value);
+                wareSelectorUC1.MinRowHeight = size;
+            }
+
+            ConfigurationParameter param3 = config.Get(ParametersLogic.Parameter.DOCUMENTDETAILS_SHOW_WARES_VIEWMODE.ToString());
+            if (param3 != null)
+            {
+                switch (param3.ToString().ToUpper())
+                {
+                    case "TREEVIEW":
+                        {
+                            wareSelectorUC1.CategoriesViewMode = UC.CategoriesUC.Mode.TreeView;
+                            break;
+                        }
+                    case "BUTTON":
+                        {
+                            wareSelectorUC1.CategoriesViewMode = UC.CategoriesUC.Mode.Button;
+                            break;
+                        }
+                }
+            }
+
+
 
         }
 
@@ -318,6 +284,11 @@ namespace Compas.AdminUI.Documents
         {
             FillPrices();
             FillSummaryPrice();
+        }
+
+        private void wareSelectorUC1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

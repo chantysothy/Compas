@@ -59,7 +59,7 @@ namespace Compas.Logic.Wares
             //using (var cdc = new CompasDataContext())
             //{
             result = (from a in context.WareCategories
-                      where (a.ParentCategoryID == CategoryID)
+                      where (a.ParentCategoryID == CategoryID) || (a.ParentCategoryID == null & CategoryID == null)
                       select a).ToList();
             //}
             return result;
@@ -158,21 +158,22 @@ namespace Compas.Logic.Wares
 
         }
 
-        
 
-        
-       
 
-        public int Create(string Name, int? ParentCategoryID)
+
+
+
+        public int Create(string Name, int? ParentCategoryID, byte[] Image)
         {
             int result = 1;
             WareCategory sr = WareCategory.CreateWareCategory(1, Name);
             sr.ParentCategoryID = ParentCategoryID;
+            sr.Image = Image;
             context.AddToWareCategories(sr);
             return result;
         }
 
-        public int Update(int ID, string Name, int? ParentCategoryID)
+        public int Update(int ID, string Name, int? ParentCategoryID, byte[] Image)
         {
             int result = 1;
             WareCategory sr = (from a in context.WareCategories
@@ -180,6 +181,7 @@ namespace Compas.Logic.Wares
                                select a).FirstOrDefault();
             sr.Name = Name;
             sr.ParentCategoryID = ParentCategoryID;
+            sr.Image = Image;
                       
             return result;
         }

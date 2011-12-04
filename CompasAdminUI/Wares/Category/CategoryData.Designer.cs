@@ -34,6 +34,12 @@
             this.SaveBt = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.CategoriesCB = new System.Windows.Forms.ComboBox();
+            this.DeleteBt = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.AddImageBt = new System.Windows.Forms.Button();
+            this.ImagePB = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagePB)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +63,7 @@
             // CancelBt
             // 
             this.CancelBt.Image = global::Compas.AdminUI.Properties.Resources.button_cancel__1_;
-            this.CancelBt.Location = new System.Drawing.Point(368, 82);
+            this.CancelBt.Location = new System.Drawing.Point(347, 257);
             this.CancelBt.Name = "CancelBt";
             this.CancelBt.Size = new System.Drawing.Size(150, 50);
             this.CancelBt.TabIndex = 17;
@@ -69,7 +75,7 @@
             // SaveBt
             // 
             this.SaveBt.Image = global::Compas.AdminUI.Properties.Resources.button_ok__1_;
-            this.SaveBt.Location = new System.Drawing.Point(174, 82);
+            this.SaveBt.Location = new System.Drawing.Point(153, 257);
             this.SaveBt.Name = "SaveBt";
             this.SaveBt.Size = new System.Drawing.Size(150, 50);
             this.SaveBt.TabIndex = 16;
@@ -96,11 +102,57 @@
             this.CategoriesCB.Size = new System.Drawing.Size(460, 21);
             this.CategoriesCB.TabIndex = 20;
             // 
+            // DeleteBt
+            // 
+            this.DeleteBt.Location = new System.Drawing.Point(291, 74);
+            this.DeleteBt.Name = "DeleteBt";
+            this.DeleteBt.Size = new System.Drawing.Size(135, 32);
+            this.DeleteBt.TabIndex = 25;
+            this.DeleteBt.Text = "Видалити зображення";
+            this.DeleteBt.UseVisualStyleBackColor = true;
+            this.DeleteBt.Click += new System.EventHandler(this.DeleteBt_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(62, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Зображення:";
+            // 
+            // AddImageBt
+            // 
+            this.AddImageBt.Location = new System.Drawing.Point(141, 74);
+            this.AddImageBt.Name = "AddImageBt";
+            this.AddImageBt.Size = new System.Drawing.Size(135, 32);
+            this.AddImageBt.TabIndex = 23;
+            this.AddImageBt.Text = "Додати зображення";
+            this.AddImageBt.UseVisualStyleBackColor = true;
+            this.AddImageBt.Click += new System.EventHandler(this.AddImageBt_Click);
+            // 
+            // ImagePB
+            // 
+            this.ImagePB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ImagePB.Location = new System.Drawing.Point(141, 112);
+            this.ImagePB.Name = "ImagePB";
+            this.ImagePB.Size = new System.Drawing.Size(128, 128);
+            this.ImagePB.TabIndex = 22;
+            this.ImagePB.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // CategoryData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 140);
+            this.ClientSize = new System.Drawing.Size(617, 319);
+            this.Controls.Add(this.DeleteBt);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.AddImageBt);
+            this.Controls.Add(this.ImagePB);
             this.Controls.Add(this.CategoriesCB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CancelBt);
@@ -110,6 +162,7 @@
             this.Name = "CategoryData";
             this.Text = "Дані категорії";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EnterpriseData_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.ImagePB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,5 +176,10 @@
         private System.Windows.Forms.TextBox NameTB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox CategoriesCB;
+        private System.Windows.Forms.Button DeleteBt;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button AddImageBt;
+        private System.Windows.Forms.PictureBox ImagePB;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

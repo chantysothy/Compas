@@ -79,8 +79,6 @@ using System.Runtime.Serialization;
 [assembly: EdmRelationshipAttribute("CompasModel", "FK_WareDocumentPayments_WareCards", "WareCard", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Compas.Model.WareCard), "WareDocumentPayment", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Compas.Model.WareDocumentPayment), true)]
 [assembly: EdmRelationshipAttribute("CompasModel", "FK_WareCardTypeDiscounts_WareCardTypes", "WareCardType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Compas.Model.WareCardType), "WareCardTypeDiscount", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Compas.Model.WareCardTypeDiscount), true)]
 [assembly: EdmRelationshipAttribute("CompasModel", "FK_WareCardTypeDiscounts_WareDiscounts", "WareDiscount", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Compas.Model.WareDiscount), "WareCardTypeDiscount", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Compas.Model.WareCardTypeDiscount), true)]
-[assembly: EdmRelationshipAttribute("CompasModel", "FK_WareCategories_WareCategories", "WareCategory", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Compas.Model.WareCategory), "WareCategory1", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Compas.Model.WareCategory), true)]
-[assembly: EdmRelationshipAttribute("CompasModel", "FK_Wares_WareCategories", "WareCategory", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Compas.Model.WareCategory), "Ware", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Compas.Model.Ware), true)]
 [assembly: EdmRelationshipAttribute("CompasModel", "FK_WareCodes_Wares", "Ware", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Compas.Model.Ware), "WareCode", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Compas.Model.WareCode), true)]
 [assembly: EdmRelationshipAttribute("CompasModel", "FK_WareComponentDetails_Wares", "Ware", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Compas.Model.Ware), "WareComponent", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Compas.Model.WareComponent), true)]
 [assembly: EdmRelationshipAttribute("CompasModel", "FK_WareComponents_Component_Wares", "Ware", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Compas.Model.Ware), "WareComponent", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Compas.Model.WareComponent), true)]
@@ -104,6 +102,8 @@ using System.Runtime.Serialization;
 [assembly: EdmRelationshipAttribute("CompasModel", "FK_Wares_WareUnits", "WareUnit", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Compas.Model.WareUnit), "Ware", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Compas.Model.Ware), true)]
 [assembly: EdmRelationshipAttribute("CompasModel", "FK_Wares_WareUnits1", "WareUnit", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Compas.Model.WareUnit), "Ware", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Compas.Model.Ware), true)]
 [assembly: EdmRelationshipAttribute("CompasModel", "FK_WareTimeLimits_Wares", "Ware", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Compas.Model.Ware), "WareTimeLimit", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Compas.Model.WareTimeLimit), true)]
+[assembly: EdmRelationshipAttribute("CompasModel", "FK_WareCategories_WareCategories", "WareCategory", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Compas.Model.WareCategory), "WareCategory1", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Compas.Model.WareCategory), true)]
+[assembly: EdmRelationshipAttribute("CompasModel", "FK_Wares_WareCategories", "WareCategory", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Compas.Model.WareCategory), "Ware", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Compas.Model.Ware), true)]
 
 #endregion
 
@@ -798,22 +798,6 @@ namespace Compas.Model
         /// <summary>
         /// Нет доступной документации по метаданным.
         /// </summary>
-        public ObjectSet<WareCategory> WareCategories
-        {
-            get
-            {
-                if ((_WareCategories == null))
-                {
-                    _WareCategories = base.CreateObjectSet<WareCategory>("WareCategories");
-                }
-                return _WareCategories;
-            }
-        }
-        private ObjectSet<WareCategory> _WareCategories;
-    
-        /// <summary>
-        /// Нет доступной документации по метаданным.
-        /// </summary>
         public ObjectSet<WareCode> WareCodes
         {
             get
@@ -1274,6 +1258,22 @@ namespace Compas.Model
             }
         }
         private ObjectSet<ViewWare> _ViewWares;
+    
+        /// <summary>
+        /// Нет доступной документации по метаданным.
+        /// </summary>
+        public ObjectSet<WareCategory> WareCategories
+        {
+            get
+            {
+                if ((_WareCategories == null))
+                {
+                    _WareCategories = base.CreateObjectSet<WareCategory>("WareCategories");
+                }
+                return _WareCategories;
+            }
+        }
+        private ObjectSet<WareCategory> _WareCategories;
 
         #endregion
         #region Методы AddTo
@@ -1599,14 +1599,6 @@ namespace Compas.Model
         }
     
         /// <summary>
-        /// Устаревший метод для добавления новых объектов в набор EntitySet WareCategories. Взамен можно использовать метод .Add связанного свойства ObjectSet&lt;T&gt;.
-        /// </summary>
-        public void AddToWareCategories(WareCategory wareCategory)
-        {
-            base.AddObject("WareCategories", wareCategory);
-        }
-    
-        /// <summary>
         /// Устаревший метод для добавления новых объектов в набор EntitySet WareCodes. Взамен можно использовать метод .Add связанного свойства ObjectSet&lt;T&gt;.
         /// </summary>
         public void AddToWareCodes(WareCode wareCode)
@@ -1836,6 +1828,14 @@ namespace Compas.Model
         public void AddToViewWares(ViewWare viewWare)
         {
             base.AddObject("ViewWares", viewWare);
+        }
+    
+        /// <summary>
+        /// Устаревший метод для добавления новых объектов в набор EntitySet WareCategories. Взамен можно использовать метод .Add связанного свойства ObjectSet&lt;T&gt;.
+        /// </summary>
+        public void AddToWareCategories(WareCategory wareCategory)
+        {
+            base.AddObject("WareCategories", wareCategory);
         }
 
         #endregion
@@ -11597,6 +11597,30 @@ namespace Compas.Model
         private global::System.String _WareCode;
         partial void OnWareCodeChanging(global::System.String value);
         partial void OnWareCodeChanged();
+    
+        /// <summary>
+        /// Нет доступной документации по метаданным.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] Image
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_Image);
+            }
+            set
+            {
+                OnImageChanging(value);
+                ReportPropertyChanging("Image");
+                _Image = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Image");
+                OnImageChanged();
+            }
+        }
+        private global::System.Byte[] _Image;
+        partial void OnImageChanging(global::System.Byte[] value);
+        partial void OnImageChanged();
 
         #endregion
     
@@ -12395,48 +12419,34 @@ namespace Compas.Model
         private Nullable<global::System.Decimal> _MinimumQuantity;
         partial void OnMinimumQuantityChanging(Nullable<global::System.Decimal> value);
         partial void OnMinimumQuantityChanged();
+    
+        /// <summary>
+        /// Нет доступной документации по метаданным.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] Image
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_Image);
+            }
+            set
+            {
+                OnImageChanging(value);
+                ReportPropertyChanging("Image");
+                _Image = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Image");
+                OnImageChanged();
+            }
+        }
+        private global::System.Byte[] _Image;
+        partial void OnImageChanging(global::System.Byte[] value);
+        partial void OnImageChanged();
 
         #endregion
     
         #region Свойства навигации
-    
-        /// <summary>
-        /// Нет доступной документации по метаданным.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CompasModel", "FK_Wares_WareCategories", "WareCategory")]
-        public WareCategory WareCategory
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WareCategory>("CompasModel.FK_Wares_WareCategories", "WareCategory").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WareCategory>("CompasModel.FK_Wares_WareCategories", "WareCategory").Value = value;
-            }
-        }
-        /// <summary>
-        /// Нет доступной документации по метаданным.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<WareCategory> WareCategoryReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WareCategory>("CompasModel.FK_Wares_WareCategories", "WareCategory");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<WareCategory>("CompasModel.FK_Wares_WareCategories", "WareCategory", value);
-                }
-            }
-        }
     
         /// <summary>
         /// Нет доступной документации по метаданным.
@@ -12702,6 +12712,44 @@ namespace Compas.Model
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<WareTimeLimit>("CompasModel.FK_WareTimeLimits_Wares", "WareTimeLimit", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// Нет доступной документации по метаданным.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CompasModel", "FK_Wares_WareCategories", "WareCategory")]
+        public WareCategory WareCategory
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WareCategory>("CompasModel.FK_Wares_WareCategories", "WareCategory").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WareCategory>("CompasModel.FK_Wares_WareCategories", "WareCategory").Value = value;
+            }
+        }
+        /// <summary>
+        /// Нет доступной документации по метаданным.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<WareCategory> WareCategoryReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WareCategory>("CompasModel.FK_Wares_WareCategories", "WareCategory");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<WareCategory>("CompasModel.FK_Wares_WareCategories", "WareCategory", value);
                 }
             }
         }
@@ -14234,6 +14282,30 @@ namespace Compas.Model
         private global::System.String _Name;
         partial void OnNameChanging(global::System.String value);
         partial void OnNameChanged();
+    
+        /// <summary>
+        /// Нет доступной документации по метаданным.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] Image
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_Image);
+            }
+            set
+            {
+                OnImageChanging(value);
+                ReportPropertyChanging("Image");
+                _Image = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Image");
+                OnImageChanged();
+            }
+        }
+        private global::System.Byte[] _Image;
+        partial void OnImageChanging(global::System.Byte[] value);
+        partial void OnImageChanged();
 
         #endregion
     

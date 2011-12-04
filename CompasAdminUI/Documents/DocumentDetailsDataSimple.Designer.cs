@@ -33,8 +33,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.wareSelectorUC1 = new Compas.UC.WareSelectorUC();
             this.numPad1 = new Compas.UC.NumPad();
+            this.wareSelectorUC1 = new Compas.UC.WareSelectorUC();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.AddAndCloseBt = new System.Windows.Forms.Button();
@@ -95,7 +95,7 @@
             // 
             this.panel3.AutoSize = true;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 725);
+            this.panel3.Location = new System.Drawing.Point(0, 100);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(70, 0);
             this.panel3.TabIndex = 2;
@@ -139,33 +139,35 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.wareSelectorUC1);
             this.panel5.Controls.Add(this.numPad1);
+            this.panel5.Controls.Add(this.wareSelectorUC1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(643, 725);
             this.panel5.TabIndex = 7;
             // 
-            // wareSelectorUC1
-            // 
-            this.wareSelectorUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wareSelectorUC1.FontSize = 20F;
-            this.wareSelectorUC1.Location = new System.Drawing.Point(0, 0);
-            this.wareSelectorUC1.Name = "wareSelectorUC1";
-            this.wareSelectorUC1.Size = new System.Drawing.Size(643, 725);
-            this.wareSelectorUC1.TabIndex = 1;
-            this.wareSelectorUC1.SelectedWareChanged += new System.EventHandler(this.wareSelectorUC1_SelectedWareChanged);
-            // 
             // numPad1
             // 
             this.numPad1.AutoSize = true;
             this.numPad1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.numPad1.Location = new System.Drawing.Point(102, 125);
+            this.numPad1.Location = new System.Drawing.Point(304, 153);
             this.numPad1.Name = "numPad1";
-            this.numPad1.Size = new System.Drawing.Size(229, 305);
+            this.numPad1.Size = new System.Drawing.Size(321, 382);
             this.numPad1.TabIndex = 0;
-            this.numPad1.Visible = false;
+            // 
+            // wareSelectorUC1
+            // 
+            this.wareSelectorUC1.CategoriesViewMode = Compas.UC.CategoriesUC.Mode.TreeView;
+            this.wareSelectorUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wareSelectorUC1.FontSize = 16F;
+            this.wareSelectorUC1.Location = new System.Drawing.Point(0, 0);
+            this.wareSelectorUC1.MinRowHeight = 60;
+            this.wareSelectorUC1.Name = "wareSelectorUC1";
+            this.wareSelectorUC1.Size = new System.Drawing.Size(643, 725);
+            this.wareSelectorUC1.TabIndex = 1;
+            this.wareSelectorUC1.SelectedWareChanged += new System.EventHandler(this.wareSelectorUC1_SelectedWareChanged);
+            this.wareSelectorUC1.Load += new System.EventHandler(this.wareSelectorUC1_Load);
             // 
             // panel6
             // 

@@ -56,6 +56,7 @@ namespace Compas.AdminUI.Wares.Category
                 ItemIntValue item = new ItemIntValue();
                 item.ID = a.ID;
                 item.Name = prefix + a.Name;
+                item.Image = a.Image;
                 items.Add(item);
                 FillCategoriesHierarchy(a, prefix + @"    ", false);
             }

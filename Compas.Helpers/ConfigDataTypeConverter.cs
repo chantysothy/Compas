@@ -16,5 +16,12 @@ namespace Compas.Helpers
                 result = false;
             return result;
         }
+
+        public static float ConvertToFloat(string Value)
+        {
+            float result;
+            result = (float)Convert.ToDouble(Value);
+            return result;
+        }
     }
 }

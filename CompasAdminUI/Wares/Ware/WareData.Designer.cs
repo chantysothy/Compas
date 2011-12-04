@@ -56,9 +56,15 @@
             this.AddManufacturerBt = new System.Windows.Forms.Button();
             this.CancelBt = new System.Windows.Forms.Button();
             this.SaveBt = new System.Windows.Forms.Button();
+            this.DeleteBt = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.AddImageBt = new System.Windows.Forms.Button();
+            this.ImagePB = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.SecondaryQuantityNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodesGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeLimitNUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagePB)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -351,7 +357,7 @@
             // CancelBt
             // 
             this.CancelBt.Image = global::Compas.AdminUI.Properties.Resources.button_cancel__1_;
-            this.CancelBt.Location = new System.Drawing.Point(357, 448);
+            this.CancelBt.Location = new System.Drawing.Point(357, 609);
             this.CancelBt.Margin = new System.Windows.Forms.Padding(4);
             this.CancelBt.Name = "CancelBt";
             this.CancelBt.Size = new System.Drawing.Size(140, 50);
@@ -364,7 +370,7 @@
             // SaveBt
             // 
             this.SaveBt.Image = global::Compas.AdminUI.Properties.Resources.button_ok__1_;
-            this.SaveBt.Location = new System.Drawing.Point(178, 448);
+            this.SaveBt.Location = new System.Drawing.Point(178, 609);
             this.SaveBt.Margin = new System.Windows.Forms.Padding(4);
             this.SaveBt.Name = "SaveBt";
             this.SaveBt.Size = new System.Drawing.Size(140, 50);
@@ -374,11 +380,57 @@
             this.SaveBt.UseVisualStyleBackColor = true;
             this.SaveBt.Click += new System.EventHandler(this.SaveBt_Click);
             // 
+            // DeleteBt
+            // 
+            this.DeleteBt.Location = new System.Drawing.Point(289, 428);
+            this.DeleteBt.Name = "DeleteBt";
+            this.DeleteBt.Size = new System.Drawing.Size(135, 32);
+            this.DeleteBt.TabIndex = 50;
+            this.DeleteBt.Text = "Видалити зображення";
+            this.DeleteBt.UseVisualStyleBackColor = true;
+            this.DeleteBt.Click += new System.EventHandler(this.DeleteBt_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(33, 436);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 17);
+            this.label10.TabIndex = 49;
+            this.label10.Text = "Зображення:";
+            // 
+            // AddImageBt
+            // 
+            this.AddImageBt.Location = new System.Drawing.Point(139, 428);
+            this.AddImageBt.Name = "AddImageBt";
+            this.AddImageBt.Size = new System.Drawing.Size(135, 32);
+            this.AddImageBt.TabIndex = 48;
+            this.AddImageBt.Text = "Додати зображення";
+            this.AddImageBt.UseVisualStyleBackColor = true;
+            this.AddImageBt.Click += new System.EventHandler(this.AddImageBt_Click);
+            // 
+            // ImagePB
+            // 
+            this.ImagePB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ImagePB.Location = new System.Drawing.Point(139, 466);
+            this.ImagePB.Name = "ImagePB";
+            this.ImagePB.Size = new System.Drawing.Size(128, 128);
+            this.ImagePB.TabIndex = 47;
+            this.ImagePB.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // WareData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 509);
+            this.ClientSize = new System.Drawing.Size(707, 672);
+            this.Controls.Add(this.DeleteBt);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.AddImageBt);
+            this.Controls.Add(this.ImagePB);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.TimeLimitNUD);
@@ -418,6 +470,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.SecondaryQuantityNUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodesGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeLimitNUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagePB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,5 +506,10 @@
         private System.Windows.Forms.NumericUpDown TimeLimitNUD;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button DeleteBt;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button AddImageBt;
+        private System.Windows.Forms.PictureBox ImagePB;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

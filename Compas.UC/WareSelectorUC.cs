@@ -17,8 +17,12 @@ using Compas.Logic.Config;
 
 namespace Compas.UC
 {
+    
+
     public partial class WareSelectorUC : UserControl
     {
+        public enum WaresViewModes { GridView, Button };
+
         public event EventHandler SelectedWareChanged;
 
         private void HandleSelectedWareChanged(object sender, EventArgs e)
@@ -65,6 +69,54 @@ namespace Compas.UC
                 WaresGV.RowTemplate.DefaultCellStyle.Font = new Font(categoriesUC2.Font.Name, value);
             }
         }
+
+        private int minRowHeight;
+
+        public int MinRowHeight
+        {
+            get
+            {
+                return minRowHeight;
+            }
+            set
+            {
+                minRowHeight = value;
+                WaresGV.RowTemplate.MinimumHeight = minRowHeight;
+            }
+        }
+
+        private CategoriesUC.Mode categoriesViewMode = CategoriesUC.Mode.Button;
+
+        public CategoriesUC.Mode CategoriesViewMode
+        {
+             
+            get
+            {
+                return categoriesViewMode;
+            }
+            set
+            {
+                categoriesViewMode = value;
+                if (value == null)
+                    categoriesUC2.ViewMode = UC.CategoriesUC.Mode.Button;
+                categoriesUC2.ViewMode = categoriesViewMode;
+            }
+        }
+
+        private WareSelectorUC.WaresViewModes waresViewModes = WareSelectorUC.WaresViewModes.Button;
+
+
+        public WareSelectorUC.WaresViewModes WaresViewMode
+        {
+            get
+            {
+                return waresViewModes;
+            }
+            set
+            {
+                waresViewModes = value;
+            }
+        }
         
 
 
@@ -101,6 +153,26 @@ namespace Compas.UC
 
         SortableBindingList<ViewWare> view;
 
+        private void CreateButton(string Name, string Text, Image ButtonImage)
+        {
+            Button newButton = new Button();
+            newButton.Name = Name;
+            if (ButtonImage != null)
+            {
+
+                newButton.Image = Helpers.ImageOperations.ScaleImage(ButtonImage, null, newButton.Font.Height * 5);
+            }
+            newButton.Text = Text;
+            newButton.TextImageRelation = TextImageRelation.ImageAboveText;
+            newButton.Height = newButton.Font.Height * (5 + 2);
+            newButton.Width = newButton.Height;
+            newButton.Dock = DockStyle.Top;
+            //newButton.Click += new EventHandler(newButton_Click);
+            newButton.Click += this.HandleSelectedWareChanged;
+            WaresFLP.SetFlowBreak(newButton, false);
+            WaresFLP.Controls.Add(newButton);
+        }
+
         private void FillWares()
         {
             WaresLogic wares = new WaresLogic(manager);
@@ -113,65 +185,35 @@ namespace Compas.UC
             if (categoryId < 0)
                 categoryId = null;
             BindingSource bs = new BindingSource();
-
-
-
             List<ViewWare> waresList = wares.GetAllView("", categoryId, manufacturerId, unitId);
-            //    mode == "new" ?
-            //    wares.GetAllView("",categoryId, manufacturerId, unitId):
-            //   /* wares.GetAll("", categoryId, manufacturerId, unitId).Select(a => new
-            //    {
-            //        a.ID,
-            //        Name = a.Name,
-            //        UnitName = a.WareUnit != null ? a.WareUnit.Name : "",
-            //        ManufacturerName = a.WareManufacturer != null ? a.WareManufacturer.Name : "",
-            //        CategoryName = a.WareCategory != null ? a.WareCategory.Name : "",
-            //        SecondaryUnitID = a.SecondaryUnitID != null ? a.SecondaryUnitID : null,
-            //        SecondaryUnitName = a.WareUnit1 != null ? a.WareUnit1.Name : "",
-            //        SecondaryUnitQuantity = a.SecondaryUnitQuantity != null ? a.SecondaryUnitQuantity : null,
-            //        a.WareCodes
-            //    }) */
-            //wares.GetAllByWareID(DocumentDetail.WareID).Select(a => new
-            //{
-            //    a.ID,
-            //    Name = a.Name,
-            //    UnitName = a.WareUnit != null ? a.WareUnit.Name : "",
-            //    ManufacturerName = a.WareManufacturer != null ? a.WareManufacturer.Name : "",
-            //    CategoryName = a.WareCategory != null ? a.WareCategory.Name : "",
-            //    SecondaryUnitID = a.SecondaryUnitID != null ? a.SecondaryUnitID : null,
-            //    SecondaryUnitName = a.WareUnit1 != null ? a.WareUnit1.Name : "",
-            //    SecondaryUnitQuantity = a.SecondaryUnitQuantity != null ? a.SecondaryUnitQuantity : null,
-            //    a.WareCodes
-            //})
-
-            //.OrderBy(a => a.CategoryName).ThenBy(a=> a.Name).ToList();
-            //List<WareView> viewList = new List<WareView>();
-            //foreach (var a in waresList)
-            //{
-            //    WareView wv = new WareView();
-            //    wv.ID = a.ID;
-            //    wv.Name = a.Name;
-            //    wv.CategoryName = a.CategoryName;
-            //    wv.ManufacturerName = a.ManufacturerName;
-            //    wv.UnitName = a.UnitName;
-            //    wv.SecondaryUnitID = a.SecondaryUnitID;
-            //    wv.SecondaryUnitName = a.SecondaryUnitName;
-            //    wv.SecondaryUnitQuantity = a.SecondaryUnitQuantity;
-            //    wv.WareCodes = a.WareCodes.ToList();
-            //    viewList.Add(wv);
-            //}
-
-            //BindingListView<ViewWare> view = new BindingListView<ViewWare>(waresList);
-            //bs.DataSource = view;
-            //bs.Sort = columnName;
-
             view = new SortableBindingList<ViewWare>(waresList);
+            WaresGV.Visible = false;
+            WaresFLP.Visible = false;
+            switch (this.WaresViewMode)
+            {
+                case WaresViewModes.GridView:
+                    {
+                        WaresGV.AutoGenerateColumns = false;
+                        WaresGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                        WaresGV.DataSource = view;
+                        WaresGV.Visible = true;
+                        break;
+                    }
+                case WaresViewModes.Button:
+                    {
+                        WaresFLP.Controls.Clear();
+                        WaresFLP.Dock = DockStyle.Fill;
+                        
+                        foreach (var ware in view)
+                        {
+                            this.CreateButton(ware.ID.ToString(), ware.Name.ToString() + "\n" + "1" + ware.UnitName,Helpers.ImageOperations.ByteArrayToImage(ware.Image));
 
-            WaresGV.AutoGenerateColumns = false;
-            WaresGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            WaresGV.DataSource = view;
 
-            
+                        }
+                        WaresFLP.Visible = true;
+                        break;
+                    }
+            }
 
         }
 

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule5 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.SaveBt = new System.Windows.Forms.Button();
             this.CancelBt = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -255,10 +255,10 @@
             this.WareLUE.Properties.EditValueChanged += new System.EventHandler(this.WareLUE_Properties_EditValueChanged);
             this.WareLUE.Size = new System.Drawing.Size(452, 30);
             this.WareLUE.TabIndex = 0;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "This value is not valid";
-            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.dxValidationProvider1.SetValidationRule(this.WareLUE, conditionValidationRule1);
+            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule5.ErrorText = "This value is not valid";
+            conditionValidationRule5.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            this.dxValidationProvider1.SetValidationRule(this.WareLUE, conditionValidationRule5);
             this.WareLUE.EditValueChanged += new System.EventHandler(this.WareLUE_EditValueChanged);
             // 
             // SalePriceTB
@@ -308,9 +308,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CurrencyLUE.Size = new System.Drawing.Size(122, 30);
             this.CurrencyLUE.TabIndex = 5;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "This value is not valid";
-            this.dxValidationProvider1.SetValidationRule(this.CurrencyLUE, conditionValidationRule2);
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "This value is not valid";
+            this.dxValidationProvider1.SetValidationRule(this.CurrencyLUE, conditionValidationRule1);
             // 
             // MessageL
             // 
@@ -379,15 +379,15 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.UnitQuantityTB.Size = new System.Drawing.Size(122, 32);
             this.UnitQuantityTB.TabIndex = 69;
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.GreaterOrEqual;
-            conditionValidationRule3.ErrorText = "This value is not valid";
-            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            conditionValidationRule3.Value1 = new decimal(new int[] {
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.GreaterOrEqual;
+            conditionValidationRule2.ErrorText = "This value is not valid";
+            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
+            conditionValidationRule2.Value1 = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.dxValidationProvider1.SetValidationRule(this.UnitQuantityTB, conditionValidationRule3);
+            this.dxValidationProvider1.SetValidationRule(this.UnitQuantityTB, conditionValidationRule2);
             this.UnitQuantityTB.EditValueChanged += new System.EventHandler(this.UnitQuantityTB_EditValueChanged);
             // 
             // SecondaryUnitQuantityTB
@@ -438,9 +438,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DiscountForUnitTB.Size = new System.Drawing.Size(122, 32);
             this.DiscountForUnitTB.TabIndex = 72;
-            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule4.ErrorText = "This value is not valid";
-            this.dxValidationProvider1.SetValidationRule(this.DiscountForUnitTB, conditionValidationRule4);
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "This value is not valid";
+            this.dxValidationProvider1.SetValidationRule(this.DiscountForUnitTB, conditionValidationRule3);
             this.DiscountForUnitTB.EditValueChanged += new System.EventHandler(this.DiscountForUnitTB_EditValueChanged);
             // 
             // label6
